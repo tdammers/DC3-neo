@@ -4,6 +4,9 @@ Douglas DC-3 for FlightGear.
 
 Work in progress.
 
+**This is by no means ready for anything other than early development; use at
+your own risk.**
+
 ## Introduction
 
 The DC-3 is arguably one of the most influential transport aircraft in history.
