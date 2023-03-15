@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>texteL.ac</path>
+
+  <animation>
+    <object-name>texteLeft</object-name>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>texteLeft</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.40 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+  
+  <!--<animation>
+    <type>select</type>
+    <object-name>texteLeft</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>-->
+
+</PropertyList>

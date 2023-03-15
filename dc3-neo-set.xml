@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="dc3-neo-common.xml">
+    
+    <sim>
+        
+        <description>Douglas DC-3</description>
+        <author>Tobias Dammers (Systems, FDM, 3D), Emmanuel Baranger (3D), PAF Team (3D)</author>
+        
+        <flight-model>jsb</flight-model>
+        <aero>dc3</aero>
+        
+        <startup>
+            <!-- <splash-texture>Aircraft/Douglas-Dc3/dc-3-splash.png</splash-texture> -->
+        </startup>
+        
+        <model>
+            <path>Aircraft/DC3-neo/Models/dc-3.xml</path>
+            <variant type="int">0</variant>
+            <livery>
+                <file type="string">default</file>
+            </livery>
+        </model>
+        
+        <!--
+        <sound>
+            <path>Aircraft/Douglas-Dc3/Sounds/dc-3-sound.xml</path>
+        </sound>
+        -->
+    </sim>
+    
+    <nasal>
+    </nasal>
+</PropertyList>

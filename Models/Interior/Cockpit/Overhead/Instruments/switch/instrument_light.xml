@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>contact.ac</path>
+
+  <animation>
+    <object-name>bouton</object-name>
+    <object-name>increase</object-name>
+    <object-name>decrease</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>increase</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/instruments-norm</property>
+        <step>0.02</step>
+        <min>0</min>
+        <max>0.16</max>
+        <wrap>0</wrap>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>decrease</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/instruments-norm</property>
+        <step>-0.02</step>
+        <min>0</min>
+        <max>0.16</max>
+        <wrap>0</wrap>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>bouton</object-name>
+    <property>controls/lighting/instruments-norm</property>
+    <factor> -1125 </factor>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/instruments-norm</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>0.16</max>
+        <wrap>0</wrap>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>

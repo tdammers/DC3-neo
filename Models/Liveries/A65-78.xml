@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- C-47B as used by Australia's ARDU for lo-vis trials -->
+<PropertyList>
+  
+  <sim>
+    
+    <model>
+      <livery>
+        <name type="string">RAAF-A65-78</name>
+        <texture>Liveries/2048x2048/A65-78.png</texture>
+        <specular>
+          <red>   0.3 </red>
+          <green> 0.3 </green>
+          <blue>  0.3 </blue>
+        </specular>
+        <shininess type="float">-0.25</shininess>
+        <civilian type="bool">true</civilian>
+      </livery>
+      <livery-engine>
+        <texture>Liveries/Propeller/A65-78-prop.png</texture>
+        <specular>
+          <red>   0.3 </red>
+          <green> 0.3 </green>
+          <blue>  0.3 </blue>
+        </specular>
+      </livery-engine>
+    </model>
+    
+  </sim>
+  
+</PropertyList>

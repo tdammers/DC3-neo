@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>contact.ac</path>
+
+  <animation>
+    <object-name>bouton</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>increase</object-name>
+    <object-name>decrease</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>bouton</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/formation-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bouton</object-name>
+    <property>controls/lighting/formation-lights-pos</property>
+    <factor> -180 </factor>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

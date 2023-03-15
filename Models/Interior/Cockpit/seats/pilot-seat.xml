@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList> 
+
+  <path>pilot-seat.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fond</object-name>
+    <object-name>acoudoir</object-name>
+    <object-name>structure</object-name>
+    <object-name>coussin</object-name>
+  </animation>
+
+  <!-- Civilian red version -->
+  <animation>
+    <type>material</type>
+    <object-name>fond</object-name>
+    <object-name>acoudoir</object-name>
+    <object-name>structure</object-name>
+    <object-name>coussin</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-red</value>
+      </equals>
+    </condition>
+    <texture>pilot-seat.png</texture>
+  </animation>
+
+  <!-- Civilian gray version -->
+  <animation>
+    <type>material</type>
+    <object-name>fond</object-name>
+    <object-name>acoudoir</object-name>
+    <object-name>structure</object-name>
+    <object-name>coussin</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-gray</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_gray.png</texture>
+  </animation>
+
+  <!-- Military version -->
+  <animation>
+    <type>material</type>
+    <object-name>fond</object-name>
+    <object-name>acoudoir</object-name>
+    <object-name>structure</object-name>
+    <object-name>coussin</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>military</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_military.png</texture>
+  </animation>
+
+  <!-- LoD -->
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>18</max-m>
+  </animation>
+
+</PropertyList>

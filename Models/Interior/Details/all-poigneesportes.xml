@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Poignées portes -->
+  <model>
+    <name>PoigneePorteAvant</name>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poigneeporte.xml</path>
+    <offsets>
+      <x-m> -7.092 </x-m>
+      <y-m> -1.065 </y-m>
+      <z-m> -0.484 </z-m>
+      <heading-deg> -6 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PoigneePorteAvant</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> -170 </factor>
+    <axis>
+      <x1-m> -7.519 </x1-m>
+      <y1-m> -1.069 </y1-m>
+      <z1-m> -0.383 </z1-m>
+      <x2-m> -7.519 </x2-m>
+      <y2-m> -1.076 </y2-m>
+      <z2-m> -0.219 </z2-m>
+    </axis>
+  </animation>
+
+  <model>
+    <name>PoigneePorteArriere</name>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poigneeporte.xml</path>
+    <offsets>
+      <x-m>  2.508 </x-m>
+      <y-m> -1.217 </y-m>
+      <z-m> -0.255 </z-m>
+      <heading-deg> 5 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PoigneePorteArriere</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <factor>  100 </factor>
+    <axis>
+      <x1-m>  2.037 </x1-m>
+      <y1-m> -1.294 </y1-m>
+      <z1-m> -0.362 </z1-m>
+      <x2-m>  2.037 </x2-m>
+      <y2-m> -1.300 </y2-m>
+      <z2-m>  0.069 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PoigneePorteArriere</object-name>
+    <property>instrumentation/doors/cargo/position-norm</property>
+    <factor> -170 </factor>
+    <axis>
+      <x1-m>  1.865 </x1-m>
+      <y1-m> -1.305 </y1-m>
+      <z1-m> -0.366 </z1-m>
+      <x2-m>  1.865 </x2-m>
+      <y2-m> -1.308 </y2-m>
+      <z2-m>  0.067 </z2-m>
+    </axis>
+  </animation>
+
+  <model>
+    <name>PoigneePorteCargo</name>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poigneeporte.xml</path>
+    <offsets>
+      <x-m>  2.960 </x-m>
+      <y-m> -1.167 </y-m>
+      <z-m> -0.255 </z-m>
+      <heading-deg> 7 </heading-deg>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PoigneePorteCargo</object-name>
+    <property>instrumentation/doors/cargo/position-norm</property>
+    <factor> 170 </factor>
+    <axis>
+      <x1-m>  3.720 </x1-m>
+      <y1-m> -1.122 </y1-m>
+      <z1-m> -0.342 </z1-m>
+      <x2-m>  3.720 </x2-m>
+      <y2-m> -1.134 </y2-m>
+      <z2-m>  0.039 </z2-m>
+    </axis>
+  </animation>
+
+</PropertyList>

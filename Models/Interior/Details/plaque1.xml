@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>plaque1.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>plaque1</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>

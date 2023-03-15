@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>blocpiston.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>caches</object-name>
+    <object-name>cames</object-name>
+    <object-name>pistons</object-name>
+    <object-name>ecrous</object-name>
+    <object-name>bougies</object-name>
+    <object-name>tuyaux</object-name>
+    <object-name>souflets</object-name>
+  </animation>
+
+</PropertyList>

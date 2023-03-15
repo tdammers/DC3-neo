@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>r1830.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>bloc</object-name>
+    <object-name>echappes</object-name>
+
+    <object-name>moteurlow</object-name>
+  </animation>
+
+  <model>
+    <name>Bloc1</name>
+    <path>Aircraft/DC3-neo/Models/Engines/blocpiston.xml</path>
+  </model>
+
+  <model>
+    <name>Bloc2</name>
+    <path>Aircraft/DC3-neo/Models/Engines/blocpiston.xml</path>
+    <offsets>
+      <roll-deg> 52 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Bloc3</name>
+    <path>Aircraft/DC3-neo/Models/Engines/blocpiston.xml</path>
+    <offsets>
+      <roll-deg> 104 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Bloc4</name>
+    <path>Aircraft/DC3-neo/Models/Engines/blocpiston.xml</path>
+    <offsets>
+      <roll-deg> 156 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Bloc5</name>
+    <path>Aircraft/DC3-neo/Models/Engines/blocpiston.xml</path>
+    <offsets>
+      <roll-deg> 208 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Bloc6</name>
+    <path>Aircraft/DC3-neo/Models/Engines/blocpiston.xml</path>
+    <offsets>
+      <roll-deg> 260 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Bloc7</name>
+    <path>Aircraft/DC3-neo/Models/Engines/blocpiston.xml</path>
+    <offsets>
+      <roll-deg> 312 </roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>HighPoly</name>
+    <object-name>Bloc1</object-name>
+    <object-name>Bloc2</object-name>
+    <object-name>Bloc3</object-name>
+    <object-name>Bloc4</object-name>
+    <object-name>Bloc5</object-name>
+    <object-name>Bloc6</object-name>
+    <object-name>Bloc7</object-name>
+    <object-name>echappes</object-name>
+    <object-name>bloc</object-name>
+  </animation>
+
+  <animation>
+    <name>LowPoly</name>
+    <object-name>moteurlow</object-name>
+  </animation>
+
+  <model>
+    <path>Aircraft/DC3-neo/Models/Engines/Propeller/propeller.xml</path>
+    <overlay>
+        <params>
+            <rpm>engines/engine[1]/thruster/rpm</rpm>
+            <pitch>engines/engine[1]/propeller-pitch</pitch>
+        </params>
+    </overlay>
+    <offsets>
+      <x-m> -0.610 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>range</type>
+    <object-name>LowPoly</object-name>
+    <min-property>sim/rendering/static-lod/detailed</min-property>
+  </animation>
+
+  <animation>
+    <type>range</type>
+    <object-name>HighPoly</object-name>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/detailed</max-property>
+  </animation>
+
+</PropertyList>

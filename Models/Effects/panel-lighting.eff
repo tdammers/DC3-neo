@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+    <name>Effects/panel-lighting</name>
+    <inherits-from>Effects/model-interior</inherits-from>
+    <parameters>
+        <implicit-lightmap-enabled type="int">1</implicit-lightmap-enabled>
+        <implicit-lightmap-tag-color type="vec3d">1.0 1.0 1.0</implicit-lightmap-tag-color>
+        <implicit-lightmap-emit-color type="vec3d">0.5 0.40 0.25</implicit-lightmap-emit-color>
+        <implicit-lightmap-threshold-low type="float">0.1</implicit-lightmap-threshold-low>
+        <implicit-lightmap-threshold-high type="float">0.9</implicit-lightmap-threshold-high>
+        <implicit-lightmap-intensity>0.5</implicit-lightmap-intensity>
+        <texture n="4">
+            <type>cubemap</type>
+            <images>
+                <positive-x>Aircraft/Douglas-Dc3/Models/Effects/white.png</positive-x>
+                <negative-x>Aircraft/Douglas-Dc3/Models/Effects/white.png</negative-x>
+                <positive-y>Aircraft/Douglas-Dc3/Models/Effects/white.png</positive-y>
+                <negative-y>Aircraft/Douglas-Dc3/Models/Effects/white.png</negative-y>
+                <positive-z>Aircraft/Douglas-Dc3/Models/Effects/white.png</positive-z>
+                <negative-z>Aircraft/Douglas-Dc3/Models/Effects/white.png</negative-z>
+            </images>
+        </texture>
+    </parameters>
+</PropertyList>

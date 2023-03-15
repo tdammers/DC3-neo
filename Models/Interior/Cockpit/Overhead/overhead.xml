@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>overhead.ac</path>
+
+  <!-- LoD -->
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>18</max-m>
+  </animation>
+
+  <!-- Civilian red version -->
+  <animation>
+    <type>material</type>
+    <object-name>overhead</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-red</value>
+      </equals>
+    </condition>
+    <texture>overhead.png</texture>
+  </animation>
+
+  <!-- Civilian gray version -->
+  <animation>
+    <type>material</type>
+    <object-name>overhead</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-gray</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_gray.png</texture>
+  </animation>
+
+  <!-- Military version -->
+  <animation>
+    <type>material</type>
+    <object-name>overhead</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>military</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_military.png</texture>
+  </animation>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/left_overhead.xml</path>
+    <offsets>
+      <x-m>  0.095 </x-m>
+      <y-m> -0.315 </y-m>
+      <z-m>  0.460 </z-m>
+      <pitch-deg>   16.6 </pitch-deg>
+      <heading-deg> 32.8 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/center_overhead.xml</path>
+    <offsets>
+      <x-m> -0.089 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.410 </z-m>
+      <pitch-deg> 12 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/right_overhead.xml</path>
+    <offsets>
+      <x-m>  0.095 </x-m>
+      <y-m>  0.315 </y-m>
+      <z-m>  0.460 </z-m>
+      <pitch-deg>    16.6 </pitch-deg>
+      <heading-deg> -32.8 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

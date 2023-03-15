@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>contact.ac</path>
+
+  <animation>
+    <object-name>bouton</object-name>
+  </animation>
+
+  <animation>
+    <object-name>increase</object-name>
+    <object-name>decrease</object-name>
+    <type>select</type>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>bouton</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/compass-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bouton</object-name>
+    <property>controls/lighting/compass-lights-pos</property>
+    <factor> -180 </factor>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

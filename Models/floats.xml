@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>floats.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>flotteurs</object-name>
+    <object-name>structure</object-name>
+
+    <object-name>gouvernailG</object-name>
+    <object-name>roueAG</object-name>
+    <object-name>Ldamper</object-name>
+    <object-name>Lstrut2</object-name>
+    <object-name>Lstrut1</object-name>
+    <object-name>roueFG</object-name>
+    <object-name>axeFG</object-name>
+
+    <object-name>gouvernailD</object-name>
+    <object-name>roueAD</object-name>
+    <object-name>Rdamper</object-name>
+    <object-name>Rstrut2</object-name>
+    <object-name>Rstrut1</object-name>
+    <object-name>roueFD</object-name>
+    <object-name>axeFD</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>flotteurs</object-name>
+    <object-name>structure</object-name>
+    
+    <object-name>gouvernailG</object-name>
+    <object-name>roueAG</object-name>
+    <object-name>Ldamper</object-name>
+    <object-name>Lstrut2</object-name>
+    <object-name>Lstrut1</object-name>
+    <object-name>roueFG</object-name>
+    <object-name>axeFG</object-name>
+    
+    <object-name>gouvernailD</object-name>
+    <object-name>roueAD</object-name>
+    <object-name>Rdamper</object-name>
+    <object-name>Rstrut2</object-name>
+    <object-name>Rstrut1</object-name>
+    <object-name>roueFD</object-name>
+    <object-name>axeFD</object-name>
+    
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+  
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>flotteurs</object-name>
+    <object-name>structure</object-name>
+  </effect>
+
+  <!-- Effets sur le sol -->
+  <!-- Roue avant gauche -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -9.554 </x-m>
+      <y-m> -2.668 </y-m>
+      <z-m> -4.596 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue avant droite -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m> -9.554 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -4.596 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue centrale gauche -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground2.xml</path>
+    <offsets>
+      <x-m> -2.124 </x-m>
+      <y-m> -2.668 </y-m>
+      <z-m> -4.592 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue centrale droite -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground3.xml</path>
+    <offsets>
+      <x-m> -2.124 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -4.592 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Trainee gauche -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Effects/wakes/wakeG.xml</path>
+    <offsets>
+      <x-m> -1.658 </x-m>
+      <y-m> -2.668 </y-m>
+      <z-m> -3.938 </z-m>
+      <pitch-deg> -45 </pitch-deg>
+    </offsets>
+  </model> 
+
+  <!-- Trainee droite -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Effects/wakes/wakeD.xml</path>
+    <offsets>
+      <x-m> -1.658 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -3.938 </z-m>
+      <pitch-deg> -45 </pitch-deg>
+    </offsets>
+  </model> 
+
+  <animation>
+    <name>EnsembleAvantG</name>
+    <object-name>Ldamper</object-name>
+    <object-name>Lstrut2</object-name>
+    <object-name>roueAG</object-name>
+  </animation>
+
+  <animation>
+    <name>EnsembleAvantD</name>
+    <object-name>Rdamper</object-name>
+    <object-name>Rstrut2</object-name>
+    <object-name>roueAD</object-name>
+  </animation>
+
+  <animation>
+    <name>RoueAvantG</name>
+    <object-name>Ldamper</object-name>
+    <object-name>roueAG</object-name>
+  </animation>
+
+  <animation>
+    <name>RoueAvantD</name>
+    <object-name>Rdamper</object-name>
+    <object-name>roueAD</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>EnsembleAvantG</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -0.28 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.00 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -9.771 </x-m>
+      <y-m> -2.668 </y-m>
+      <z-m> -3.719 </z-m>
+    </center>
+    <axis>
+      <x> -0.042258 </x>
+      <y>  0.000000 </y>
+      <z> -0.099868 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>EnsembleAvantD</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -0.28 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.00 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -9.771 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -3.719 </z-m>
+    </center>
+    <axis>
+      <x> -0.042258 </x>
+      <y>  0.000000 </y>
+      <z> -0.099868 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RoueAvantG</object-name>
+    <property>gear/gear[0]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -50 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -9.771 </x-m>
+      <y-m> -2.668 </y-m>
+      <z-m> -3.719 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RoueAvantD</object-name>
+    <property>gear/gear[1]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -50 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -9.771 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -3.719 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>roueFG</object-name>
+    <object-name>axeFG</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -0.34 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.00 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -2.112 </x-m>
+      <y-m> -2.668 </y-m>
+      <z-m> -4.175 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>roueFG</object-name>
+    <property>gear/gear[2]/compression-m</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -2.112 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -4.175 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>roueFD</object-name>
+    <object-name>axeFD</object-name>
+    <property>gear/gear[3]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -0.34 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.00 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -2.112 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -4.175 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>roueFD</object-name>
+    <property>gear/gear[3]/compression-m</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -2.112 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -4.175 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueAG</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -9.545 </x-m>
+      <y-m> -2.668 </y-m>
+      <z-m> -4.302 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueAD</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -9.545 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -4.302 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueFG</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -2.112 </x-m>
+      <y-m> -2.668 </y-m>
+      <z-m> -4.175 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueFD</object-name>
+    <property>gear/gear[3]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -2.112 </x-m>
+      <y-m>  2.668 </y-m>
+      <z-m> -4.175 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

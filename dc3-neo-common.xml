@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PropertyList>
+    <sim>
+
+        <fuel-fraction>0.8</fuel-fraction>
+
+        <rating>
+            <FDM type="int">     3 </FDM>
+            <systems type="int"> 1 </systems>
+            <cockpit type="int"> 1 </cockpit>
+            <model type="int">   3 </model>
+        </rating>
+        <tags>
+            <tag>transport</tag>
+            <tag>bush-plane</tag>
+            <tag>douglas</tag>
+            <tag>1930s</tag>
+            <tag>1940s</tag>
+            <tag>castering-wheel</tag>
+            <tag>retractable-gear</tag>
+            <tag>tail-dragger</tag>
+            <tag>propeller</tag>
+            <tag>piston</tag>
+            <tag>twin-engine</tag>
+            <tag>variable-pitch</tag>
+        </tags>
+
+        <!--
+    <previews>
+        <preview>
+            <type>exterior</type>
+            <path>Splash/splash1.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+        <preview>
+            <type>exterior</type>
+            <path>Splash/splash2.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+        <preview>
+            <type>exterior</type>
+            <path>Splash/splash3.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+        <preview>
+            <type>interior</type>
+            <path>Splash/splash4.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+        <preview>
+            <type>exterior</type>
+            <path>Splash/splash5.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+    </previews>
+    -->
+
+        <model>
+            <start-idling type="bool">false</start-idling>
+            <config>
+                <show-yokes type="bool">true</show-yokes>
+                <show-pilot type="bool">true</show-pilot>
+                <show-copilot type="bool">true</show-copilot>
+            </config>
+        </model>
+
+        <views include="dc3-neo-views.xml">
+        </views>
+
+        <current-view>
+            <can-change-z-offset type="bool">false</can-change-z-offset>
+            <z-offset-min-m type="float">12.5</z-offset-min-m>
+            <z-offset-max-m type="float">3200.0</z-offset-max-m>
+        </current-view>
+
+        <aircraft-data>
+            <path>/sim/model/config/show-yokes</path>
+            <path>/sim/model/config/show-pilot</path>
+            <path>/sim/model/config/show-copilot</path>
+            <path>/sim/model/config/details-high</path>
+            <path>/sim/model/config/light-cone</path>
+            <path>/sim/model/config/version</path>
+            <path>/sim/model/config/panel</path>
+            <path>/instrumentation/gps155/settings</path>
+        </aircraft-data>
+
+        <rendering>
+            <static-lod>
+                <ai-detailed>1500</ai-detailed>
+            </static-lod>
+        </rendering>
+
+        <freeze>
+            <fuel type="bool">true</fuel>
+        </freeze>
+
+        <multiplay n="0">
+            <chat_display>1</chat_display>
+            <generic n="0">
+                <!-- <int   n="11" alias="/sim/model/lights/passing/state"/> -->
+            </generic>
+        </multiplay>
+
+        <systems>
+        </systems>
+
+    </sim>
+
+    <consumables>
+        <fuel>
+            <tank n="0">
+                <name>Forward Left</name>
+            </tank>
+            <tank n="1">
+                <name>Forward Right</name>
+            </tank>
+            <tank n="2">
+                <name>Rear Left</name>
+            </tank>
+            <tank n="3">
+                <name>Rear Right</name>
+            </tank>
+        </fuel>
+    </consumables>
+
+    <payload>
+        <weight n="0">
+            <name>Flight Crew (A)</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+            <max-lb>600</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="1">
+            <name>Baggage Front (B)</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+            <max-lb>800</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="2">
+            <name>Front Galley / Navigator (C)</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+            <max-lb>1000</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="3">
+            <name>Passengers / Cargo D</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+            <max-lb>3000</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="4">
+            <name>Passengers / Cargo E</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+            <max-lb>3000</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="5">
+            <name>Passengers / Cargo F</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+            <max-lb>2400</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="6">
+            <name>Baggage Rear (G)</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+            <max-lb>1300</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="7">
+            <name>Rear Galley / Lavatory</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+            <max-lb>350</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+    </payload>
+
+    <nasal>
+    </nasal>
+
+    <autopilot>
+    </autopilot>
+
+    <fdm>
+        <jsbsim>
+            <params>
+                <pitch>
+                    <alpha>1.0</alpha>
+                    <alphadot>0.4550</alphadot>
+                    <elevator>-0.4654</elevator>
+                    <propwash>1.0</propwash>
+                    <rate>1.2683</rate>
+                </pitch>
+                <roll>
+                    <aileron>0.5</aileron>
+                    <beta>0.2</beta>
+                    <damp>-1.0</damp>
+                    <rudder>0.05</rudder>
+                    <yaw>0.25</yaw>
+                </roll>
+                <yaw>
+                    <aileron>0.1</aileron>
+                    <beta>1.0</beta>
+                    <damp>0.5</damp>
+                    <roll>0.1</roll>
+                    <rudder>0.2</rudder>
+                </yaw>
+            </params>
+        </jsbsim>
+    </fdm>
+
+    <controls>
+        <engines>
+            <engine n="0">
+                <feed_tank type="int">0</feed_tank>
+            </engine>
+            <engine n="1">
+                <feed_tank type="int">1</feed_tank>
+            </engine>
+        </engines>
+    </controls>
+
+    <input>
+        <keyboard>
+          <key n="77">
+            <name>M</name>
+            <desc>Increase Mixture</desc>
+            <binding>
+              <command>property-adjust</command>
+              <property>/controls/engines/mixture-all</property>
+              <step>-0.25</step>
+              <min>-1</min>
+              <max>1</max>
+            </binding>
+          </key>
+          <key n="109">
+            <name>m</name>
+            <desc>Decrease Mixture</desc>
+            <binding>
+              <command>property-adjust</command>
+              <property>/controls/engines/mixture-all</property>
+              <step>0.25</step>
+              <min>-1</min>
+              <max>1</max>
+            </binding>
+          </key>
+        </keyboard>
+    </input>
+
+</PropertyList>

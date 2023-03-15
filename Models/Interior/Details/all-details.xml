@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Extincteurs -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/extincteur.xml</path>
+    <offsets>
+      <x-m> -6.929 </x-m>
+      <y-m>  0.823 </y-m>
+      <z-m> -0.260 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pochette -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/pochette.xml</path>
+    <offsets>
+      <x-m> -6.881 </x-m>
+      <y-m>  0.621 </y-m>
+      <z-m>  0.434 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/extincteur.xml</path>
+    <offsets>
+      <x-m>  4.381 </x-m>
+      <y-m> -0.787 </y-m>
+      <z-m> -0.260 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Plaque 1 -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque1.xml</path>
+    <offsets>
+      <x-m> -6.878 </x-m>
+      <y-m>  0.847 </y-m>
+      <z-m>  0.114 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque1.xml</path>
+    <offsets>
+      <x-m> 4.441 </x-m>
+      <y-m> 0.572 </y-m>
+      <z-m> 0.167 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque1.xml</path>
+    <offsets>
+      <x-m>  4.441 </x-m>
+      <y-m> -0.783 </y-m>
+      <z-m>  0.044 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Plaque 2 -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque2.xml</path>
+    <offsets>
+      <x-m> 4.441 </x-m>
+      <y-m> 0.560 </y-m>
+      <z-m> 0.353 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Plaque 3 -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque3.xml</path>
+    <offsets>
+      <x-m> -7.613 </x-m>
+      <y-m>  0.780 </y-m>
+      <z-m>  0.408 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque3.xml</path>
+    <offsets>
+      <x-m> -7.613 </x-m>
+      <y-m> -0.780 </y-m>
+      <z-m>  0.408 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Plaque 4 -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque4.xml</path>
+    <offsets>
+      <x-m> -7.557 </x-m>
+      <y-m> -0.784 </y-m>
+      <z-m>  0.349 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque4.xml</path>
+    <offsets>
+      <x-m> -7.557 </x-m>
+      <y-m>  0.784 </y-m>
+      <z-m>  0.349 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Plaque 5 -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque5.xml</path>
+    <offsets>
+      <x-m> -6.844 </x-m>
+      <y-m>  0.454 </y-m>
+      <z-m>  0.344 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Plaque porte avant -->
+  <model>
+    <name>PlaquePorteAvant</name>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaqueporte.xml</path>
+    <offsets>
+      <x-m> -7.159 </x-m>
+      <y-m> -1.089 </y-m>
+      <z-m> -0.256 </z-m>
+      <heading-deg> 84 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PlaquePorteAvant</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> -170 </factor>
+    <axis>
+      <x1-m> -7.519 </x1-m>
+      <y1-m> -1.069 </y1-m>
+      <z1-m> -0.383 </z1-m>
+      <x2-m> -7.519 </x2-m>
+      <y2-m> -1.076 </y2-m>
+      <z2-m> -0.219 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Plaque porte arriere -->
+  <model>
+    <name>PlaquePorteArriere</name>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque6.xml</path>
+    <offsets>
+      <x-m>  2.276 </x-m>
+      <y-m> -1.256 </y-m>
+      <z-m>  0.003 </z-m>
+      <heading-deg> 94 </heading-deg>
+      <pitch-deg>    2 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PlaquePorteArriere</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <factor>  100 </factor>
+    <axis>
+      <x1-m>  2.037 </x1-m>
+      <y1-m> -1.294 </y1-m>
+      <z1-m> -0.362 </z1-m>
+      <x2-m>  2.037 </x2-m>
+      <y2-m> -1.300 </y2-m>
+      <z2-m>  0.069 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PlaquePorteArriere</object-name>
+    <property>instrumentation/doors/cargo/position-norm</property>
+    <factor> -170 </factor>
+    <axis>
+      <x1-m>  1.865 </x1-m>
+      <y1-m> -1.305 </y1-m>
+      <z1-m> -0.366 </z1-m>
+      <x2-m>  1.865 </x2-m>
+      <y2-m> -1.308 </y2-m>
+      <z2-m>  0.067 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Plaque porte cargo -->
+  <model>
+    <name>PlaquePorteCargo</name>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/plaque6.xml</path>
+    <offsets>
+      <x-m>  3.168 </x-m>
+      <y-m> -1.148 </y-m>
+      <z-m>  0.218 </z-m>
+      <heading-deg> 97 </heading-deg>
+      <pitch-deg>   12 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PlaquePorteCargo</object-name>
+    <property>instrumentation/doors/cargo/position-norm</property>
+    <factor> 170 </factor>
+    <axis>
+      <x1-m>  3.720 </x1-m>
+      <y1-m> -1.122 </y1-m>
+      <z1-m> -0.342 </z1-m>
+      <x2-m>  3.720 </x2-m>
+      <y2-m> -1.134 </y2-m>
+      <z2-m>  0.039 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Grande tringle -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringlegrande.xml</path>
+    <offsets>
+      <x-m> -7.547 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.862 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringlegrande.xml</path>
+    <offsets>
+      <x-m> -7.619 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.862 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Grand Rideau -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideaugrand.xml</path>
+    <offsets>
+      <x-m> -7.542 </x-m>
+      <y-m> -0.023 </y-m>
+      <z-m>  0.140 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideaugrand.xml</path>
+    <offsets>
+      <x-m> -7.623 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.140 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Petitex tringlex et rideaux -->
+  <!-- Cote gauche -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m>  1.409 </x-m>
+      <y-m> -1.263 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m>  1.415 </x-m>
+      <y-m> -1.257 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m>  0.411 </x-m>
+      <y-m> -1.257 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m>  0.413 </x-m>
+      <y-m> -1.248 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -0.630 </x-m>
+      <y-m> -1.259 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -0.627 </x-m>
+      <y-m> -1.248 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -1.573 </x-m>
+      <y-m> -1.260 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -1.574 </x-m>
+      <y-m> -1.248 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -2.581 </x-m>
+      <y-m> -1.260 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -2.589 </x-m>
+      <y-m> -1.248 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -3.600 </x-m>
+      <y-m> -1.254 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> 89 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -3.603 </x-m>
+      <y-m> -1.244 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> 89 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -4.522 </x-m>
+      <y-m> -1.239 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> 88 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -4.528 </x-m>
+      <y-m> -1.229 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> 88 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -5.463 </x-m>
+      <y-m> -1.195 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> 86 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -5.468 </x-m>
+      <y-m> -1.182 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> 86 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Cote droit -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> 1.409 </x-m>
+      <y-m> 1.263 </y-m>
+      <z-m> 0.220 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> 1.415 </x-m>
+      <y-m> 1.257 </y-m>
+      <z-m> 0.032 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> 0.411 </x-m>
+      <y-m> 1.257 </y-m>
+      <z-m> 0.220 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> 0.413 </x-m>
+      <y-m> 1.248 </y-m>
+      <z-m> 0.032 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -0.630 </x-m>
+      <y-m>  1.259 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -0.627 </x-m>
+      <y-m>  1.248 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -1.573 </x-m>
+      <y-m>  1.260 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -1.574 </x-m>
+      <y-m>  1.248 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -2.581 </x-m>
+      <y-m>  1.260 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -2.589 </x-m>
+      <y-m>  1.248 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -3.600 </x-m>
+      <y-m>  1.254 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> -89 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -3.603 </x-m>
+      <y-m>  1.244 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> -89 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -4.522 </x-m>
+      <y-m>  1.239 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> -88 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -4.528 </x-m>
+      <y-m>  1.229 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> -88 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/tringle.xml</path>
+    <offsets>
+      <x-m> -5.463 </x-m>
+      <y-m>  1.195 </y-m>
+      <z-m>  0.220 </z-m>
+      <heading-deg> -86 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/rideau.xml</path>
+    <offsets>
+      <x-m> -5.468 </x-m>
+      <y-m>  1.182 </y-m>
+      <z-m>  0.032 </z-m>
+      <heading-deg> -86 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Toutes les lampes -->
+  <!-- Gauche -->       
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -5.859 </x-m>
+      <y-m> -0.864 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -5.132 </x-m>
+      <y-m> -0.942 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -4.385 </x-m>
+      <y-m> -0.979 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -3.643 </x-m>
+      <y-m> -0.979 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -2.884 </x-m>
+      <y-m> -0.979 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -2.172 </x-m>
+      <y-m> -0.979 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -1.442 </x-m>
+      <y-m> -0.979 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -0.688 </x-m>
+      <y-m> -0.979 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m>  0.0418 </x-m>
+      <y-m> -0.9790 </y-m>
+      <z-m>  0.3400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m>  0.772 </x-m>
+      <y-m> -0.979 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m>  1.502 </x-m>
+      <y-m> -0.979 </y-m>
+      <z-m>  0.340 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Droite -->       
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -5.859 </x-m>
+      <y-m>  0.864 </y-m>
+      <z-m>  0.340 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -5.132 </x-m>
+      <y-m>  0.942 </y-m>
+      <z-m>  0.340 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -4.385 </x-m>
+      <y-m>  0.979 </y-m>
+      <z-m>  0.340 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -3.643 </x-m>
+      <y-m>  0.979 </y-m>
+      <z-m>  0.340 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -2.884 </x-m>
+      <y-m>  0.979 </y-m>
+      <z-m>  0.340 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -2.172 </x-m>
+      <y-m>  0.979 </y-m>
+      <z-m>  0.340 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -1.442 </x-m>
+      <y-m>  0.979 </y-m>
+      <z-m>  0.340 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> -0.688 </x-m>
+      <y-m>  0.979 </y-m>
+      <z-m>  0.340 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> 0.0418 </x-m>
+      <y-m> 0.9790 </y-m>
+      <z-m> 0.3400 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> 0.772 </x-m>
+      <y-m> 0.979 </y-m>
+      <z-m> 0.367 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> 1.502 </x-m>
+      <y-m> 0.900 </y-m>
+      <z-m> 0.364 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/lampes.xml</path>
+    <offsets>
+      <x-m> 2.302 </x-m>
+      <y-m> 0.880 </y-m>
+      <z-m> 0.355 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Les poignees -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -5.633 </x-m>
+      <y-m> -0.730 </y-m>
+      <z-m>  0.497 </z-m>
+      <roll-deg>    -40 </roll-deg>
+      <heading-deg>  -4 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -4.483 </x-m>
+      <y-m> -0.801 </y-m>
+      <z-m>  0.497 </z-m>
+      <roll-deg>    -40 </roll-deg>
+      <heading-deg>  -2 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -3.383 </x-m>
+      <y-m> -0.801 </y-m>
+      <z-m>  0.497 </z-m>
+      <roll-deg>    -40 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -2.222 </x-m>
+      <y-m> -0.799 </y-m>
+      <z-m>  0.495 </z-m>
+      <roll-deg>   -40 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -1.112 </x-m>
+      <y-m> -0.798 </y-m>
+      <z-m>  0.494 </z-m>
+      <roll-deg>   -40 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m>  0.028 </x-m>
+      <y-m> -0.795 </y-m>
+      <z-m>  0.491 </z-m>
+      <roll-deg>   -40 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m>  1.168 </x-m>
+      <y-m> -0.790 </y-m>
+      <z-m>  0.486 </z-m>
+      <roll-deg>   -40 </roll-deg>
+    </offsets>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -5.633 </x-m>
+      <y-m>  0.730 </y-m>
+      <z-m>  0.497 </z-m>
+      <roll-deg>   -150 </roll-deg>
+      <heading-deg>   4 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -4.483 </x-m>
+      <y-m>  0.801 </y-m>
+      <z-m>  0.497 </z-m>
+      <roll-deg>   -150 </roll-deg>
+      <heading-deg>   2 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -3.383 </x-m>
+      <y-m>  0.801 </y-m>
+      <z-m>  0.497 </z-m>
+      <roll-deg>   -150 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -2.222 </x-m>
+      <y-m>  0.798 </y-m>
+      <z-m>  0.494 </z-m>
+      <roll-deg>   -150 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> -1.112 </x-m>
+      <y-m>  0.796 </y-m>
+      <z-m>  0.493 </z-m>
+      <roll-deg> -150 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> 0.118 </x-m>
+      <y-m> 0.786 </y-m>
+      <z-m> 0.497 </z-m>
+      <roll-deg> -150 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> 1.318 </x-m>
+      <y-m> 0.787 </y-m>
+      <z-m> 0.485 </z-m>
+      <roll-deg> -150 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poignee.xml</path>
+    <offsets>
+      <x-m> 2.488 </x-m>
+      <y-m> 0.732 </y-m>
+      <z-m> 0.485 </z-m>
+      <roll-deg>   -150 </roll-deg>
+      <heading-deg>  -4 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

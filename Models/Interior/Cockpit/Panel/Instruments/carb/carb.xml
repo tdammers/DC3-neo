@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--Tout est à définir-->
+<PropertyList>
+
+  <path>carb.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>fond2</object-name>
+    <object-name>face</object-name>
+    <object-name>visses</object-name>
+    <object-name>needleL</object-name>
+    <object-name>needleR</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Douglas-Dc3/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needleL</object-name>
+    <object-name>needleR</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needleL</object-name>
+    <property>engines/engine/carb-temp-degc</property>
+    <interpolation>
+      <entry><ind> -50 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>   0 </ind><dep>  26.5 </dep></entry>
+      <entry><ind>  50 </ind><dep>  56.8 </dep></entry>
+      <entry><ind> 100 </ind><dep>  89.2 </dep></entry>
+      <entry><ind> 150 </ind><dep> 114.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.004 </x-m>
+      <y-m> -0.015 </y-m>
+      <z-m> -0.001 </z-m>  
+    </center>
+    <axis> 
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needleR</object-name>
+    <property>engines/engine[1]/carb-temp-degc</property>
+    <interpolation>
+      <entry><ind> -50 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>   0 </ind><dep>  26.5 </dep></entry>
+      <entry><ind>  50 </ind><dep>  56.8 </dep></entry>
+      <entry><ind> 100 </ind><dep>  89.2 </dep></entry>
+      <entry><ind> 150 </ind><dep> 114.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.004 </x-m>
+      <y-m> 0.015 </y-m>
+      <z-m> 0.001 </z-m>  
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

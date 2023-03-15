@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<system name="Landing Gear">
+    <channel name="Landing Gear">
+        <switch name="fcs/gear-no-wow">
+            <default value="1"/>
+            <test logic="AND" value="0">
+                gear/unit[1]/WOW eq 1
+                gear/unit[2]/WOW eq 1
+            </test>
+        </switch>
+
+        <kinematic name="Landing Gear Control">
+            <input>gear/gear-cmd-norm</input>
+            <traverse>
+                <setting>
+                    <position> 0 </position>
+                    <time>     0 </time>
+                </setting>
+                <setting>
+                    <position> 1 </position>
+                    <time>  11.5 </time>
+                </setting>
+            </traverse>
+            <output>gear/gear-pos-norm</output>
+        </kinematic>
+
+        <pure_gain name="Tail Wheel Caster Angle">
+            <input>gear/unit[2]/steering-angle-deg</input>
+            <output>/gear/gear[2]/caster-angle-deg</output>
+        </pure_gain>
+
+        <switch name="Tail Wheel Lock">
+            <default value="1" />
+            <test logic="AND" value="0">
+                /controls/gear/tailwheel-lock eq 1
+                <!--
+                gear/unit[2]/steering-angle-deg lt 5
+                gear/unit[2]/steering-angle-deg gt -5
+                -->
+            </test>
+            <output>gear/unit[2]/castered</output>
+        </switch>
+    </channel>
+    
+</system>

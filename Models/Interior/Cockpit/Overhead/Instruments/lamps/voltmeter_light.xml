@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>voltmeter_light.ac</path>
+
+  <animation>
+    <object-name>lampoff</object-name>
+    <object-name>lampon</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lampon</object-name>
+    <condition>
+      <and>
+        <property>/controls/electric/engine[0]/generator</property>
+        <property>/controls/electric/engine[1]/generator</property>
+        <not>
+          <property>/engines/engine[0]/running</property>
+          <property>/engines/engine[1]/running</property>
+        </not>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampoff</object-name>
+    <emission>
+      <red>   0 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampon</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/volts</factor-prop>
+      <red>   2.00 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+</PropertyList>

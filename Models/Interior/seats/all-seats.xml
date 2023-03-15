@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Passagers -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -5.250 </x-m>
+      <y-m> -0.838 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -5.250 </x-m>
+      <y-m>  0.259 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -5.250 </x-m>
+      <y-m>  0.799 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -4.250 </x-m>
+      <y-m> -0.838 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -4.250 </x-m>
+      <y-m>  0.259 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -4.250 </x-m>
+      <y-m>  0.799 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -3.250 </x-m>
+      <y-m> -0.838 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -3.250 </x-m>
+      <y-m>  0.259 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -3.250 </x-m>
+      <y-m>  0.799 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -2.250 </x-m>
+      <y-m> -0.838 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -2.250 </x-m>
+      <y-m>  0.259 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -2.250 </x-m>
+      <y-m>  0.799 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -1.250 </x-m>
+      <y-m> -0.838 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -1.250 </x-m>
+      <y-m>  0.259 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -1.250 </x-m>
+      <y-m>  0.799 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -0.250 </x-m>
+      <y-m> -0.838 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -0.250 </x-m>
+      <y-m>  0.259 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -0.250 </x-m>
+      <y-m>  0.799 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m>  0.750 </x-m>
+      <y-m> -0.838 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m>  0.750 </x-m>
+      <y-m>  0.259 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m>  0.750 </x-m>
+      <y-m>  0.799 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m>  1.750 </x-m>
+      <y-m>  0.259 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m>  1.750 </x-m>
+      <y-m>  0.799 </y-m>
+      <z-m> -0.410 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

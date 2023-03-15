@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>center_console.ac</path>
+
+  <animation>
+    <object-name>cons_bas</object-name>
+    <object-name>corps-milieu</object-name>
+    <object-name>corps-haut</object-name>
+    <object-name>ailerontrim</object-name>
+    <object-name>ruddertrim</object-name>
+    <object-name>onoff</object-name>
+    <object-name>aileron</object-name>
+    <object-name>rudder</object-name>
+    <object-name>lev1</object-name>
+    <object-name>axe</object-name>
+    <object-name>Aileron_trim</object-name>
+    <object-name>Rudder_trim</object-name>
+    <object-name>volantTrim</object-name>
+    <object-name>carter-trim</object-name>
+    <object-name>Grad_mixt</object-name>
+    <object-name>textmanL</object-name>
+    <object-name>textmanR</object-name>
+    <object-name>fuel_left</object-name>
+    <object-name>fuel_right</object-name>
+    <object-name>textmanL</object-name>
+    <object-name>textmanR</object-name>
+    <object-name>Ail_trim_needle</object-name>
+    <object-name>Rud_trim_needle</object-name>
+    <object-name>elev_trim_index</object-name>
+    <object-name>elev_trim</object-name>
+    <object-name>Prop_G</object-name>
+    <object-name>Prop_D</object-name>
+    <object-name>Throt_G</object-name>
+    <object-name>Throt_D</object-name>
+    <object-name>Mixt_G</object-name>
+    <object-name>Mixt_D</object-name>
+    <object-name>guideP</object-name>
+    <object-name>guideP2</object-name>
+    <object-name>guideT</object-name>
+    <object-name>guideT2</object-name>
+    <object-name>guideM</object-name>
+    <object-name>guideM2</object-name>
+    <object-name>support</object-name>
+    <object-name>manette1</object-name>
+    <object-name>manette2</object-name>
+    <object-name>manette3</object-name>
+    <object-name>souslevierM_D</object-name>
+    <object-name>levierM_D</object-name>
+    <object-name>souslevierM_G</object-name>
+    <object-name>levierM_G</object-name>
+    <object-name>brake_parking</object-name>
+    <object-name>brake_throttle</object-name>
+
+    <object-name>prop_g_up</object-name>
+    <object-name>prop_g_dwn</object-name>
+    <object-name>prop_d_up</object-name>
+    <object-name>prop_d_dwn</object-name>
+    <object-name>throt_g_up</object-name>
+    <object-name>throt_g_dwn</object-name>
+    <object-name>throt_d_up</object-name>
+    <object-name>throt_d_dwn</object-name>
+    <object-name>mixt_g_up</object-name>
+    <object-name>mixt_g_dwn</object-name>
+    <object-name>mixt_d_up</object-name>
+    <object-name>mixt_d_dwn</object-name>
+    <object-name>el_trim_dwn</object-name>
+    <object-name>el_trim_up</object-name>
+    <object-name>ail_trim_l</object-name>
+    <object-name>ail_trim_r</object-name>
+    <object-name>rud_trim_l</object-name>
+    <object-name>rud_trim_r</object-name>
+    <object-name>fuel_left_ccw</object-name>
+    <object-name>fuel_left_cw</object-name>
+    <object-name>fuel_right_ccw</object-name>
+    <object-name>fuel_right_cw</object-name>
+    <object-name>tailwheel_lock</object-name>
+    <object-name>plaque-tw</object-name>
+  </animation>
+
+  <!-- Civilian red version -->
+  <animation>
+    <type>material</type>
+    <object-name>cons_bas</object-name>
+    <object-name>corps-milieu</object-name>
+    <object-name>corps-haut</object-name>
+    <object-name>ailerontrim</object-name>
+    <object-name>ruddertrim</object-name>
+    <object-name>onoff</object-name>
+    <object-name>aileron</object-name>
+    <object-name>rudder</object-name>
+    <object-name>lev1</object-name>
+    <object-name>axe</object-name>
+    <object-name>Aileron_trim</object-name>
+    <object-name>Rudder_trim</object-name>
+    <object-name>volantTrim</object-name>
+    <object-name>carter-trim</object-name>
+    <object-name>Grad_mixt</object-name>
+    <object-name>textmanL</object-name>
+    <object-name>textmanR</object-name>
+    <object-name>fuel_left</object-name>
+    <object-name>fuel_right</object-name>
+    <object-name>textmanL</object-name>
+    <object-name>textmanR</object-name>
+    <object-name>Ail_trim_needle</object-name>
+    <object-name>Rud_trim_needle</object-name>
+    <object-name>elev_trim_index</object-name>
+    <object-name>elev_trim</object-name>
+    <object-name>Prop_G</object-name>
+    <object-name>Prop_D</object-name>
+    <object-name>Throt_G</object-name>
+    <object-name>Throt_D</object-name>
+    <object-name>Mixt_G</object-name>
+    <object-name>Mixt_D</object-name>
+    <object-name>guideP</object-name>
+    <object-name>guideP2</object-name>
+    <object-name>guideT</object-name>
+    <object-name>guideT2</object-name>
+    <object-name>guideM</object-name>
+    <object-name>guideM2</object-name>
+    <object-name>support</object-name>
+    <object-name>manette1</object-name>
+    <object-name>manette2</object-name>
+    <object-name>manette3</object-name>
+    <object-name>souslevierM_D</object-name>
+    <object-name>levierM_D</object-name>
+    <object-name>souslevierM_G</object-name>
+    <object-name>levierM_G</object-name>
+    <object-name>brake_parking</object-name>
+    <object-name>brake_throttle</object-name>
+
+    <object-name>prop_g_up</object-name>
+    <object-name>prop_g_dwn</object-name>
+    <object-name>prop_d_up</object-name>
+    <object-name>prop_d_dwn</object-name>
+    <object-name>throt_g_up</object-name>
+    <object-name>throt_g_dwn</object-name>
+    <object-name>throt_d_up</object-name>
+    <object-name>throt_d_dwn</object-name>
+    <object-name>mixt_g_up</object-name>
+    <object-name>mixt_g_dwn</object-name>
+    <object-name>mixt_d_up</object-name>
+    <object-name>mixt_d_dwn</object-name>
+    <object-name>el_trim_dwn</object-name>
+    <object-name>el_trim_up</object-name>
+    <object-name>ail_trim_l</object-name>
+    <object-name>ail_trim_r</object-name>
+    <object-name>rud_trim_l</object-name>
+    <object-name>rud_trim_r</object-name>
+    <object-name>fuel_left_ccw</object-name>
+    <object-name>fuel_left_cw</object-name>
+    <object-name>fuel_right_ccw</object-name>
+    <object-name>fuel_right_cw</object-name>
+    <object-name>tailwheel_lock</object-name>
+    <object-name>plaque-tw</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/model/config/version</property>
+          <value>civilian-red</value>
+        </equals>
+      </and>
+    </condition>
+    <texture>pedestal.png</texture>
+  </animation>
+
+  <!-- Civilian gray version -->
+  <animation>
+    <type>material</type>
+    <object-name>cons_bas</object-name>
+    <object-name>corps-milieu</object-name>
+    <object-name>corps-haut</object-name>
+    <object-name>ailerontrim</object-name>
+    <object-name>ruddertrim</object-name>
+    <object-name>onoff</object-name>
+    <object-name>aileron</object-name>
+    <object-name>rudder</object-name>
+    <object-name>lev1</object-name>
+    <object-name>axe</object-name>
+    <object-name>Aileron_trim</object-name>
+    <object-name>Rudder_trim</object-name>
+    <object-name>volantTrim</object-name>
+    <object-name>carter-trim</object-name>
+    <object-name>Grad_mixt</object-name>
+    <object-name>textmanL</object-name>
+    <object-name>textmanR</object-name>
+    <object-name>fuel_left</object-name>
+    <object-name>fuel_right</object-name>
+    <object-name>textmanL</object-name>
+    <object-name>textmanR</object-name>
+    <object-name>Ail_trim_needle</object-name>
+    <object-name>Rud_trim_needle</object-name>
+    <object-name>elev_trim_index</object-name>
+    <object-name>elev_trim</object-name>
+    <object-name>Prop_G</object-name>
+    <object-name>Prop_D</object-name>
+    <object-name>Throt_G</object-name>
+    <object-name>Throt_D</object-name>
+    <object-name>Mixt_G</object-name>
+    <object-name>Mixt_D</object-name>
+    <object-name>guideP</object-name>
+    <object-name>guideP2</object-name>
+    <object-name>guideT</object-name>
+    <object-name>guideT2</object-name>
+    <object-name>guideM</object-name>
+    <object-name>guideM2</object-name>
+    <object-name>support</object-name>
+    <object-name>manette1</object-name>
+    <object-name>manette2</object-name>
+    <object-name>manette3</object-name>
+    <object-name>souslevierM_D</object-name>
+    <object-name>levierM_D</object-name>
+    <object-name>souslevierM_G</object-name>
+    <object-name>levierM_G</object-name>
+    <object-name>brake_parking</object-name>
+    <object-name>brake_throttle</object-name>
+
+    <object-name>prop_g_up</object-name>
+    <object-name>prop_g_dwn</object-name>
+    <object-name>prop_d_up</object-name>
+    <object-name>prop_d_dwn</object-name>
+    <object-name>throt_g_up</object-name>
+    <object-name>throt_g_dwn</object-name>
+    <object-name>throt_d_up</object-name>
+    <object-name>throt_d_dwn</object-name>
+    <object-name>mixt_g_up</object-name>
+    <object-name>mixt_g_dwn</object-name>
+    <object-name>mixt_d_up</object-name>
+    <object-name>mixt_d_dwn</object-name>
+    <object-name>el_trim_dwn</object-name>
+    <object-name>el_trim_up</object-name>
+    <object-name>ail_trim_l</object-name>
+    <object-name>ail_trim_r</object-name>
+    <object-name>rud_trim_l</object-name>
+    <object-name>rud_trim_r</object-name>
+    <object-name>fuel_left_ccw</object-name>
+    <object-name>fuel_left_cw</object-name>
+    <object-name>fuel_right_ccw</object-name>
+    <object-name>fuel_right_cw</object-name>
+    <object-name>tailwheel_lock</object-name>
+    <object-name>plaque-tw</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/model/config/version</property>
+          <value>civilian-gray</value>
+        </equals>
+      </and>
+    </condition>
+    <texture>Liveries/colors_gray.png</texture>
+  </animation>
+
+  <!-- Military version -->
+  <animation>
+    <type>material</type>
+    <object-name>cons_bas</object-name>
+    <object-name>corps-milieu</object-name>
+    <object-name>corps-haut</object-name>
+    <object-name>ailerontrim</object-name>
+    <object-name>ruddertrim</object-name>
+    <object-name>onoff</object-name>
+    <object-name>aileron</object-name>
+    <object-name>rudder</object-name>
+    <object-name>lev1</object-name>
+    <object-name>axe</object-name>
+    <object-name>Aileron_trim</object-name>
+    <object-name>Rudder_trim</object-name>
+    <object-name>volantTrim</object-name>
+    <object-name>carter-trim</object-name>
+    <object-name>Grad_mixt</object-name>
+    <object-name>textmanL</object-name>
+    <object-name>textmanR</object-name>
+    <object-name>fuel_left</object-name>
+    <object-name>fuel_right</object-name>
+    <object-name>textmanL</object-name>
+    <object-name>textmanR</object-name>
+    <object-name>Ail_trim_needle</object-name>
+    <object-name>Rud_trim_needle</object-name>
+    <object-name>elev_trim_index</object-name>
+    <object-name>elev_trim</object-name>
+    <object-name>Prop_G</object-name>
+    <object-name>Prop_D</object-name>
+    <object-name>Throt_G</object-name>
+    <object-name>Throt_D</object-name>
+    <object-name>Mixt_G</object-name>
+    <object-name>Mixt_D</object-name>
+    <object-name>guideP</object-name>
+    <object-name>guideP2</object-name>
+    <object-name>guideT</object-name>
+    <object-name>guideT2</object-name>
+    <object-name>guideM</object-name>
+    <object-name>guideM2</object-name>
+    <object-name>support</object-name>
+    <object-name>manette1</object-name>
+    <object-name>manette2</object-name>
+    <object-name>manette3</object-name>
+    <object-name>souslevierM_D</object-name>
+    <object-name>levierM_D</object-name>
+    <object-name>souslevierM_G</object-name>
+    <object-name>levierM_G</object-name>
+    <object-name>brake_parking</object-name>
+    <object-name>brake_throttle</object-name>
+
+    <object-name>prop_g_up</object-name>
+    <object-name>prop_g_dwn</object-name>
+    <object-name>prop_d_up</object-name>
+    <object-name>prop_d_dwn</object-name>
+    <object-name>throt_g_up</object-name>
+    <object-name>throt_g_dwn</object-name>
+    <object-name>throt_d_up</object-name>
+    <object-name>throt_d_dwn</object-name>
+    <object-name>mixt_g_up</object-name>
+    <object-name>mixt_g_dwn</object-name>
+    <object-name>mixt_d_up</object-name>
+    <object-name>mixt_d_dwn</object-name>
+    <object-name>el_trim_dwn</object-name>
+    <object-name>el_trim_up</object-name>
+    <object-name>ail_trim_l</object-name>
+    <object-name>ail_trim_r</object-name>
+    <object-name>rud_trim_l</object-name>
+    <object-name>rud_trim_r</object-name>
+    <object-name>fuel_left_ccw</object-name>
+    <object-name>fuel_left_cw</object-name>
+    <object-name>fuel_right_ccw</object-name>
+    <object-name>fuel_right_cw</object-name>
+    <object-name>tailwheel_lock</object-name>
+    <object-name>plaque-tw</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/model/config/version</property>
+          <value>military</value>
+        </equals>
+      </and>
+    </condition>
+    <texture>Liveries/colors_military.png</texture>
+  </animation>
+  
+  <!--juste un essai!-->
+  <animation>
+    <object-name>volantTrim</object-name>
+    <type>material</type>
+    <emission>
+      <!--<factor-prop>instrumentation/mfd/emission</factor-prop>-->
+      <red>   0.9 </red>
+      <green> 0.9 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <!-- **********  THROTTLE  **********-->
+  <animation>
+    <type>rotate</type>
+    <object-name>Throt_G</object-name>
+    <object-name>throt_g_up</object-name>
+    <object-name>throt_g_dwn</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> 70 </factor>
+    <center>
+      <x-m> 0.334 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.110 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Throt_D</object-name>
+    <object-name>throt_d_up</object-name>
+    <object-name>throt_d_dwn</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <factor> 70 </factor>
+    <center>
+      <x-m> 0.334 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.110 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- **********PROPELLER PITCH********** -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Prop_G</object-name>
+    <object-name>prop_g_up</object-name>
+    <object-name>prop_g_dwn</object-name>
+    <property>controls/engines/engine[0]/propeller-pitch</property>
+    <factor> 80 </factor>
+    <center>
+      <x-m> 0.334 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.110 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Prop_D</object-name>
+    <object-name>prop_d_up</object-name>
+    <object-name>prop_d_dwn</object-name>
+    <property>controls/engines/engine[1]/propeller-pitch</property>
+    <factor> 80 </factor>
+    <center>
+      <x-m> 0.334 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.110 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- **********MIXTURE********** -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Mixt_G</object-name>
+    <object-name>mixt_g_up</object-name>
+    <object-name>mixt_g_dwn</object-name>
+    <object-name>levierM_G</object-name>
+    <object-name>souslevierM_G</object-name>
+    <property>controls/engines/engine[0]/mixture</property>
+    <factor> 80 </factor>
+    <center>
+      <x-m> 0.334 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.110 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Mixt_D</object-name>
+    <object-name>mixt_d_up</object-name>
+    <object-name>mixt_d_dwn</object-name>
+    <object-name>levierM_D</object-name>
+    <object-name>souslevierM_D</object-name>
+    <property>controls/engines/engine[1]/mixture</property>
+    <factor> 80 </factor>
+    <center>
+      <x-m> 0.334 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.110 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- **********ELEVATOR-TRIM********** -->
+  <animation>
+    <type>rotate</type>    
+    <object-name>volantTrim</object-name>    
+    <property>controls/flight/elevator-trim</property>
+    <factor> 400 </factor>
+    <center>
+      <x-m>  0.346 </x-m>
+      <y-m> -0.116 </y-m>
+      <z-m>  0.114 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>    
+    <object-name>elev_trim_index</object-name>    
+    <property>controls/flight/elevator-trim</property>
+    <factor> 0.045 </factor>
+    <center>
+      <x-m>  0.394 </x-m>
+      <y-m> -0.088 </y-m>
+      <z-m>  0.106 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- **********AILERON-TRIM********** -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Aileron_trim</object-name>
+    <property>controls/flight/aileron-trim</property>
+    <factor> 3000 </factor>
+    <center>
+      <x-m>  0.271 </x-m>
+      <y-m> -0.140 </y-m>
+      <z-m> -0.040 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Ail_trim_needle</object-name>
+    <property>controls/flight/aileron-trim</property>
+    <factor> 90 </factor>
+    <center>
+      <x-m>  0.262 </x-m>
+      <y-m> -0.095 </y-m>
+      <z-m> -0.081 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- *********RUDDER-TRIM********** -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Rudder_trim</object-name>
+    <property>controls/flight/rudder-trim</property>
+    <factor> 3000 </factor>
+    <center>
+      <x-m>  0.271 </x-m>
+      <y-m>  0.142 </y-m>
+      <z-m> -0.040 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Rud_trim_needle</object-name>
+    <property>controls/flight/rudder-trim</property>
+    <factor> 90 </factor>
+    <center>
+      <x-m>  0.262 </x-m>
+      <y-m>  0.102 </y-m>
+      <z-m> -0.081 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- *********FUEL Valves********* -->
+  <!-- Left -->  
+  <animation>
+    <type>rotate</type>    
+    <object-name>fuel_left</object-name>    
+    <property>controls/fuel/left-valve-pos</property>
+    <factor> 72 </factor>
+    <center>
+      <x-m>  0.203 </x-m>
+      <y-m> -0.135 </y-m>
+      <z-m> -0.068 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- Ajustage par bt-souris-gauche -->
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>fuel_left_ccw</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/left-valve</property>
+        <step>1</step>
+        <min>0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>fuel_left_cw</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+          <property>controls/fuel/left-valve</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Right -->
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_right</object-name>
+    <property>controls/fuel/right-valve-pos</property>
+    <factor> 72 </factor>
+    <center>
+      <x-m>  0.201 </x-m>
+      <y-m>  0.144 </y-m>
+      <z-m> -0.068 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- Ajustage par bt-souris-gauche -->
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>fuel_right_ccw</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+          <property>controls/fuel/right-valve</property>
+        <step>1</step>
+        <min>0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>fuel_right_cw</object-name>
+    <action>
+    <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/right-valve</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- ******** Long-Range Fuel Tank ******** -->
+  <animation>
+    <type>rotate</type>
+    <object-name>lev1</object-name>
+    <property>controls/fuel/long-range-pos</property>
+    <factor> 90 </factor>
+    <center>
+      <x-m>  0.271 </x-m>
+      <y-m> -0.125 </y-m>
+      <z-m> -0.159 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- commutation par bt-souris-gauche -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>lev1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/fuel/long-range</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- ******** Parking Brake ******** -->
+  <animation>
+    <type>translate</type>
+    <object-name>brake_parking</object-name>
+    <property>controls/gear/brake-parking-pos</property>
+    <factor> 0.024 </factor>
+    <center>
+      <x-m>  0.271 </x-m>
+      <y-m> -0.125 </y-m>
+      <z-m> -0.159 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- commutation par bt-souris-gauche -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>brake_parking</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/brake-parking</property>
+      </binding>
+    </action>
+  </animation>/
+  
+ <!-- ******** Tail Wheel lock******** -->
+  <animation>
+    <type>rotate</type>
+    <object-name>tailwheel_lock</object-name>
+    <property>controls/gear/tailwheel-lock-pos</property>
+    <factor>90</factor>
+    <center>
+      <x-m>  0.236 </x-m>
+      <y-m> -0.001 </y-m>
+      <z-m> -0.192 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- commutation par bt-souris-gauche -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>tailwheel_lock</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/tailwheel-lock</property>
+      </binding>
+    </action>
+  </animation> 
+
+</PropertyList>

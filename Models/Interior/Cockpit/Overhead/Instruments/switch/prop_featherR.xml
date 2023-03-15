@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>push.ac</path>
+
+  <animation>
+    <object-name>tour</object-name>
+    <object-name>poussoir</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>poussoir</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/propeller-feather</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>poussoir</object-name>
+    <property>controls/engines/engine[1]/propeller-feather-pos</property>
+    <factor> -0.01 </factor>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

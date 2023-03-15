@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>handle.ac</path>
+  
+  <animation>
+    <object-name>mancheG</object-name>
+    <object-name>ecrousG</object-name>
+    <object-name>volantGG</object-name>
+    <object-name>volantGD</object-name>
+    <object-name>mancheD</object-name>
+    <object-name>ecrousD</object-name>
+    <object-name>volantDG</object-name>
+    <object-name>volantDD</object-name>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>mancheG</object-name>
+    <object-name>ecrousG</object-name>
+    <object-name>volantGG</object-name>
+    <object-name>volantGD</object-name>
+    <object-name>mancheD</object-name>
+    <object-name>ecrousD</object-name>
+    <object-name>volantDG</object-name>
+    <object-name>volantDD</object-name>
+    <condition>
+      <property>sim/model/config/show-yokes</property>
+    </condition>
+  </animation>
+  
+  <!-- Civilian red version -->
+  <animation>
+    <type>material</type>
+    <object-name>mancheG</object-name>
+    <object-name>ecrousG</object-name>
+    <object-name>volantGG</object-name>
+    <object-name>volantGD</object-name>
+    <object-name>mancheD</object-name>
+    <object-name>ecrousD</object-name>
+    <object-name>volantDG</object-name>
+    <object-name>volantDD</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-red</value>
+      </equals>
+    </condition>
+    <texture>handle.png</texture>
+  </animation>
+  
+  <!-- Civilian gray version -->
+  <animation>
+    <type>material</type>
+    <object-name>mancheG</object-name>
+    <object-name>ecrousG</object-name>
+    <object-name>volantGG</object-name>
+    <object-name>volantGD</object-name>
+    <object-name>mancheD</object-name>
+    <object-name>ecrousD</object-name>
+    <object-name>volantDG</object-name>
+    <object-name>volantDD</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-gray</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_gray.png</texture>
+  </animation>
+  
+  <!-- Military version -->
+  <animation>
+    <type>material</type>
+    <object-name>mancheG</object-name>
+    <object-name>ecrousG</object-name>
+    <object-name>volantGG</object-name>
+    <object-name>volantGD</object-name>
+    <object-name>mancheD</object-name>
+    <object-name>ecrousD</object-name>
+    <object-name>volantDG</object-name>
+    <object-name>volantDD</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>military</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_military.png</texture>
+  </animation>
+  
+  <animation>
+    <name>VolantG</name>
+    <object-name>volantGG</object-name>
+    <object-name>volantGD</object-name>
+  </animation>
+  
+  <animation>
+    <name>VolantD</name>
+    <object-name>volantDD</object-name>
+    <object-name>volantDG</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>VolantG</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>90</factor>
+    <center>
+      <x-m>  0.3480 </x-m>
+      <y-m> -0.3780 </y-m>
+      <z-m>  0.3914 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>VolantD</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>90</factor>
+    <center>
+      <x-m> 0.3480 </x-m>
+      <y-m> 0.3780 </y-m>
+      <z-m> 0.3914 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>mancheG</object-name>
+    <object-name>ecrousG</object-name>
+    <object-name>mancheD</object-name>
+    <object-name>ecrousD</object-name>
+    <object-name>VolantG</object-name>
+    <object-name>VolantD</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>6</factor>
+    <center>
+      <x-m>  0.289 </x-m>
+      <y-m> -0.690 </y-m>
+      <z-m> -0.358 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

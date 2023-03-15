@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--Température cylindre-->
+<PropertyList>
+
+  <path>cyl.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>fond2</object-name>
+    <object-name>face</object-name>
+    <object-name>needleL</object-name>
+    <object-name>needleR</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Douglas-Dc3/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needleL</object-name>
+    <object-name>needleR</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needleL</object-name>
+    <property>engines/engine/cyl-temp</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0.00 </dep></entry>
+      <entry><ind>  50 </ind><dep>  12.75 </dep></entry>
+      <entry><ind> 100 </ind><dep>  28.00 </dep></entry>
+      <entry><ind> 200 </ind><dep>  60.00 </dep></entry>
+      <entry><ind> 300 </ind><dep>  95.50 </dep></entry>
+      <entry><ind> 400 </ind><dep> 124.00 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.023 </y-m>
+      <z-m>  0.000 </z-m>  
+    </center>
+    <axis> 
+      <x> 1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needleR</object-name>
+    <property>engines/engine[1]/cyl-temp</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0.00 </dep></entry>
+      <entry><ind>  50 </ind><dep>  12.75 </dep></entry>
+      <entry><ind> 100 </ind><dep>  28.00 </dep></entry>
+      <entry><ind> 200 </ind><dep>  60.00 </dep></entry>
+      <entry><ind> 300 </ind><dep>  95.50 </dep></entry>
+      <entry><ind> 400 </ind><dep> 124.00 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.023 </y-m>
+      <z-m> 0.000 </z-m>  
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

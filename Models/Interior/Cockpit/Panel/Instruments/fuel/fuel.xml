@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>fuel.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>knob</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    
+    <object-name>fuelL</object-name>
+    <object-name>fuelR</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>needle</object-name>
+    <object-name>face</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>fuelL</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/tank-gauge</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>fuelR</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/tank-gauge</property>
+        <step>1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>knob</object-name>
+    <property>controls/fuel/tank-gauge-pos</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>  0.0000 </x-m>
+      <y-m>  0.0000 </y-m>
+      <z-m> -0.0336 </z-m>
+    </center>
+    <axis> 
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>consumables/fuel/needle-gauge</property>
+    <factor>-0.69</factor>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.014 </z-m>
+    </center>
+    <axis> 
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

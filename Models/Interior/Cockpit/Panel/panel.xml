@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- LoD -->
+  <animation>
+    <type>range</type>
+    <min-m>  0 </min-m>
+    <max-m> 18 </max-m>
+  </animation>
+
+  <!-- Console Centrale -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Pedestal/center_console.xml</path>
+    <offsets>
+      <x-m> 0.01 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 0.00 </z-m>
+    </offsets>
+  </model>
+
+  <!--Commandes Gear + Flaps-->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Gear-flaps/gear-flaps.xml</path>
+    <offsets>
+      <x-m>  0.01 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.05 </z-m>
+    </offsets>
+  </model> 
+
+  <!--Cowl-flap command-->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Cowl-flaps/cowl-flaps.xml</path>
+    <offsets>
+      <x-m> 0.380 </x-m>
+      <y-m> 0.825 </y-m>
+      <z-m> 0.365 </z-m>
+      <heading-deg> 12 </heading-deg>
+      <roll-deg>    15 </roll-deg>
+    </offsets>
+  </model>   
+
+  <!-- Manche -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Handle/handle.xml</path>
+    <offsets>
+      <x-m> -0.01 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.00 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pédales Pilote -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -0.090 </x-m>
+      <y-m> -0.430 </y-m>
+      <z-m> -0.210 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pédales Copilote -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -0.090 </x-m>
+      <y-m>  0.430 </y-m>
+      <z-m> -0.210 </z-m>
+    </offsets>
+  </model>
+
+  <!--   cap -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/cap/cap.xml</path>
+    <offsets>
+      <x-m> -0.120 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.645 </z-m>
+    </offsets>
+  </model>
+   
+  <!-- Pression hydraulique + Pression des trains-->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/hydgear/hydgear.xml</path>
+    <offsets>
+      <x-m> 0.12 </x-m>
+      <y-m> 0.70 </y-m>
+      <z-m> 0.40 </z-m>
+      <heading-deg> -65 </heading-deg>
+    </offsets>
+  </model> 
+
+  <model>
+    <name>PanelTraditional</name>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/panel-traditional.xml</path>
+  </model>
+  
+  <animation>
+    <type>select</type>
+    <object-name>PanelTraditional</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/panel</property>
+        <value>traditional</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <model>
+    <name>Panel1980</name>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/panel-1980.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Panel1980</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>sim/model/config/panel</property>
+          <value>standard</value>
+        </equals>
+        <equals>
+          <property>sim/model/config/panel</property>
+          <value>gps155</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <!-- chronometre -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/chronograph/chronograph.xml</path>
+    <offsets>
+      <x-m> -0.006 </x-m>
+      <y-m> -0.612 </y-m>
+      <z-m>  0.349 </z-m>
+    </offsets>
+  </model> 
+  
+  <!-- Warning -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/warning/warning.xml</path>
+    <offsets>
+      <x-m> -0.01114 </x-m>
+      <y-m>  0.58096 </y-m>
+      <z-m>  0.17376 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

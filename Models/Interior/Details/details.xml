@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>details.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>tringles</object-name>
+    <object-name>rideaux</object-name>
+    <object-name>extincteurs</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>

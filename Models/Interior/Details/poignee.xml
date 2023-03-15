@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>poignee.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>support</object-name>
+    <object-name>poignee</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>

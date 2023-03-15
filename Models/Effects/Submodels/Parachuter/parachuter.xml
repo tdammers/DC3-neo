@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>parachuter.ac</path>
+  
+  <offsets>
+    <pitch-deg> 90 </pitch-deg>
+  </offsets>
+  
+  <animation>
+    <object-name>corps</object-name>
+    <object-name>casque</object-name>
+    <object-name>visiere</object-name>
+    <object-name>bottes</object-name>
+    <object-name>mains</object-name>
+    <object-name>parachute</object-name>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>parachute</object-name>
+    <property>sim/time/elapsed-sec</property>
+    <offset> 0 </offset>
+    <factor> 3 </factor>
+    <max-m> 16 </max-m>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>scale</type>
+    <object-name>parachute</object-name>
+    <property>sim/time/elapsed-sec</property>
+    <offset> 0 </offset>
+    <x-max> 20 </x-max>
+    <y-max> 20 </y-max>
+    <z-max>  1 </z-max>
+    <x-factor> 5 </x-factor>
+    <y-factor> 5 </y-factor>
+    <z-factor> 1 </z-factor>
+  </animation>
+  
+</PropertyList>

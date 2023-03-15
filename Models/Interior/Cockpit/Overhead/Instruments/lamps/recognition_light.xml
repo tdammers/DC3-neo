@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>recognition_light.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+
+    <object-name>lampoff</object-name>
+    <object-name>lampon</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lampon</object-name>
+    <condition>
+      <or>
+        <property>controls/lighting/recognition-lights</property>
+        <property>controls/lighting/recognition-lights[1]</property>
+        <property>controls/lighting/recognition-lights[2]</property>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampoff</object-name>
+    <emission>
+      <red>   0 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampon</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/volts</factor-prop>
+      <red>   2.00 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+</PropertyList>

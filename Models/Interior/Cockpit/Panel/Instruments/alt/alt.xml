@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Altimètre DC3 C47 -->
+<PropertyList>
+
+  <path>alt.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>visses</object-name>
+    <object-name>knob</object-name>
+    <object-name>alt-Needle1</object-name>
+    <object-name>alt-Needle2</object-name>
+    <object-name>alt-Needle3</object-name>
+    <object-name>ingh</object-name>
+    <object-name>inghR</object-name>
+    <object-name>inghL</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Douglas-Dc3/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>alt-Needle1</object-name>
+    <object-name>alt-Needle2</object-name>
+    <object-name>alt-Needle3</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+   <animation>
+     <type>rotate</type>
+    <object-name>alt-Needle1</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.36</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>alt-Needle2</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.0036</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>alt-Needle3</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.036</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Bouton réglage -->
+  <animation>
+    <type>knob</type>
+    <object-name>ingh</object-name>
+    <property>instrumentation/altimeter/setting-inhg</property>
+    <center>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.0357 </y-m>
+      <z-m> -0.0361 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <property>/instrumentation/altimeter/setting-inhg</property>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <factor>0.01</factor>
+        <min>26.0</min>
+        <max>33.0</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+    <shift-action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <factor>0.1</factor>
+        <min>26.0</min>
+        <max>33.0</max>
+        <wrap>false</wrap>
+      </binding>
+    </shift-action>
+    <hovered>
+        <binding>
+            <command>set-tooltip</command>
+            <tooltip-id>alt1-setting</tooltip-id>
+            <label>Altimeter: %.2f</label>
+            <property>instrumentation/altimeter/setting-inhg</property>
+        </binding>
+    </hovered>
+  </animation>
+</PropertyList>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+    <name>Effects/gps155</name>
+    <inherits-from>Effects/model-combined</inherits-from>
+    <parameters>
+        <texture n="3">
+            <image>Aircraft/Lockheed1049h/Models/Instruments/GPS155-lightmap.png</image>
+            <filter>linear-mipmap-linear</filter>
+            <wrap-s>clamp</wrap-s>
+            <wrap-t>clamp</wrap-t>
+            <internal-format>normalized</internal-format>
+        </texture>
+        <lightmap-enabled type="int">1</lightmap-enabled>
+        <lightmap-multi type="int">0</lightmap-multi>     
+        <lightmap-factor n="0" type="float">1.0</lightmap-factor>
+        <lightmap-color n="0" type="vec3d"> 1 0.95 0.7 </lightmap-color>
+        <lightmap-factor n="1" type="float">0.0</lightmap-factor>
+        <lightmap-color n="1" type="vec3d"> 0 0 0 </lightmap-color>
+        <lightmap-factor n="2" type="float">0.0</lightmap-factor>
+        <lightmap-color n="2" type="vec3d"> 0 0 0 </lightmap-color>
+    </parameters>
+</PropertyList>

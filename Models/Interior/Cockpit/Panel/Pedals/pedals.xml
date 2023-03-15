@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>pedals.ac</path>
+  
+  <animation>
+    <object-name>mec-freins</object-name>
+    <object-name>guide-pieds</object-name>
+    <object-name>pedalsL</object-name>
+    <object-name>pedalsR</object-name>
+    <object-name>brakeL</object-name>
+    <object-name>brakeR</object-name>
+    <object-name>axeL</object-name>
+    <object-name>axeR</object-name>
+  </animation>
+  
+  <!-- Civilian red version -->
+  <animation>
+    <type>material</type>
+    <object-name>mec-freins</object-name>
+    <object-name>guide-pieds</object-name>
+    <object-name>pedalsL</object-name>
+    <object-name>pedalsR</object-name>
+    <object-name>brakeL</object-name>
+    <object-name>brakeR</object-name>
+    <object-name>axeL</object-name>
+    <object-name>axeR</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>sim/model/config/version</property>
+          <value>civilian-red</value>
+        </equals>
+        <equals>
+          <property>sim/model/config/version</property>
+          <value>civilian-gray</value>
+        </equals>
+      </or>
+    </condition>
+    <texture>pedals.png</texture>
+  </animation>
+  
+  <!-- military version -->
+  <animation>
+    <type>material</type>
+    <object-name>mec-freins</object-name>
+    <object-name>guide-pieds</object-name>
+    <object-name>pedalsL</object-name>
+    <object-name>pedalsR</object-name>
+    <object-name>brakeL</object-name>
+    <object-name>brakeR</object-name>
+    <object-name>axeL</object-name>
+    <object-name>axeR</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>military</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_green.png</texture>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>pedalsL</object-name>
+    <object-name>axeL</object-name>
+    <property>controls/flight/rudder</property>
+    <factor> 0.07 </factor>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>pedalsR</object-name>
+    <object-name>axeR</object-name>
+    <property>controls/flight/rudder</property>
+    <factor> -0.07 </factor>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>pedalsL</object-name>
+    <property>controls/gear/brake-left</property>
+    <factor> -20 </factor>
+    <center>
+      <x-m> 0.00 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 0.07 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>pedalsR</object-name>
+    <property>controls/gear/brake-right</property>
+    <factor> -20 </factor>
+    <center>
+      <x-m> 0.00 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 0.07 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>brakeL</object-name>
+    <property>controls/flight/rudder</property>
+    <factor> 16 </factor>
+    <center>
+      <x-m>-0.076 </x-m>
+      <y-m> 0.036 </y-m>
+      <z-m>-0.137 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>brakeR</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-16</factor>
+    <center>
+      <x-m>-0.076 </x-m>
+      <y-m> 0.036 </y-m>
+      <z-m>-0.137 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>brakeL</object-name>
+    <property>controls/gear/brake-left</property>
+    <factor> -0.02 </factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>brakeR</object-name>
+    <property>controls/gear/brake-right</property>
+    <factor> -0.02 </factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+  </animation>
+  
+  <!--
+  <animation>
+    <type>pick</type>
+    <object-name>pedalsL</object-name>
+    <object-name>axeL</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/flight/rudder</property>
+        <step>-0.05</step>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>pedalsR</object-name>
+    <object-name>axeR</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/flight/rudder</property>
+        <step>0.05</step>
+      </binding>
+    </action>
+  </animation>
+  -->
+  
+</PropertyList>

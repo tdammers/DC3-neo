@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>plaque.ac</path>
+
+  <animation>
+    <object-name>plaque</object-name>
+  </animation>
+  
+  <!-- Civilian red version -->
+  <animation>
+    <type>material</type>
+    <object-name>plaque</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-red</value>
+      </equals>
+    </condition>
+    <texture>overhead.png</texture>
+  </animation>
+
+  <!-- Civilian gray version -->
+  <animation>
+    <type>material</type>
+    <object-name>plaque</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-gray</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_gray.png</texture>
+  </animation>
+
+  <!-- Military version -->
+  <animation>
+    <type>material</type>
+    <object-name>plaque</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>military</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_military.png</texture>
+  </animation>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/Textes/texteR.xml</path>
+  </model>
+  
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/engine_starterL.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.180 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/engine_starterR.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.147 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/booster_pumpL.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.114 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/booster_pumpR.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.081 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/lamps/recognition_light.xml</path>
+    <offsets>
+      <x-m>  0.00134 </x-m>
+      <y-m> -0.04800 </y-m>
+      <z-m> -0.06500 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/recognition_1.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m>  0.032 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/recognition_2.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m>  0.058 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/recognition_3.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m>  0.084 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/voltmeter/voltmeterL.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.123 </y-m>
+      <z-m> -0.030 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/voltmeter/voltmeterR.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.177 </y-m>
+      <z-m> -0.030 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/lamps/voltmeter_light.xml</path>
+    <offsets>
+      <x-m> -0.0005 </x-m>
+      <y-m>  0.150 </y-m>
+      <z-m>  0.005 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/cockpit_light.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.133 </y-m>
+      <z-m>  0.020 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/inverter.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.100 </y-m>
+      <z-m>  0.020 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/carburator_deicer.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.067 </y-m>
+      <z-m>  0.020 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/prop_featherR.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.035 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/formation_light.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.085 </y-m>
+      <z-m>  0.045 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

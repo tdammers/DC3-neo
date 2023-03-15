@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<!--
+  File:     PW-R-1830-S1C3G.xml
+  Author:   Tobias Dammers
+
+  See: http://wiki.flightgear.org/JSBSim_Engines#FGPiston
+
+  Inputs:
+    name:           PW-R-1830-S1C3G
+    type:           Piston Engine
+    power:          1193.49 hp
+-->
+
+<piston_engine name="PW-R-1830-S1C3G">
+    
+  <minmp unit="INHG"> 7.00 </minmp>
+  <maxmp unit="INHG"> 29.92 </maxmp>
+  <displacement unit="IN3"> 1829.4 </displacement>
+  <bsfc> 0.49 </bsfc>
+  <volumetric-efficiency> 1.2 </volumetric-efficiency>
+  <maxhp> 1200.00 </maxhp>
+  <cycles> 4.0 </cycles>
+  <bore unit="IN"> 5.5 </bore>
+  <stroke unit="IN"> 5.5 </stroke>
+  <cylinders> 14 </cylinders>
+  <cylinder-head-mass> 15.0 </cylinder-head-mass>
+  <compression-ratio> 6.7 </compression-ratio>
+  <sparkfaildrop> 0.1 </sparkfaildrop>
+  <idlerpm> 500.0 </idlerpm>
+  <maxrpm> 2800.0 </maxrpm>
+  <maxthrottle> 1.0 </maxthrottle>
+  <minthrottle> 0.1 </minthrottle>
+  <starter-rpm> 500 </starter-rpm>
+  <boostmanual> 1 </boostmanual>
+  <numboostspeeds> 1 </numboostspeeds>
+  <boostoverride> 1 </boostoverride>
+  <takeoffboost>0</takeoffboost>
+
+  <ratedboost1 unit="INHG"> 18.08 </ratedboost1> <!-- 48.0 - 29.92 -->
+  <ratedpower1 unit="HP"> 1200 </ratedpower1>
+  <ratedrpm1> 2700 </ratedrpm1>
+  <ratedaltitude1> 2000 </ratedaltitude1>
+
+  <man-press-lag> 0.1 </man-press-lag>
+  <static-friction unit="HP">0.1</static-friction>
+  <starter-torque> 1200 </starter-torque>
+  <!-- <boost-loss-factor> 1.15 </boost-loss-factor> -->
+  
+</piston_engine>

@@ -1,0 +1,38 @@
+<PropertyList>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/switch.ac</path>
+    <model>
+        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/gps-placard.ac</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.040</y-m>
+            <z-m>-0.002</z-m>
+        </offsets>
+    </model>
+    <animation>
+        <type>pick</type>
+        <object-name>switch</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>instrumentation/nav[0]/slaved-to-gps</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/model/sound/click</property>
+            </binding>
+        </action>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>switch</object-name>
+        <property>instrumentation/nav[0]/slaved-to-gps</property>
+        <factor> -50 </factor>
+        <axis>
+            <x>  0 </x>
+            <y>  1 </y>
+            <z>  0 </z>
+        </axis>
+    </animation>
+</PropertyList>

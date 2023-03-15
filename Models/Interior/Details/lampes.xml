@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>lampes.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>lampes</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>

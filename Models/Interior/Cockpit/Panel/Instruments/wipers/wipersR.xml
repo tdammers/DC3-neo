@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList> 
+
+  <path>wipers.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>moteur</object-name>
+    <object-name>bras</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Civilian red version -->
+  <animation>
+    <type>material</type>
+    <object-name>moteur</object-name>
+    <object-name>bras</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/model/config/version</property>
+          <value>civilian-red</value>
+        </equals>
+      </and>
+    </condition>
+    <texture>wipers.png</texture>
+  </animation>
+
+  <!-- Civilian gray version -->
+  <animation>
+    <type>material</type>
+    <object-name>moteur</object-name>
+    <object-name>bras</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/model/config/version</property>
+          <value>civilian-gray</value>
+        </equals>
+      </and>
+    </condition>
+    <texture>Liveries/colors_gray.png</texture>
+  </animation>
+
+  <!-- Military version -->
+  <animation>
+    <type>material</type>
+    <object-name>moteur</object-name>
+    <object-name>bras</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/model/config/version</property>
+          <value>military</value>
+        </equals>
+      </and>
+    </condition>
+    <texture>Liveries/colors_military.png</texture>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bras</object-name>
+    <property>controls/hydraulic/wipers-right/position-norm</property>
+    <factor> 170 </factor>
+    <min>   0 </min>
+    <max> 170 </max>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>moteur</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/hydraulic/wipers-right/switch</property>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/hydraulic/wipers-right/arc-sec</property>
+        <step>1</step>
+        <min>1</min>
+        <max>20</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/hydraulic/wipers-right/arc-sec</property>
+        <step>-1</step>
+        <min>1</min>
+        <max>20</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>
+

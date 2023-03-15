@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <sim>
+    
+    <model>
+      <livery>
+        <name type="string">C-47</name>
+        <texture>Liveries/1024x1024/c47.png</texture>
+        <specular>
+          <red>   0.3 </red>
+          <green> 0.3 </green>
+          <blue>  0.3 </blue>
+        </specular>
+        <shininess type="float">-0.75</shininess>
+        <civilian type="bool">false</civilian>
+      </livery>
+      <livery-engine>
+        <texture>Liveries/Propeller/c47-prop.png</texture>
+        <specular>
+          <red>   0.3 </red>
+          <green> 0.3 </green>
+          <blue>  0.3 </blue>
+        </specular>
+      </livery-engine>
+    </model>
+    
+  </sim>
+  
+</PropertyList>

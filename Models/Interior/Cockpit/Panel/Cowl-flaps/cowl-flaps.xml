@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>cowl-flaps.ac</path>
+
+  <animation>     
+    <object-name>plaque</object-name>
+    <object-name>vanne</object-name>
+    <object-name>LH</object-name>
+    <object-name>RH</object-name>
+    <object-name>cflUp</object-name>
+    <object-name>cflDown</object-name>
+    <object-name>cfrUp</object-name>
+    <object-name>cfrDown</object-name>
+  </animation>
+
+  <!-- ANIMATION ROTATE -->
+  <animation>
+    <type>rotate</type>
+    <object-name>LH</object-name>
+    <property>controls/engines/engine/cowl-flaps-pos</property>
+    <factor> 25 </factor>
+    <center>
+      <x-m> -0.056 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RH</object-name>
+    <property>controls/engines/engine[1]/cowl-flaps-pos</property>
+    <factor> 24 </factor>
+    <center>
+      <x-m>  0.053 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <!-- ANIMATION PICK -->
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>cflUp</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine/cowl-flaps-cmd</property>
+        <step>1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>cflDown</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine/cowl-flaps-cmd</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>cfrUp</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/cowl-flaps-cmd</property>
+        <step>1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>cfrDown</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/cowl-flaps-cmd</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>

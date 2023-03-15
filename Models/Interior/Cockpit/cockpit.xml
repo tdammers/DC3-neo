@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>cockpit.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>cab-interieur</object-name>    
+    <object-name>cab-plancher</object-name>
+    <object-name>cadres-vitres</object-name>
+    <object-name>guide</object-name>
+    <object-name>poignee</object-name>
+    <object-name>verrou</object-name>
+    <object-name>structure</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>cab-intvitres</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>cab-intvitres</object-name>
+  </effect>
+  
+  <!-- Civilian red version -->
+  <animation>
+    <type>material</type>
+    <object-name>cab-interieur</object-name>    
+    <object-name>cab-plancher</object-name>
+    <object-name>cadres-vitres</object-name>
+    <object-name>guide</object-name>
+    <object-name>poignee</object-name>
+    <object-name>verrou</object-name>
+    <object-name>structure</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-red</value>
+      </equals>
+    </condition>
+    <texture>copckpit.png</texture>
+  </animation>
+
+  <!-- Civilian gray version -->
+  <animation>
+    <type>material</type>
+    <object-name>cab-interieur</object-name>    
+    <object-name>cab-plancher</object-name>
+    <object-name>cadres-vitres</object-name>
+    <object-name>guide</object-name>
+    <object-name>poignee</object-name>
+    <object-name>verrou</object-name>
+    <object-name>structure</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-gray</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_gray.png</texture>
+  </animation>
+
+  <!-- Military version -->
+  <animation>
+    <type>material</type>
+    <object-name>cab-interieur</object-name>
+    
+    <object-name>cab-plancher</object-name>
+    <object-name>cadres-vitres</object-name>
+    <object-name>guide</object-name>
+    <object-name>poignee</object-name>
+    <object-name>verrou</object-name>
+    <object-name>structure</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>military</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_military.png</texture>
+  </animation>
+
+  <!--overhead Panneau Cockpit Supérieur-->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/overhead.xml</path>
+    <offsets>
+      <x-m> -0.03 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.00 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -0.200 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.560 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m>  0.156 </x-m>
+      <y-m> -0.424 </y-m>
+      <z-m> -0.335 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Copilote -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Pilot/copilot.xml</path>
+    <offsets>
+      <x-m>  0.156 </x-m>
+      <y-m>  0.424 </y-m>
+      <z-m> -0.335 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Les sièges -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/seats/all-pilot-seats.xml</path>
+  </model>
+
+  <!-- Essuie-glaces -->
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/wipers/wipersL.xml</path>
+    <offsets>
+      <x-m> -0.2070 </x-m>
+      <y-m> -0.2940 </y-m>
+      <z-m>  0.0732 </z-m>
+      <pitch-deg>   17 </pitch-deg>
+      <heading-deg> 36 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/wipers/wipersR.xml</path>
+    <offsets>
+      <x-m> -0.2070 </x-m>
+      <y-m>  0.2940 </y-m>
+      <z-m>  0.0732 </z-m>
+      <pitch-deg>    17 </pitch-deg>
+      <heading-deg> -36 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

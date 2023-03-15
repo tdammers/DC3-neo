@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>seat.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>siege</object-name>
+    <object-name>accoudoirs</object-name>
+    <object-name>reposetete</object-name>
+    <object-name>tablette</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- LoD -->
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>32</max-m>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>siege</object-name>
+    <object-name>accoudoirs</object-name>
+    <object-name>reposetete</object-name>
+    <object-name>tablette</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-red</value>
+      </equals>
+    </condition>
+    <texture>seat.png</texture>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>siege</object-name>
+    <object-name>accoudoirs</object-name>
+    <object-name>reposetete</object-name>
+    <object-name>tablette</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/version</property>
+        <value>civilian-gray</value>
+      </equals>
+    </condition>
+    <texture>Liveries/colors_gray.png</texture>
+  </animation>
+
+</PropertyList>
