@@ -84,12 +84,6 @@
             <path>/instrumentation/gps155/settings</path>
         </aircraft-data>
 
-        <rendering>
-            <static-lod>
-                <ai-detailed>1500</ai-detailed>
-            </static-lod>
-        </rendering>
-
         <freeze>
             <fuel type="bool">true</fuel>
         </freeze>

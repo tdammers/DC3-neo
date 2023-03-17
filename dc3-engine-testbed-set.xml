@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+    <sim>
+        <description>Engine testbed for Douglas DC-3</description>
+        <author>Tobias Dammers (Systems, FDM, 3D), Emmanuel Baranger (3D), PAF Team (3D)</author>
+        
+        <flight-model>jsb</flight-model>
+        <aero>engine-testbed</aero>
+        
+        <startup>
+            <!-- <splash-texture>Aircraft/Douglas-Dc3/dc-3-splash.png</splash-texture> -->
+        </startup>
+        
+        <model>
+            <path>Aircraft/DC3-neo/Models/dc-3.xml</path>
+            <variant type="int">0</variant>
+            <livery>
+                <file type="string">default</file>
+            </livery>
+        </model>
+
+        <views include="dc3-neo-views.xml"></views>
+
+        <menubar>
+            <default>
+                <menu n="99">
+                    <label>Engine Testbed</label>
+                    <enabled type="bool">true</enabled>
+                    <item>
+                        <name>engineinfo</name>
+                        <label>Engine info</label>
+                        <binding>
+                            <command>dialog-show</command>
+                            <dialog-name>enginestats</dialog-name>
+                        </binding>
+                    </item>
+
+                </menu>
+            </default>
+
+        </menubar>
+    </sim>
+    
+    <nasal>
+    </nasal>
+
+    <input>
+        <keyboard>
+          <key n="80">
+            <name>P</name>
+            <desc>Increase Prop Condition</desc>
+            <binding>
+              <command>property-adjust</command>
+              <property type="string">/controls/engines/engine[0]/propeller-pitch</property>
+              <step>-0.1</step>
+              <min>-1</min>
+              <max>1</max>
+            </binding>
+            <binding>
+              <command>property-adjust</command>
+              <property type="string">/controls/engines/engine[1]/propeller-pitch</property>
+              <step>-0.1</step>
+              <min>-1</min>
+              <max>1</max>
+            </binding>
+          </key>
+          <key n="112">
+            <name>p</name>
+            <desc>Decrease Prop Condition</desc>
+            <binding>
+              <command>property-adjust</command>
+              <property type="string">/controls/engines/engine[0]/propeller-pitch</property>
+              <step>0.1</step>
+              <min>-1</min>
+              <max>1</max>
+            </binding>
+            <binding>
+              <command>property-adjust</command>
+              <property type="string">/controls/engines/engine[1]/propeller-pitch</property>
+              <step>0.1</step>
+              <min>-1</min>
+              <max>1</max>
+            </binding>
+          </key>
+        </keyboard>
+    </input>
+
+</PropertyList>

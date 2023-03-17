@@ -194,7 +194,7 @@
     </mass_balance>
     
     <propulsion>
-        <engine file="PW_R_1830_S1C3G">
+        <engine file="Electric1200hp">
             <feed> 0 </feed>
             
             <thruster file="Hamilton_Standard_23E50">
@@ -212,7 +212,7 @@
             </thruster>
         </engine>
         
-        <engine file="PW_R_1830_S1C3G">
+        <engine file="Electric1200hp">
             <feed> 1 </feed>
             
             <thruster file="Hamilton_Standard_23E50">

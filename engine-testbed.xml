@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
+
+<fdm_config name="dc3" version="2.0" release="ALPHA"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
+
+    <fileheader>
+        <author>Tobias Dammers</author>
+        <filecreationdate>12 Mar 2023</filecreationdate>
+        <version>0.1</version>
+        <description>Douglas DC-3 Engine Testbed</description>
+    </fileheader>
+
+    <metrics>
+        <wingarea  unit="FT2">   987.05 </wingarea>
+        <wingspan  unit="FT" >    95.00 </wingspan>
+        <wing_incidence unit="DEG"> 2.00 </wing_incidence>
+        <chord     unit="FT" >    30.26 </chord>
+        <htailarea unit="FT2">   179.20 </htailarea>
+        <htailarm  unit="FT" >    27.89 </htailarm>
+        <vtailarea  unit="FT2">   84.60 </vtailarea>
+        <vtailarm  unit="FT" >    27.56 </vtailarm>
+        <location name="AERORP" unit="IN">
+            <!-- 33% MAC -->
+            <x>   251.64 </x>
+            <y>     0.00 </y>
+            <z>     0.00 </z>
+        </location>
+        <location name="EYEPOINT" unit="IN">
+            <x>    61.84 </x>
+            <y>   -24.00 </y>
+            <z>    65.00 </z>
+        </location>
+        <location name="VRP" unit="M">
+            <x>  9.84</x>
+            <y>  0.00</y>
+            <z>  0.35</z>
+        </location>
+    </metrics>
+
+    <mass_balance>
+        <ixx unit="SLUG*FT2">1296200000</ixx>
+        <iyy unit="SLUG*FT2"> 738100000</iyy>
+        <izz unit="SLUG*FT2">2363560000</izz>
+        <emptywt unit="LBS" >181900000</emptywt>
+        <location name="CG" unit="IN">
+            <x>   243.34 </x>
+            <y>     0.00 </y>
+            <z>   -19.33 </z>
+        </location>
+    </mass_balance>
+
+    <propulsion>
+        <engine file="Electric1200hp">
+            <feed> 0 </feed>
+
+            <thruster file="Hamilton_Standard_23E50">
+                <sense> 1 </sense>
+                <location unit="IN">
+                    <x>   107.67 </x>
+                    <y>  -111.00 </y>
+                    <z>   -25.00 </z>
+                </location>
+                <orient unit="DEG">
+                    <pitch>     0.00 </pitch>
+                    <roll>     0.00 </roll>
+                    <yaw>     0.00 </yaw>
+                </orient>
+            </thruster>
+        </engine>
+
+        <engine file="Electric1200hp">
+            <feed> 1 </feed>
+
+            <thruster file="Hamilton_Standard_23E50">
+                <sense> 1 </sense>
+                <location unit="IN">
+                    <x>   107.67 </x>
+                    <y>   111.00 </y>
+                    <z>   -25.00 </z>
+                </location>
+                <orient unit="DEG">
+                    <pitch>     0.00 </pitch>
+                    <roll>     0.00 </roll>
+                    <yaw>     0.00 </yaw>
+                </orient>
+            </thruster>
+        </engine>
+
+    </propulsion>
+
+    <ground_reactions>
+        <contact type="BOGEY" name="LEFT_MAIN">
+            <location unit="IN">
+                <x> 215.33 </x>
+                <y>-111.00</y>
+                <z>-130.33</z>
+            </location>
+            <static_friction>  1.00 </static_friction>
+            <dynamic_friction> 0.50 </dynamic_friction>
+            <rolling_friction> 0.02 </rolling_friction>
+            <spring_coeff  unit="LBS/FT">     26204480 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 1310224 </damping_coeff>
+            <max_steer unit="DEG">0</max_steer>
+            <brake_group> LEFT </brake_group>
+            <retractable> 1 </retractable>
+        </contact>
+
+        <contact type="BOGEY" name="RIGHT_MAIN">
+            <location unit="IN">
+                <x> 215.33</x>
+                <y> 111.00</y>
+                <z>-130.33</z>
+            </location>
+            <static_friction>  1.00 </static_friction>
+            <dynamic_friction> 0.50 </dynamic_friction>
+            <rolling_friction> 0.02 </rolling_friction>
+            <spring_coeff  unit="LBS/FT">     26204480 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 1310224 </damping_coeff>
+            <max_steer unit="DEG">0</max_steer>
+            <brake_group> RIGHT </brake_group>
+            <retractable> 1 </retractable>
+        </contact>
+
+        <contact type="BOGEY" name="TAIL">
+            <location unit="IN">
+                <x> 665.00</x>
+                <y>   0.00</y>
+                <z>-130.33</z>
+            </location>
+            <static_friction>  0.80 </static_friction>
+            <dynamic_friction> 0.50 </dynamic_friction>
+            <rolling_friction> 0.02 </rolling_friction>
+            <spring_coeff  unit="LBS/FT">     2620448 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 1310224 </damping_coeff>
+            <max_steer unit="DEG"> 360.00 </max_steer>
+            <brake_group> NONE </brake_group>
+            <retractable> 0 </retractable>
+        </contact>
+
+        <contact type="STRUCTURE" name="LEFT_WING">
+            <location unit="IN">
+                <x>   180.00 </x>
+                <y>  -570.00 </y>
+                <z>     0.00 </z>
+            </location>
+            <static_friction>  1 </static_friction>
+            <dynamic_friction> 1 </dynamic_friction>
+            <spring_coeff unit="LBS/FT">      26204480 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 26204480 </damping_coeff>
+        </contact>
+
+        <contact type="STRUCTURE" name="RIGHT_WING">
+            <location unit="IN">
+                <x>   180.00 </x>
+                <y>   570.00 </y>
+                <z>     0.00 </z>
+            </location>
+            <static_friction>  1 </static_friction>
+            <dynamic_friction> 1 </dynamic_friction>
+            <spring_coeff unit="LBS/FT">      26204480 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 26204480 </damping_coeff>
+        </contact>
+
+        <contact type="STRUCTURE" name="STABILIZER_TOP">
+            <location unit="IN">
+                <x>   722.00 </x>
+                <y>     0.00 </y>
+                <z>   158.33 </z>
+            </location>
+            <static_friction>  1 </static_friction>
+            <dynamic_friction> 1 </dynamic_friction>
+            <spring_coeff unit="LBS/FT">      26204480 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 26204480 </damping_coeff>
+        </contact>
+
+        <contact type="STRUCTURE" name="TAIL">
+            <location unit="IN">
+                <x>   773.00 </x>
+                <y>     0.00 </y>
+                <z>   158.33 </z>
+            </location>
+            <static_friction>  1 </static_friction>
+            <dynamic_friction> 1 </dynamic_friction>
+            <spring_coeff unit="LBS/FT">      26204480 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 26204480 </damping_coeff>
+        </contact>
+
+        <contact type="STRUCTURE" name="NOSE">
+            <location unit="IN">
+                <x>     0.00 </x>
+                <y>     0.00 </y>
+                <z>     0.00 </z>
+            </location>
+            <static_friction>  1 </static_friction>
+            <dynamic_friction> 1 </dynamic_friction>
+            <spring_coeff unit="LBS/FT">      26204480 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 26204480 </damping_coeff>
+        </contact>
+
+        <contact type="STRUCTURE" name="COCKPIT_ROOF">
+            <location unit="IN">
+                <x>    38.00 </x>
+                <y>     0.00 </y>
+                <z>    38.00 </z>
+            </location>
+            <static_friction>  1 </static_friction>
+            <dynamic_friction> 1 </dynamic_friction>
+            <spring_coeff unit="LBS/FT">      26204480 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 26204480 </damping_coeff>
+        </contact>
+
+        <contact type="STRUCTURE" name="FRONT_FUSELAGE_ROOF">
+            <location unit="IN">
+                <x>    63.00 </x>
+                <y>     0.00 </y>
+                <z>    63.00 </z>
+            </location>
+            <static_friction>  1 </static_friction>
+            <dynamic_friction> 1 </dynamic_friction>
+            <spring_coeff unit="LBS/FT">      26204480 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 26204480 </damping_coeff>
+        </contact>
+
+
+    </ground_reactions>
+
+    <system file="Propulsion.xml"/>
+    <system file="Aircraft control.xml"/>
+    <system file="Landing Gear.xml"/>
+    <system file="Flaps.xml"/>
+
+    <flight_control name="FCS: dc3">
+
+    </flight_control>
+
+    <aerodynamics>
+
+        <axis name="LIFT">
+            <function name="aero/force/Lift_dummy">
+                <value>0</value>
+            </function>
+        </axis>
+        <axis name="DRAG">
+            <function name="aero/force/Drag_dummy">
+                <value>0</value>
+            </function>
+        </axis>
+        <axis name="SIDE">
+            <function name="aero/force/Side_dummy">
+                <value>0</value>
+            </function>
+        </axis>
+
+        <axis name="PITCH">
+            <function name="aero/moment/Pitch_dummy">
+                <value>0</value>
+            </function>
+        </axis>
+        <axis name="ROLL">
+            <function name="aero/moment/Roll_dummy">
+                <value>0</value>
+            </function>
+        </axis>
+        <axis name="YAW">
+            <function name="aero/moment/Yaw_dummy">
+                <value>0</value>
+            </function>
+        </axis>
+
+    </aerodynamics>
+
+    <external_reactions>
+    </external_reactions>
+
+</fdm_config>
