@@ -1,0 +1,19 @@
+# VSPGEOM Tag Key File
+/home/tobias/flightgear/fgdata-standalone/Aircraft/DC3-neo/src/aero/dc3_VSPGeom.vspgeom
+14
+
+# tag#,geom#,surf#,gname,gid,ssname1,ssname2,...,ssid1,ssid2,...
+1,0,0,Fuselage_S,ZYFTMVCRGK
+2,5,0,LeftNacelle_S,ETULVFDANZ
+3,5,1,LeftNacelle_S,ETULVFDANZ
+4,2,0,MainWing_S,NPVNRTHTKR
+5,2,1,MainWing_S,NPVNRTHTKR
+6,3,0,HStab_S,LCAZRCEZNK
+7,3,1,HStab_S,LCAZRCEZNK
+8,4,0,VStab_S,GPOBFEAKPB
+9,6,0,RightProp_S,CQZHSEODMM
+10,6,1,RightProp_S,CQZHSEODMM
+11,6,2,RightProp_S,CQZHSEODMM
+12,1,0,LeftProp_S,SMVQBUIQHX
+13,1,1,LeftProp_S,SMVQBUIQHX
+14,1,2,LeftProp_S,SMVQBUIQHX

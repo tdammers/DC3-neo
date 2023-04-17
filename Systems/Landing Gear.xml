@@ -24,19 +24,17 @@
             <output>gear/gear-pos-norm</output>
         </kinematic>
 
+        <!-- forward tailwheel caster angle for animation purposes -->
         <pure_gain name="Tail Wheel Caster Angle">
             <input>gear/unit[2]/steering-angle-deg</input>
             <output>/gear/gear[2]/caster-angle-deg</output>
         </pure_gain>
 
+        <!-- set/unset tail wheel castering property based on lock state -->
         <switch name="Tail Wheel Lock">
             <default value="1" />
             <test logic="AND" value="0">
-                /controls/gear/tailwheel-lock eq 1
-                <!--
-                gear/unit[2]/steering-angle-deg lt 5
-                gear/unit[2]/steering-angle-deg gt -5
-                -->
+                /controls/gear/tailwheel-lock-engaged eq 1
             </test>
             <output>gear/unit[2]/castered</output>
         </switch>

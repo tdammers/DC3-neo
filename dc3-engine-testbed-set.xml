@@ -53,14 +53,14 @@
             <binding>
               <command>property-adjust</command>
               <property type="string">/controls/engines/engine[0]/propeller-pitch</property>
-              <step>-0.1</step>
+              <step>-0.05</step>
               <min>-1</min>
               <max>1</max>
             </binding>
             <binding>
               <command>property-adjust</command>
               <property type="string">/controls/engines/engine[1]/propeller-pitch</property>
-              <step>-0.1</step>
+              <step>-0.05</step>
               <min>-1</min>
               <max>1</max>
             </binding>
@@ -71,14 +71,14 @@
             <binding>
               <command>property-adjust</command>
               <property type="string">/controls/engines/engine[0]/propeller-pitch</property>
-              <step>0.1</step>
+              <step>0.05</step>
               <min>-1</min>
               <max>1</max>
             </binding>
             <binding>
               <command>property-adjust</command>
               <property type="string">/controls/engines/engine[1]/propeller-pitch</property>
-              <step>0.1</step>
+              <step>0.05</step>
               <min>-1</min>
               <max>1</max>
             </binding>

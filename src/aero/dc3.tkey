@@ -1,0 +1,18 @@
+# VSP Tag Key File
+/home/tobias/flightgear/fgdata-standalone/Aircraft/DC3-neo/src/aero/dc3.tri
+14
+
+1,Fuselage_S_Surf0
+2,LeftNacelle_S_Surf0
+3,LeftNacelle_S_Surf1
+4,MainWing_S_Surf0
+5,MainWing_S_Surf1
+6,HStab_S_Surf0
+7,HStab_S_Surf1
+8,VStab_S_Surf0
+9,RightProp_S_Surf0
+10,RightProp_S_Surf1
+11,RightProp_S_Surf2
+12,LeftProp_S_Surf0
+13,LeftProp_S_Surf1
+14,LeftProp_S_Surf2

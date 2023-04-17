@@ -169,6 +169,9 @@
     </payload>
 
     <nasal>
+        <dc3>
+            <file>Aircraft/DC3-neo/Nasal/tailwheel.nas</file>
+        </dc3>
     </nasal>
 
     <autopilot>
@@ -193,11 +196,29 @@
                 </roll>
                 <yaw>
                     <aileron>0.1</aileron>
-                    <beta>1.0</beta>
+                    <beta>0.6</beta>
                     <damp>0.5</damp>
                     <roll>0.1</roll>
-                    <rudder>0.2</rudder>
+                    <rudder>0.3</rudder>
                 </yaw>
+                <drag>
+                    <parasitic>0.018</parasitic>
+                    <induced>0.9</induced>
+                    <gear>0.01</gear>
+                    <elevator>0.01</elevator>
+                    <flaps>0.045</flaps>
+                    <alpha>1</alpha>
+                    <beta>1</beta>
+                    <mach>1</mach>
+                </drag>
+                <lift>
+                    <alpha>1</alpha>
+                    <pitch-rate>1.35</pitch-rate>
+                    <alpha-rate>0.5</alpha-rate>
+                    <elevator>0.5</elevator>
+                    <propwash>1</propwash>
+                    <flaps>0.3</flaps>
+                </lift>
             </params>
         </jsbsim>
     </fdm>

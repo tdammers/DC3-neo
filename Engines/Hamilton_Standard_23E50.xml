@@ -11,8 +11,8 @@
   <!-- engine RPM regulated between 1800 and 2800 -->
   <minrpm>1012.5</minrpm>
   <maxrpm>1575.0</maxrpm>
-  <cp_factor>0.327</cp_factor>
-  <ct_factor>0.7096</ct_factor>
+  <cp_factor>0.7</cp_factor>
+  <ct_factor>0.7</ct_factor>
   <constspeed>1</constspeed>
 
   <!-- Propeller thrust concerns:

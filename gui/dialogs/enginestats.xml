@@ -178,11 +178,36 @@
         <text>
             <row>6</row>
             <col>0</col>
-            <label>Power (BHP)</label>
+            <label>Helical Tip Mach Number</label>
             <halign>left</halign>
         </text>
         <text>
             <row>6</row>
+            <col>1</col>
+            <label>000000</label>
+            <property>/fdm/jsbsim/propulsion/engine[0]/helical-tip-Mach</property>
+            <format>%6.4f</format>
+            <live type="bool">true</live>
+            <halign>right</halign>
+        </text>
+        <text>
+            <row>6</row>
+            <col>2</col>
+            <label>000000</label>
+            <property>/fdm/jsbsim/propulsion/engine[1]/helical-tip-Mach</property>
+            <format>%6.4f</format>
+            <live type="bool">true</live>
+            <halign>right</halign>
+        </text>
+
+        <text>
+            <row>7</row>
+            <col>0</col>
+            <label>Power (BHP)</label>
+            <halign>left</halign>
+        </text>
+        <text>
+            <row>7</row>
             <col>1</col>
             <label>000000</label>
             <property>/fdm/jsbsim/propulsion/engine[0]/power-hp</property>
@@ -191,7 +216,7 @@
             <halign>right</halign>
         </text>
         <text>
-            <row>6</row>
+            <row>7</row>
             <col>2</col>
             <label>000000</label>
             <property>/fdm/jsbsim/propulsion/engine[1]/power-hp</property>
@@ -201,13 +226,13 @@
         </text>
 
         <text>
-            <row>7</row>
+            <row>8</row>
             <col>0</col>
             <label>Thrust (lbf)</label>
             <halign>left</halign>
         </text>
         <text>
-            <row>7</row>
+            <row>8</row>
             <col>1</col>
             <label>000000</label>
             <property>/fdm/jsbsim/propulsion/engine[0]/thrust-lbs</property>
@@ -216,7 +241,7 @@
             <halign>right</halign>
         </text>
         <text>
-            <row>7</row>
+            <row>8</row>
             <col>2</col>
             <label>000000</label>
             <property>/fdm/jsbsim/propulsion/engine[1]/thrust-lbs</property>
