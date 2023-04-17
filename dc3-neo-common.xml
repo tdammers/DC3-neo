@@ -203,7 +203,7 @@
                 </yaw>
                 <drag>
                     <parasitic>0.018</parasitic>
-                    <induced>0.9</induced>
+                    <induced>0.09</induced>
                     <gear>0.01</gear>
                     <elevator>0.01</elevator>
                     <flaps>0.045</flaps>
