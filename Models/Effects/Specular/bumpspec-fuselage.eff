@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PropertyList>
-  <name>Aircraft/Douglas-Dc3/Models/Effects/reflection</name>
-  <inherits-from>Aircraft/Douglas-Dc3/Models/Effects/Specular/bumpspec</inherits-from>
+  <name>Aircraft/DC3-neo/Models/Effects/reflection</name>
+  <inherits-from>Aircraft/DC3-neo/Models/Effects/Specular/bumpspec</inherits-from>
   <parameters>
     <reflection-fresnel type="float"><use>sim/model/livery/fresnel</use></reflection-fresnel>
     <reflection-enabled><use>sim/model/livery/civilian</use></reflection-enabled>
     <texture n="2">
-      <image>Aircraft/Douglas-Dc3/Models/normalmap.png</image>
+      <image>Aircraft/DC3-neo/Models/normalmap.png</image>
       <filter>linear-mipmap-linear</filter>
       <wrap-s>clamp</wrap-s>
       <wrap-t>clamp</wrap-t>

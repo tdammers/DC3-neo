@@ -95,7 +95,12 @@
     <object-name>antennes</object-name>
   </effect>
 
-  <!-- working for Rembrandt -->
+  <animation>
+    <type>material</type>
+    <object-name>vitres</object-name>
+    <alpha>0.5</alpha>
+  </animation>
+
   <effect>
     <inherits-from>Aircraft/DC3-neo/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>

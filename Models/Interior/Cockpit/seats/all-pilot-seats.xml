@@ -5,7 +5,7 @@
   <!-- Les sièges -->
   <!-- Pilote -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/seats/pilot-seat.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/seats/pilot-seat.xml</path>
     <offsets>
       <x-m>  0.516 </x-m>
       <y-m> -0.500 </y-m>
@@ -15,7 +15,7 @@
 
   <!-- Copilote -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/seats/pilot-seat.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/seats/pilot-seat.xml</path>
     <offsets>
       <x-m>  0.516 </x-m>
       <y-m>  0.500 </y-m>

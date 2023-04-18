@@ -27,7 +27,7 @@
   
   <!-- Conservateur de cap -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/sperry/cap/cap.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/sperry/cap/cap.xml</path>
     <offsets>
       <x-m> -0.0011 </x-m>
       <y-m> -0.1160 </y-m>
@@ -534,7 +534,7 @@
   
   <!-- AI -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/sperry/ai/ai.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/sperry/ai/ai.xml</path>
     <offsets>
       <x-m> 0.000 </x-m>
       <y-m> 0.034 </y-m>
@@ -544,7 +544,7 @@
 
   <!-- Suction gauge -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/sperry/suction/suction.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/sperry/suction/suction.xml</path>
     <offsets>
       <x-m> 0.003 </x-m>
       <y-m> 0.139 </y-m>

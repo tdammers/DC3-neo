@@ -66,7 +66,7 @@
   <!-- Effets sur le sol -->
   <!-- Roue avant gauche -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground0.xml</path>
+    <path>Aircraft/DC3-neo/Models/Effects/ground/ground0.xml</path>
     <offsets>
       <x-m> -9.554 </x-m>
       <y-m> -2.668 </y-m>
@@ -76,7 +76,7 @@
 
   <!-- Roue avant droite -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground1.xml</path>
+    <path>Aircraft/DC3-neo/Models/Effects/ground/ground1.xml</path>
     <offsets>
       <x-m> -9.554 </x-m>
       <y-m>  2.668 </y-m>
@@ -86,7 +86,7 @@
 
   <!-- Roue centrale gauche -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground2.xml</path>
+    <path>Aircraft/DC3-neo/Models/Effects/ground/ground2.xml</path>
     <offsets>
       <x-m> -2.124 </x-m>
       <y-m> -2.668 </y-m>
@@ -96,7 +96,7 @@
 
   <!-- Roue centrale droite -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground3.xml</path>
+    <path>Aircraft/DC3-neo/Models/Effects/ground/ground3.xml</path>
     <offsets>
       <x-m> -2.124 </x-m>
       <y-m>  2.668 </y-m>
@@ -106,7 +106,7 @@
 
   <!-- Trainee gauche -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Effects/wakes/wakeG.xml</path>
+    <path>Aircraft/DC3-neo/Models/Effects/wakes/wakeG.xml</path>
     <offsets>
       <x-m> -1.658 </x-m>
       <y-m> -2.668 </y-m>
@@ -117,7 +117,7 @@
 
   <!-- Trainee droite -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Effects/wakes/wakeD.xml</path>
+    <path>Aircraft/DC3-neo/Models/Effects/wakes/wakeD.xml</path>
     <offsets>
       <x-m> -1.658 </x-m>
       <y-m>  2.668 </y-m>

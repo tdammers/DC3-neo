@@ -51,7 +51,7 @@
   </animation>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/left_overhead.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Overhead/left_overhead.xml</path>
     <offsets>
       <x-m>  0.095 </x-m>
       <y-m> -0.315 </y-m>
@@ -62,7 +62,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/center_overhead.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Overhead/center_overhead.xml</path>
     <offsets>
       <x-m> -0.089 </x-m>
       <y-m>  0.000 </y-m>
@@ -72,7 +72,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/right_overhead.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Overhead/right_overhead.xml</path>
     <offsets>
       <x-m>  0.095 </x-m>
       <y-m>  0.315 </y-m>

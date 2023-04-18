@@ -4,7 +4,7 @@
 
   <submodel> 
     <name>parachutist</name>
-    <model>Aircraft/Douglas-Dc3/Models/Effects/Submodels/Parachuter/parachuter.xml</model>
+    <model>Aircraft/DC3-neo/Models/Effects/Submodels/Parachuter/parachuter.xml</model>
     <trigger>controls/paratroopers/trigger/state</trigger>
     <speed> 0 </speed>
     <repeat> true </repeat>

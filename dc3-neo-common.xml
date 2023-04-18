@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <PropertyList>
-    <sim>
+    <sim include="dc3-neo-views.xml">
 
         <fuel-fraction>0.8</fuel-fraction>
 
@@ -63,9 +63,6 @@
                 <show-copilot type="bool">true</show-copilot>
             </config>
         </model>
-
-        <views include="dc3-neo-views.xml">
-        </views>
 
         <current-view>
             <can-change-z-offset type="bool">false</can-change-z-offset>

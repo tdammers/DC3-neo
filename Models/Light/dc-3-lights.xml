@@ -4,7 +4,7 @@
 
   <!-- Left Nav Light -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/NavLightL.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/NavLightL.xml</path>
     <offsets>
       <x-m>  -1.354 </x-m>
       <y-m> -14.665 </y-m>
@@ -14,7 +14,7 @@
 
   <!-- Right Nav Light -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/NavLightR.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/NavLightR.xml</path>
     <offsets>
       <x-m> -1.354 </x-m>
       <y-m> 14.665 </y-m>
@@ -24,7 +24,7 @@
 
   <!-- Strobe Light -->
   <model> <!-- Tail -->
-    <path>Aircraft/Douglas-Dc3/Models/Light/StrobeLight.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/StrobeLight.xml</path>
     <offsets>
       <x-m> 8.342 </x-m>
       <y-m> 0.003 </y-m>
@@ -33,7 +33,7 @@
   </model>
 
   <model> <!-- Left wing -->
-    <path>Aircraft/Douglas-Dc3/Models/Light/StrobeLight.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/StrobeLight.xml</path>
     <offsets>
       <x-m>  -1.344 </x-m>
       <y-m> -14.665 </y-m>
@@ -42,7 +42,7 @@
   </model>
 
   <model> <!-- Right wing -->
-    <path>Aircraft/Douglas-Dc3/Models/Light/StrobeLight.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/StrobeLight.xml</path>
     <offsets>
       <x-m> -1.344 </x-m>
       <y-m> 14.665 </y-m>
@@ -52,7 +52,7 @@
 
   <!-- Tail Light -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/TailLight.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/TailLight.xml</path>
     <offsets>
       <x-m> 9.791 </x-m>
       <y-m> 0.003 </y-m>
@@ -62,7 +62,7 @@
 
   <!-- Left Landing Light -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/LandingLightL.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/LandingLightL.xml</path>
     <offsets>
       <x-m> -4.316 </x-m>
       <y-m> -5.594 </y-m>
@@ -73,7 +73,7 @@
 
   <!-- Right Landing Light -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/LandingLightR.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/LandingLightR.xml</path>
     <offsets>
       <x-m> -4.316 </x-m>
       <y-m>  5.594 </y-m>
@@ -84,7 +84,7 @@
 
   <!-- Recognition Light 1 -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition1.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition1.xml</path>
     <offsets>
       <x-m> -2.698 </x-m>
       <y-m>  0.000 </y-m>
@@ -93,7 +93,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition1.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition1.xml</path>
     <offsets>
       <x-m> -0.598 </x-m>
       <y-m>  0.000 </y-m>
@@ -102,7 +102,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition1.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition1.xml</path>
     <offsets>
       <x-m> -1.498 </x-m>
       <y-m>  0.003 </y-m>
@@ -111,7 +111,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition1.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition1.xml</path>
     <offsets>
       <x-m> -2.698 </x-m>
       <y-m>  0.000 </y-m>
@@ -120,7 +120,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition1.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition1.xml</path>
     <offsets>
       <x-m> -0.598 </x-m>
       <y-m>  0.000 </y-m>
@@ -129,7 +129,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition1.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition1.xml</path>
     <offsets>
       <x-m> -1.498 </x-m>
       <y-m>  0.003 </y-m>
@@ -139,7 +139,7 @@
 
   <!-- Recognition Light 2 -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition2.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition2.xml</path>
     <offsets>
       <x-m> -1.783 </x-m>
       <y-m> 11.454 </y-m>
@@ -148,7 +148,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition2.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition2.xml</path>
     <offsets>
       <x-m>  -1.783 </x-m>
       <y-m> -11.454 </y-m>
@@ -157,7 +157,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition2.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition2.xml</path>
     <offsets>
       <x-m> -2.318 </x-m>
       <y-m>  8.463 </y-m>
@@ -166,7 +166,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition2.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition2.xml</path>
     <offsets>
       <x-m> -2.318 </x-m>
       <y-m> -8.463 </y-m>
@@ -175,7 +175,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition2.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition2.xml</path>
     <offsets>
       <x-m> -2.872 </x-m>
       <y-m>  5.084 </y-m>
@@ -184,7 +184,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition2.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition2.xml</path>
     <offsets>
       <x-m> -2.872 </x-m>
       <y-m> -5.084 </y-m>
@@ -194,7 +194,7 @@
 
   <!-- Recognition Light 3 -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition3.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition3.xml</path>
     <offsets>
       <x-m> -5.472 </x-m>
       <y-m>  1.376 </y-m>
@@ -203,7 +203,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition3.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition3.xml</path>
     <offsets>
       <x-m> -5.472 </x-m>
       <y-m> -1.376 </y-m>
@@ -212,7 +212,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition3.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition3.xml</path>
     <offsets>
       <x-m> -2.185 </x-m>
       <y-m>  1.430 </y-m>
@@ -221,7 +221,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition3.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition3.xml</path>
     <offsets>
       <x-m> -2.185 </x-m>
       <y-m> -1.430 </y-m>
@@ -230,7 +230,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition3.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition3.xml</path>
     <offsets>
       <x-m>  1.730 </x-m>
       <y-m>  1.424 </y-m>
@@ -239,7 +239,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/Recognition3.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/Recognition3.xml</path>
     <offsets>
       <x-m>  1.730 </x-m>
       <y-m> -1.424 </y-m>
@@ -249,7 +249,7 @@
 
   <!-- Formation Lights -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/FormationLight.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/FormationLight.xml</path>
     <offsets>
       <x-m> -9.850 </x-m>
       <y-m>  0.000 </y-m>
@@ -258,7 +258,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/FormationLight.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/FormationLight.xml</path>
     <offsets>
       <x-m> -2.836 </x-m>
       <y-m>  0.000 </y-m>
@@ -267,7 +267,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/FormationLight.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/FormationLight.xml</path>
     <offsets>
       <x-m>  8.389 </x-m>
       <y-m> -0.101 </y-m>
@@ -276,7 +276,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Light/FormationLight.xml</path>
+    <path>Aircraft/DC3-neo/Models/Light/FormationLight.xml</path>
     <offsets>
       <x-m>  8.389 </x-m>
       <y-m>  0.101 </y-m>

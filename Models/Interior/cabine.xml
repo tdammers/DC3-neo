@@ -157,12 +157,12 @@
   <!-- Les détails -->
   <model>
     <name>AllDetails</name>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/all-details.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Details/all-details.xml</path>
   </model>
 
   <model>
     <name>AllPoignees</name>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/all-poigneesportes.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Details/all-poigneesportes.xml</path>
   </model>
 
   <animation>
@@ -189,7 +189,7 @@
   <!-- Les sièges -->
   <model>
     <name>AllSeats</name>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/seats/all-seats.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/seats/all-seats.xml</path>
   </model>
 
   <animation>
@@ -211,7 +211,7 @@
 
   <!-- Cockpit -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/cockpit.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/cockpit.xml</path>
     <offsets>
       <x-m> -8.346 </x-m>
       <y-m>  0.000 </y-m>

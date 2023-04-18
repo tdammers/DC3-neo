@@ -16,7 +16,7 @@
 
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Aircraft/Douglas-Dc3/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>Aircraft/DC3-neo/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
   

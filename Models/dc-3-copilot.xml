@@ -15,7 +15,7 @@
 
   <!-- Copilote -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Pilot/copilot.xml</path>
+    <path>Aircraft/DC3-neo/Models/Pilot/copilot.xml</path>
     <offsets>
       <x-m> -8.190 </x-m>
       <y-m>  0.424 </y-m>

@@ -1,7 +1,7 @@
 <PropertyList>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/switch/switch.ac</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Overhead/Instruments/switch/switch.ac</path>
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/gps-placard.ac</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/gps-placard.ac</path>
         <offsets>
             <x-m>0</x-m>
             <y-m>0.040</y-m>

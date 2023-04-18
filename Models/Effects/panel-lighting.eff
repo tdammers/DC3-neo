@@ -13,12 +13,12 @@
         <texture n="4">
             <type>cubemap</type>
             <images>
-                <positive-x>Aircraft/Douglas-Dc3/Models/Effects/white.png</positive-x>
-                <negative-x>Aircraft/Douglas-Dc3/Models/Effects/white.png</negative-x>
-                <positive-y>Aircraft/Douglas-Dc3/Models/Effects/white.png</positive-y>
-                <negative-y>Aircraft/Douglas-Dc3/Models/Effects/white.png</negative-y>
-                <positive-z>Aircraft/Douglas-Dc3/Models/Effects/white.png</positive-z>
-                <negative-z>Aircraft/Douglas-Dc3/Models/Effects/white.png</negative-z>
+                <positive-x>Aircraft/DC3-neo/Models/Effects/white.png</positive-x>
+                <negative-x>Aircraft/DC3-neo/Models/Effects/white.png</negative-x>
+                <positive-y>Aircraft/DC3-neo/Models/Effects/white.png</positive-y>
+                <negative-y>Aircraft/DC3-neo/Models/Effects/white.png</negative-y>
+                <positive-z>Aircraft/DC3-neo/Models/Effects/white.png</positive-z>
+                <negative-z>Aircraft/DC3-neo/Models/Effects/white.png</negative-z>
             </images>
         </texture>
     </parameters>

@@ -83,7 +83,7 @@
 
   <!--overhead Panneau Cockpit Supérieur-->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/overhead.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Overhead/overhead.xml</path>
     <offsets>
       <x-m> -0.03 </x-m>
       <y-m>  0.00 </y-m>
@@ -93,7 +93,7 @@
 
   <!-- Tableau de bord -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/panel.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/panel.xml</path>
     <offsets>
       <x-m> -0.200 </x-m>
       <y-m>  0.000 </y-m>
@@ -103,7 +103,7 @@
 
   <!-- Pilote -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Pilot/pilot.xml</path>
+    <path>Aircraft/DC3-neo/Models/Pilot/pilot.xml</path>
     <offsets>
       <x-m>  0.156 </x-m>
       <y-m> -0.424 </y-m>
@@ -113,7 +113,7 @@
 
   <!-- Copilote -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Pilot/copilot.xml</path>
+    <path>Aircraft/DC3-neo/Models/Pilot/copilot.xml</path>
     <offsets>
       <x-m>  0.156 </x-m>
       <y-m>  0.424 </y-m>
@@ -123,12 +123,12 @@
 
   <!-- Les sièges -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/seats/all-pilot-seats.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/seats/all-pilot-seats.xml</path>
   </model>
 
   <!-- Essuie-glaces -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/wipers/wipersL.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/wipers/wipersL.xml</path>
     <offsets>
       <x-m> -0.2070 </x-m>
       <y-m> -0.2940 </y-m>
@@ -139,7 +139,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/wipers/wipersR.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/wipers/wipersR.xml</path>
     <offsets>
       <x-m> -0.2070 </x-m>
       <y-m>  0.2940 </y-m>

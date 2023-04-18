@@ -3,7 +3,7 @@
 <PropertyList>
 
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Overhead/Instruments/ignition/ignition.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Overhead/Instruments/ignition/ignition.xml</path>
   </model>
 
   <text>

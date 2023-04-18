@@ -6,7 +6,7 @@
 
     <!--   ASI -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/asi2/asi.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/asi2/asi.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m> -0.510 </y-m>
@@ -16,7 +16,7 @@
 
     <!--  AI -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/ai3/ai.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/ai3/ai.xml</path>
         <offsets>
             <x-m> -0.010 </x-m>
             <y-m> -0.400 </y-m>
@@ -26,7 +26,7 @@
 
     <!--ALT -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/alt/alt.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/alt/alt.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m> -0.290 </y-m>
@@ -36,7 +36,7 @@
 
     <!-- TURN -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/turn/turn.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/turn/turn.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m> -0.510 </y-m>
@@ -47,7 +47,7 @@
 
     <!--VSI-->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/vsi/vsi.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/vsi/vsi.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m> -0.290 </y-m>
@@ -57,7 +57,7 @@
 
     <!-- HSI -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/NSA360/NSA360.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/NSA360/NSA360.xml</path>
         <offsets>
             <x-m> -0.010 </x-m>
             <y-m> -0.400 </y-m>
@@ -67,7 +67,7 @@
 
     <!--  DME -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/ki266/ki266.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/ki266/ki266.xml</path>
         <offsets>
             <x-m>  -0.010 </x-m>
             <y-m>  -0.400 </y-m>
@@ -77,7 +77,7 @@
 
     <!-- VOR2 -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/vor/vor2.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/vor/vor2.xml</path>
         <offsets>
             <x-m> -0.000 </x-m>
             <y-m> -0.510 </y-m>
@@ -87,7 +87,7 @@
 
     <!-- ADF -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/adf/adf.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/adf/adf.xml</path>
         <offsets>
             <x-m> -0.000 </x-m>
             <y-m> -0.290 </y-m>
@@ -98,7 +98,7 @@
     <!-- Panel copilote -->
     <!--   ASI -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/asi2/asi.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/asi2/asi.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m>  0.290</y-m>
@@ -108,7 +108,7 @@
 
     <!--  AI -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/ai3/ai.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/ai3/ai.xml</path>
         <offsets>
             <x-m> -0.010 </x-m>
             <y-m>  0.400 </y-m>
@@ -118,7 +118,7 @@
 
     <!--ALT -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/alt/alt.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/alt/alt.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m>  0.510 </y-m>
@@ -128,7 +128,7 @@
 
     <!-- TURN -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/turn/turn.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/turn/turn.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m>  0.290 </y-m>
@@ -138,7 +138,7 @@
 
     <!--VSI-->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/vsi/vsi.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/vsi/vsi.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m>  0.510</y-m>
@@ -150,7 +150,7 @@
 
     <!-- FMA -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/century41/fma.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/century41/fma.xml</path>
         <offsets>
             <x-m>  0.000 </x-m>
             <y-m> -0.290  </y-m>
@@ -160,7 +160,7 @@
 
     <!-- AP buttons -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/century41/buttons.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/century41/buttons.xml</path>
         <offsets>
             <x-m>  0.110 </x-m>
             <y-m>  0.000  </y-m>
@@ -171,7 +171,7 @@
 
     <!-- RPM -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/rpm/rpm.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/rpm/rpm.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m> -0.150 </y-m>
@@ -182,7 +182,7 @@
 
     <!-- Manifold -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/manifold/manifold.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/manifold/manifold.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m> -0.050 </y-m>
@@ -192,7 +192,7 @@
 
     <!-- Fuel pressure -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/fuelpress/fuelpress.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/fuelpress/fuelpress.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m>  0.050 </y-m>
@@ -202,7 +202,7 @@
 
     <!-- Oil pressure -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/oil/oil.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/oil/oil.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m>  0.150 </y-m>
@@ -212,7 +212,7 @@
 
     <!-- tempérture cylindre -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/cyl/cyl.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/cyl/cyl.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m> -0.150 </y-m>
@@ -222,7 +222,7 @@
 
     <!-- tempérture air extérieur -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/temp/temp.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/temp/temp.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m>  0.150 </y-m>
@@ -233,7 +233,7 @@
 
     <!-- température carb -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/carb/carb.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/carb/carb.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m> -0.150 </y-m>
@@ -243,7 +243,7 @@
 
     <!-- oil temp -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/oiltemp/oiltemp.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/oiltemp/oiltemp.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m> -0.150</y-m>
@@ -253,7 +253,7 @@
 
     <!-- gauges fuel -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/fuel/fuel.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/fuel/fuel.xml</path>
         <offsets>
             <x-m> -0.010 </x-m>
             <y-m>  0.278 </y-m>
@@ -263,7 +263,7 @@
 
     <!-- Hyd. pressure -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/hydpress/hydpress.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/hydpress/hydpress.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m>  0.378 </y-m>
@@ -273,7 +273,7 @@
 
     <!-- De-icing. pressure -->
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/deicepress/deicepress.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/deicepress/deicepress.xml</path>
         <offsets>
             <x-m> -0.015 </x-m>
             <y-m>  0.473 </y-m>
@@ -282,7 +282,7 @@
     </model>
 
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/RadioStack/radio-stack.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/RadioStack/radio-stack.xml</path>
         <offsets>
             <x-m>  0.20 </x-m>
             <y-m>  0.00 </y-m>
@@ -293,7 +293,7 @@
 
   <model>
     <name>gps155</name>
-    <path>Aircraft/Douglas-Dc3/Models/Instruments/gps155.xml</path>
+    <path>Aircraft/DC3-neo/Models/Instruments/gps155.xml</path>
     <offsets>
       <x-m>-0.01</x-m>
       <y-m>0.0</y-m>
@@ -304,7 +304,7 @@
   
   <model>
     <name>gps-switch</name>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/gps-switch.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/gps-switch.xml</path>
     <offsets>
       <x-m>0.0</x-m>
       <y-m>-0.050</y-m>

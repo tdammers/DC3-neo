@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
- <name>Aircraft/Douglas-Dc3/Models/Effects/Specular/bumpspec</name>
+ <name>Aircraft/DC3-neo/Models/Effects/Specular/bumpspec</name>
  <inherits-from>Effects/model-combined-deferred</inherits-from>
  <parameters>
   <rain-enabled type="int">2</rain-enabled>

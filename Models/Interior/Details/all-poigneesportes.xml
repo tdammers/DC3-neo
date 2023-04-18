@@ -5,7 +5,7 @@
   <!-- Poignées portes -->
   <model>
     <name>PoigneePorteAvant</name>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poigneeporte.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Details/poigneeporte.xml</path>
     <offsets>
       <x-m> -7.092 </x-m>
       <y-m> -1.065 </y-m>
@@ -31,7 +31,7 @@
 
   <model>
     <name>PoigneePorteArriere</name>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poigneeporte.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Details/poigneeporte.xml</path>
     <offsets>
       <x-m>  2.508 </x-m>
       <y-m> -1.217 </y-m>
@@ -72,7 +72,7 @@
 
   <model>
     <name>PoigneePorteCargo</name>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Details/poigneeporte.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Details/poigneeporte.xml</path>
     <offsets>
       <x-m>  2.960 </x-m>
       <y-m> -1.167 </y-m>

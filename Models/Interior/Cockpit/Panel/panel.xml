@@ -11,7 +11,7 @@
 
   <!-- Console Centrale -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Pedestal/center_console.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Pedestal/center_console.xml</path>
     <offsets>
       <x-m> 0.01 </x-m>
       <y-m> 0.00 </y-m>
@@ -21,7 +21,7 @@
 
   <!--Commandes Gear + Flaps-->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Gear-flaps/gear-flaps.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Gear-flaps/gear-flaps.xml</path>
     <offsets>
       <x-m>  0.01 </x-m>
       <y-m>  0.00 </y-m>
@@ -31,7 +31,7 @@
 
   <!--Cowl-flap command-->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Cowl-flaps/cowl-flaps.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Cowl-flaps/cowl-flaps.xml</path>
     <offsets>
       <x-m> 0.380 </x-m>
       <y-m> 0.825 </y-m>
@@ -43,7 +43,7 @@
 
   <!-- Manche -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Handle/handle.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Handle/handle.xml</path>
     <offsets>
       <x-m> -0.01 </x-m>
       <y-m>  0.00 </y-m>
@@ -53,7 +53,7 @@
 
   <!-- Pédales Pilote -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Pedals/pedals.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Pedals/pedals.xml</path>
     <offsets>
       <x-m> -0.090 </x-m>
       <y-m> -0.430 </y-m>
@@ -63,7 +63,7 @@
 
   <!-- Pédales Copilote -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Pedals/pedals.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Pedals/pedals.xml</path>
     <offsets>
       <x-m> -0.090 </x-m>
       <y-m>  0.430 </y-m>
@@ -73,7 +73,7 @@
 
   <!--   cap -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/cap/cap.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/cap/cap.xml</path>
     <offsets>
       <x-m> -0.120 </x-m>
       <y-m>  0.000 </y-m>
@@ -83,7 +83,7 @@
    
   <!-- Pression hydraulique + Pression des trains-->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/hydgear/hydgear.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/hydgear/hydgear.xml</path>
     <offsets>
       <x-m> 0.12 </x-m>
       <y-m> 0.70 </y-m>
@@ -94,7 +94,7 @@
 
   <model>
     <name>PanelTraditional</name>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/panel-traditional.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/panel-traditional.xml</path>
   </model>
   
   <animation>
@@ -110,9 +110,10 @@
 
   <model>
     <name>Panel1980</name>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/panel-1980.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/panel-1980.xml</path>
   </model>
 
+  <!--
   <animation>
     <type>select</type>
     <object-name>Panel1980</object-name>
@@ -129,10 +130,11 @@
       </or>
     </condition>
   </animation>
+  -->
 
   <!-- chronometre -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/chronograph/chronograph.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/chronograph/chronograph.xml</path>
     <offsets>
       <x-m> -0.006 </x-m>
       <y-m> -0.612 </y-m>
@@ -142,7 +144,7 @@
   
   <!-- Warning -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/warning/warning.xml</path>
+    <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/warning/warning.xml</path>
     <offsets>
       <x-m> -0.01114 </x-m>
       <y-m>  0.58096 </y-m>

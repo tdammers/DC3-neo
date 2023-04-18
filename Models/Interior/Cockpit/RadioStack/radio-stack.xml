@@ -1,6 +1,6 @@
 <PropertyList>
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/VHF-22/ctl22-com1.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/VHF-22/ctl22-com1.xml</path>
         <offsets>
             <x-m> -0.010 </x-m>
             <y-m> -0.030 </y-m>
@@ -9,7 +9,7 @@
         </offsets>
     </model>
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/VHF-22/ctl22-com2.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/VHF-22/ctl22-com2.xml</path>
         <offsets>
             <x-m> -0.010 </x-m>
             <y-m>  0.030 </y-m>
@@ -41,7 +41,7 @@
         </offsets>
     </model>
     <model>
-        <path>Aircraft/Douglas-Dc3/Models/Interior/Cockpit/Panel/Instruments/TDR-94/ctl92-transponder.xml</path>
+        <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/TDR-94/ctl92-transponder.xml</path>
         <offsets>
             <x-m> -0.010 </x-m>
             <y-m>  0.030 </y-m>

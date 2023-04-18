@@ -4,7 +4,7 @@
     <path>Century41-buttons.ac</path>
     
     <effect>
-        <inherits-from>Aircraft/Douglas-Dc3/Models/Effects/panel-lighting</inherits-from>
+        <inherits-from>Aircraft/DC3-neo/Models/Effects/panel-lighting</inherits-from>
         <object-name>Case</object-name>
         <parameters>
             <implicit-lightmap-intensity>
