@@ -180,7 +180,7 @@
                 <pitch>
                     <alpha>1.0</alpha>
                     <alphadot>0.4550</alphadot>
-                    <elevator>-0.4654</elevator>
+                    <elevator>-0.6</elevator>
                     <propwash>1.0</propwash>
                     <rate>1.2683</rate>
                 </pitch>
@@ -193,10 +193,10 @@
                 </roll>
                 <yaw>
                     <aileron>0.1</aileron>
-                    <beta>0.6</beta>
-                    <damp>0.5</damp>
+                    <beta>0.5</beta>
+                    <damp>0.7</damp>
                     <roll>0.1</roll>
-                    <rudder>0.3</rudder>
+                    <rudder>0.4</rudder>
                 </yaw>
                 <drag>
                     <parasitic>0.018</parasitic>
