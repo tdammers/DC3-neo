@@ -27,6 +27,7 @@
         <!-- forward tailwheel caster angle for animation purposes -->
         <pure_gain name="Tail Wheel Caster Angle">
             <input>gear/unit[2]/steering-angle-deg</input>
+            <gain>1.0</gain>
             <output>/gear/gear[2]/caster-angle-deg</output>
         </pure_gain>
 

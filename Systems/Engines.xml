@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<system name="Engines">
+    <!-- NOTES: -->
+    <!--
+        Required BHP for idling at 500 rpm: ~11
+        Blower can maintain 48 inHg MP up to 7000 ft pressure altitude;
+        corresponding atmospheric pressure is 23.09 inHg. Ergo, the blower
+        can achieve up to 24.91 inHg of additional pressure.
+    -->
+    <channel name="Left Engine">
+        <fcs_function name="propulsion/engine[0]/mp-inhg">
+            <function>
+                <product>
+                    <p>/controls/engines/engine[0]/throttle</p>
+                    <sum>
+                        <v>24.91</v>
+                        <product>
+                            <p>atmosphere/P-psf</p>
+                            <!-- convert to inHg -->
+                            <v>0.014139032344453</v>
+                        </product>
+                    </sum>
+                </product>
+            </function>
+        </fcs_function>
+
+        <!-- max power attainable at sea level, mixture auto rich -->
+        <fcs_function name="propulsion/engine[0]/power-hp-sl">
+            <function>
+                <table>
+                    <independentVar lookup="row">propulsion/engine[0]/engine-rpm</independentVar>
+                    <independentVar lookup="column">propulsion/engine[0]/mp-inhg</independentVar>
+                    <tableData>
+                                0     10    15    20    26    28    30    32    34    36    38    40    42    44    46    48
+                         500    11    50    75    100   123   135   150   163   175   183   200   213   225   238   250   263
+                        1000    30    100   140   180   245   270   300   325   350   375   400   425   450   475   500   525
+                        2000    50    150   210   300   490   540   600   650   700   750   800   850   900   950   1000  1050
+                        2200    70    180   250   330   525   580   640   710   770   820   870   920   960   1000  1050  1100
+                        2400    100   200   265   350   540   610   675   740   800   860   915   965   1005  1050  1095  1135
+                        2550    140   220   280   370   575   640   700   765   825   885   935   985   1030  1075  1125  1175
+                        2700    190   240   295   380   595   660   725   790   850   915   965   1020  1070  1115  1160  1200
+                        2750    220   300   340   390   580   675   740   805   835   935   985   1040  1090  1135  1180  1220
+                        2800    230   310   350   400   610   690   755   820   850   955   1005  1060  1110  1155  1200  1240
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/power-hp-target">
+            <function>
+                <product>
+                    <p>propulsion/engine[0]/power-hp-sl</p>
+                    <table>
+                        <independentVar lookup="row">atmosphere/pressure-altitude</independentVar>
+                        <tableData>
+                            -2000   1.0000
+                                0   1.0000
+                             1000   1.0010
+                             2000   1.0025
+                             3000   1.0050
+                             4000   1.0090
+                             5000   1.0160
+                             6000   1.0250
+                             8000   1.0450
+                            11000   1.0810
+                            15000   1.1300
+                            20000   1.2000
+                        </tableData>
+                    </table>
+                </product>
+            </function>
+        </fcs_function>
+
+        <pure_gain name="/engines/engine[0]/mp-osi">
+            <input>propulsion/engine[0]/mp-inhg</input>
+            <gain>1</gain>
+        </pure_gain>
+
+        <fcs_function name="fcs/throttle-pos-norm[0]">
+            <function>
+                <table>
+                    <independentVar lookup="row">propulsion/engine[0]/power-hp-target</independentVar>
+                    <tableData>
+                        0  0
+                     1200  1
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+    </channel>
+</system>
