@@ -15,7 +15,7 @@
 
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Aircraft/DC3-neo/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>Aircraft/Douglas-Dc3/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
   
@@ -45,7 +45,6 @@
       <entry><ind>  20 </ind><dep>   7.5 </dep></entry>
       <entry><ind>  30 </ind><dep>  15.0 </dep></entry>
       <entry><ind>  50 </ind><dep>  45.0 </dep></entry>
-      <entry><ind>  70 </ind><dep>  90.0 </dep></entry>
       <entry><ind> 100 </ind><dep> 135.0 </dep></entry>
       <entry><ind> 130 </ind><dep> 180.0 </dep></entry>
       <entry><ind> 150 </ind><dep> 210.0 </dep></entry>

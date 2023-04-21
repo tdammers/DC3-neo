@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <PropertyList>
     <sim include="dc3-neo-views.xml">
-
+        
         <fuel-fraction>0.8</fuel-fraction>
-
+        
         <rating>
             <FDM type="int">     3 </FDM>
             <systems type="int"> 1 </systems>
@@ -24,7 +24,7 @@
             <tag>twin-engine</tag>
             <tag>variable-pitch</tag>
         </tags>
-
+        
         <!--
     <previews>
         <preview>
@@ -54,7 +54,7 @@
         </preview>
     </previews>
     -->
-
+        
         <model>
             <start-idling type="bool">false</start-idling>
             <config>
@@ -63,13 +63,13 @@
                 <show-copilot type="bool">true</show-copilot>
             </config>
         </model>
-
+        
         <current-view>
             <can-change-z-offset type="bool">false</can-change-z-offset>
             <z-offset-min-m type="float">12.5</z-offset-min-m>
             <z-offset-max-m type="float">3200.0</z-offset-max-m>
         </current-view>
-
+        
         <aircraft-data>
             <path>/sim/model/config/show-yokes</path>
             <path>/sim/model/config/show-pilot</path>
@@ -80,23 +80,25 @@
             <path>/sim/model/config/panel</path>
             <path>/instrumentation/gps155/settings</path>
         </aircraft-data>
-
+        
         <freeze>
             <fuel type="bool">true</fuel>
         </freeze>
-
+        
         <multiplay n="0">
             <chat_display>1</chat_display>
             <generic n="0">
                 <!-- <int   n="11" alias="/sim/model/lights/passing/state"/> -->
+                <float n="14" alias="/controls/engines/engine[0]/cowl-flaps-norm"> 0 </float>
+                <float n="15" alias="/controls/engines/engine[1]/cowl-flaps-norm"> 0 </float>
             </generic>
         </multiplay>
-
+        
         <systems>
         </systems>
-
+        
     </sim>
-
+    
     <consumables>
         <fuel>
             <tank n="0">
@@ -113,7 +115,7 @@
             </tank>
         </fuel>
     </consumables>
-
+    
     <payload>
         <weight n="0">
             <name>Flight Crew (A)</name>
@@ -164,16 +166,19 @@
             <min-lb>0</min-lb>
         </weight>
     </payload>
-
+    
     <nasal>
+        <controls>
+            <file>Aircraft/DC3-neo/Nasal/controls.nas</file>
+        </controls>
         <dc3>
             <file>Aircraft/DC3-neo/Nasal/tailwheel.nas</file>
         </dc3>
     </nasal>
-
+    
     <autopilot>
     </autopilot>
-
+    
     <fdm>
         <jsbsim>
             <params>
@@ -193,10 +198,10 @@
                 </roll>
                 <yaw>
                     <aileron>0.1</aileron>
-                    <beta>0.5</beta>
+                    <beta>0.4</beta>
                     <damp>0.7</damp>
                     <roll>0.1</roll>
-                    <rudder>0.4</rudder>
+                    <rudder>0.5</rudder>
                 </yaw>
                 <drag>
                     <parasitic>0.018</parasitic>
@@ -217,45 +222,105 @@
                     <flaps>0.3</flaps>
                 </lift>
             </params>
+            <propulsion>
+                <engine n="0">
+                    <firing>0.0</firing>
+                    <available-fuel>0.0</available-fuel>
+                    <cht-degc>20.0</cht-degc>
+                    <cowl-flaps>0</cowl-flaps>
+                </engine>
+                <engine n="1">
+                    <firing>0.0</firing>
+                    <available-fuel>0.0</available-fuel>
+                    <cht-degc>20.0</cht-degc>
+                    <cowl-flaps>0</cowl-flaps>
+                </engine>
+            </propulsion>
         </jsbsim>
     </fdm>
-
+    
     <controls>
         <engines>
             <engine n="0">
                 <feed_tank type="int">0</feed_tank>
+                <boost-coil type="bool">false</boost-coil>
+                <prime type="bool">false</prime>
+                <cowl-flaps-pos type="double">1</cowl-flaps-pos>
+                <cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
             </engine>
             <engine n="1">
                 <feed_tank type="int">1</feed_tank>
+                <boost-coil type="bool">false</boost-coil>
+                <prime type="bool">false</prime>
+                <cowl-flaps-pos type="double">1</cowl-flaps-pos>
+                <cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
             </engine>
         </engines>
     </controls>
-
+    
     <input>
         <keyboard>
-          <key n="77">
-            <name>M</name>
-            <desc>Increase Mixture</desc>
-            <binding>
-              <command>property-adjust</command>
-              <property>/controls/engines/mixture-all</property>
-              <step>-0.25</step>
-              <min>-1</min>
-              <max>1</max>
-            </binding>
-          </key>
-          <key n="109">
-            <name>m</name>
-            <desc>Decrease Mixture</desc>
-            <binding>
-              <command>property-adjust</command>
-              <property>/controls/engines/mixture-all</property>
-              <step>0.25</step>
-              <min>-1</min>
-              <max>1</max>
-            </binding>
-          </key>
+            <key n="75">
+                <name>K</name>
+                <desc>Cowl Flaps Open</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.modifyCowlFlaps(1)</script>
+                </binding>
+            </key>
+            <key n="107">
+                <name>k</name>
+                <desc>Cowl Flaps Close</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.modifyCowlFlaps(-1)</script>
+                </binding>
+            </key>
+            <key n="113">
+                <name>q</name>
+                <desc>Mesh Selected Engine</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.meshEngine(1)</script>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>nasal</command>
+                        <script>controls.meshEngine(0)</script>
+                    </binding>
+                </mod-up>
+            </key>
+            <key n="100">
+                <name>d</name>
+                <desc>Prime Selected Engine</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.primeEngine(1)</script>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>nasal</command>
+                        <script>controls.primeEngine(0)</script>
+                    </binding>
+                </mod-up>
+            </key>
+            <key n="77">
+                <name>M</name>
+                <desc>Increase Mixture</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.modifyMixture(1)</script>
+                </binding>
+            </key>
+            <key n="109">
+                <name>m</name>
+                <desc>Decrease Mixture</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.modifyMixture(-1)</script>
+                </binding>
+            </key>
         </keyboard>
     </input>
-
+    
 </PropertyList>
