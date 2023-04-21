@@ -198,8 +198,8 @@
                 </roll>
                 <yaw>
                     <aileron>0.1</aileron>
-                    <beta>0.4</beta>
-                    <damp>0.7</damp>
+                    <beta>0.3</beta>
+                    <damp>0.2</damp>
                     <roll>0.1</roll>
                     <rudder>0.5</rudder>
                 </yaw>
