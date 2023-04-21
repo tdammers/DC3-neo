@@ -64,10 +64,10 @@
     <property>engines/engine[1]/mp-osi</property>
     <interpolation>
       <entry><ind>  0 </ind><dep>   0 </dep></entry>
-      <entry><ind> 20 </ind><dep>  53 </dep></entry>
-      <entry><ind> 32 </ind><dep> 107 </dep></entry>
+      <entry><ind> 20 </ind><dep>  51 </dep></entry>
+      <entry><ind> 30 </ind><dep> 105 </dep></entry>
       <entry><ind> 40 </ind><dep> 160 </dep></entry>
-      <entry><ind> 50 </ind><dep> 217 </dep></entry>
+      <entry><ind> 50 </ind><dep> 216 </dep></entry>
       <entry><ind> 60 </ind><dep> 270 </dep></entry>
       <entry><ind> 70 </ind><dep> 321 </dep></entry>
     </interpolation>
