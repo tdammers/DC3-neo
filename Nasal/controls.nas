@@ -23,7 +23,7 @@ var primeEngine = func (v, which...) {
         foreach(var i; which)
             foreach(var e; engines)
             if(e.index == i) {
-                var n = e.controls.getNode("prime");
+                var n = e.controls.getNode("primer");
                 if (n != nil)
                     n.setBoolValue(v);
             }
@@ -31,7 +31,7 @@ var primeEngine = func (v, which...) {
     else {
         foreach(var e; engines)
             if(e.selected.getValue()) {
-                var n = e.controls.getNode("prime");
+                var n = e.controls.getNode("primer");
                 if (n != nil)
                     n.setBoolValue(v);
             }

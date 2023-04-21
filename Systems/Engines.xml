@@ -385,6 +385,100 @@
                 </table>
             </function>
         </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/fuel-demand-firing">
+            <function>
+                <table>
+                    <independentVar lookup="row">propulsion/engine[0]/power-hp-firing</independentVar>
+                    <tableData>
+                         0   0.0
+                       625   7.5
+                      1200  15.0
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/fuel-demand-cranking">
+            <function>
+                <table>
+                    <independentVar lookup="row">propulsion/engine[0]/engine-rpm</independentVar>
+                    <tableData>
+                         0   0.0
+                        30   0.1
+                      1000   1.0
+                      3000   3.0
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+
+        <switch name="propulsion/engine[0]/fuel-demand">
+            <default value="propulsion/engine[0]/fuel-demand-cranking"/>
+            <test value="propulsion/engine[0]/fuel-demand-firing">
+                propulsion/engine[0]/firing-state eq 1
+            </test>
+        </switch>
+
+        <fcs_function name="propulsion/engine[0]/max-fuel-flow">
+            <function>
+                <table>
+                    <independentVar lookup="row">propulsion/engine[0]/engine-rpm</independentVar>
+                    <tableData>
+                          0   0.0
+                        400   0.5
+                        500   1.0
+                       1000  10.0
+                       2000  20.0
+                       3000  30.0
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+
+        <pure_gain name="propulsion/engine[0]/fuel-flow-primer">
+            <input>/controls/engines/engine[0]/primer</input>
+            <gain>0.2</gain>
+        </pure_gain>
+
+        <fcs_function name="propulsion/engine[0]/fuel-flow">
+            <function>
+                <difference>
+                    <sum>
+                        <!-- fuel supply from carburetor -->
+                        <min>
+                            <table>
+                                <independentVar lookup="row">propulsion/engine[0]/fuel-available</independentVar>
+                                <tableData>
+                                   0.0  30
+                                   0.5   0
+                                </tableData>
+                            </table>
+                            <p>propulsion/engine[0]/max-fuel-flow</p>
+                        </min>
+                        <p>propulsion/engine[0]/fuel-flow-primer</p>
+                    </sum>
+                    <!-- fuel out -->
+                    <p>propulsion/engine[0]/fuel-demand</p>
+                </difference>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/fuel-available">
+            <function>
+                <max>
+                    <sum>
+                        <p>propulsion/engine[0]/fuel-available</p>
+                        <product>
+                            <p>simulation/channel-dt</p>
+                            <p>propulsion/engine[0]/fuel-flow</p>
+                        </product>
+                    </sum>
+                    <v>0.0</v>
+                </max>
+            </function>
+        </fcs_function>
+
     </channel>
 
     <channel name="Right Engine">

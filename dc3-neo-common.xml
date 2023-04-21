@@ -225,13 +225,13 @@
             <propulsion>
                 <engine n="0">
                     <firing>0.0</firing>
-                    <available-fuel>0.0</available-fuel>
+                    <fuel-available>0.0</fuel-available>
                     <cht-degc>20.0</cht-degc>
                     <cowl-flaps>0</cowl-flaps>
                 </engine>
                 <engine n="1">
                     <firing>0.0</firing>
-                    <available-fuel>0.0</available-fuel>
+                    <fuel-available>0.0</fuel-available>
                     <cht-degc>20.0</cht-degc>
                     <cowl-flaps>0</cowl-flaps>
                 </engine>
@@ -244,14 +244,14 @@
             <engine n="0">
                 <feed_tank type="int">0</feed_tank>
                 <boost-coil type="bool">false</boost-coil>
-                <prime type="bool">false</prime>
+                <primer type="bool">false</primer>
                 <cowl-flaps-pos type="double">1</cowl-flaps-pos>
                 <cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
             </engine>
             <engine n="1">
                 <feed_tank type="int">1</feed_tank>
                 <boost-coil type="bool">false</boost-coil>
-                <prime type="bool">false</prime>
+                <primer type="bool">false</primer>
                 <cowl-flaps-pos type="double">1</cowl-flaps-pos>
                 <cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
             </engine>
