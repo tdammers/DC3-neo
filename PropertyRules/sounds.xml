@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+    <flipflop>
+        <type>monostable</type>
+        <time>0.5</time>
+        <S><property>/fdm/jsbsim/propulsion/engine[0]/backfiring</property></S>
+        <output>/sounds/engine[0]/backfiring</output>
+    </flipflop>
+    <flipflop>
+        <type>monostable</type>
+        <time>0.5</time>
+        <S><property>/fdm/jsbsim/propulsion/engine[1]/backfiring</property></S>
+        <output>/sounds/engine[1]/backfiring</output>
+    </flipflop>
+</PropertyList>

@@ -24,6 +24,10 @@
             <tag>twin-engine</tag>
             <tag>variable-pitch</tag>
         </tags>
+
+        <sound>
+            <path>dc3-neo-sounds.xml</path>
+        </sound>
         
         <!--
     <previews>
@@ -95,6 +99,9 @@
         </multiplay>
         
         <systems>
+            <property-rule n="150">
+                <path>Aircraft/DC3-neo/PropertyRules/sounds.xml</path>
+            </property-rule>
         </systems>
         
     </sim>
@@ -178,6 +185,15 @@
     
     <autopilot>
     </autopilot>
+
+    <sounds>
+        <engine n="0">
+            <backfiring type="bool">0</backfiring>
+        </engine>
+        <engine n="1">
+            <backfiring type="bool">0</backfiring>
+        </engine>
+    </sounds>
     
     <fdm>
         <jsbsim>
@@ -224,13 +240,15 @@
             </params>
             <propulsion>
                 <engine n="0">
-                    <firing>0.0</firing>
+                    <firing-state>0</firing-state>
+                    <backfiring>0.0</backfiring>
                     <fuel-available>0.0</fuel-available>
                     <cht-degc>20.0</cht-degc>
                     <cowl-flaps>0</cowl-flaps>
                 </engine>
                 <engine n="1">
-                    <firing>0.0</firing>
+                    <firing-state>0</firing-state>
+                    <backfiring>0.0</backfiring>
                     <fuel-available>0.0</fuel-available>
                     <cht-degc>20.0</cht-degc>
                     <cowl-flaps>0</cowl-flaps>
