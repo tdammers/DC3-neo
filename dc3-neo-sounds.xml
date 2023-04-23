@@ -142,6 +142,53 @@
             </position>
         </wheel-rumble>
 
+        <gear-touchdown>
+            <name>Touchdown Left</name>
+            <path>Sounds/touchdown.wav</path>
+            <mode>once</mode>
+            <condition>
+                <property>gear/gear[0]/wow</property>
+            </condition>
+            <volume>
+                <property>gear/gear[0]/rollspeed-ms</property>
+                <factor>0.02</factor>
+                <offset>-0.1</offset>
+                <min>0</min>
+                <max>0.5</max>
+            </volume>
+            <pitch>
+                <offset>0.0</offset>
+            </pitch>
+            <position>
+                <x>-4.379</x>
+                <y> 2.8194</y>
+                <z>-3.3104</z>
+            </position>
+        </gear-touchdown>
+        <gear-touchdown>
+            <name>Touchdown Right</name>
+            <path>Sounds/touchdown.wav</path>
+            <mode>once</mode>
+            <condition>
+                <property>gear/gear[1]/wow</property>
+            </condition>
+            <volume>
+                <property>gear/gear[1]/rollspeed-ms</property>
+                <factor>0.02</factor>
+                <offset>-0.1</offset>
+                <min>0</min>
+                <max>0.5</max>
+            </volume>
+            <pitch>
+                <offset>0.0</offset>
+            </pitch>
+            <position>
+                <x>-4.379</x>
+                <y>-2.8194</y>
+                <z>-3.3104</z>
+            </position>
+        </gear-touchdown>
+
         <gear-extend>
             <name>Landing Gear Extend</name>
             <path>Sounds/gear_extend.wav</path>
@@ -218,9 +265,9 @@
             </volume>
             <pitch>
                 <property>/engines/engine[0]/rpm</property>
-                <factor>0.006</factor>
+                <factor>0.0015</factor>
                 <offset>0</offset>
-                <min>0.1</min>
+                <min>0.25</min>
                 <max>2.0</max>
             </pitch>
         </engine>
@@ -412,10 +459,10 @@
                 <z> 0.0000</z>
             </position>
             <condition>
-                <less-than>
+                <equals>
                     <property>/fdm/jsbsim/propulsion/engine[0]/firing-state</property>
-                    <value>1</value>
-                </less-than>
+                    <value>0</value>
+                </equals>
             </condition>
             <volume>
                 <expression>
@@ -423,7 +470,7 @@
                         <property>/engines/engine[0]/rpm</property>
                         <entry>
                             <ind>0</ind><dep>0</dep>
-                            <ind>10</ind><dep>0</dep>
+                            <ind>10</ind><dep>1</dep>
                         </entry>
                     </table>
                 </expression>
@@ -662,10 +709,10 @@
                 <z> 0.0000</z>
             </position>
             <condition>
-                <less-than>
+                <equals>
                     <property>/fdm/jsbsim/propulsion/engine[1]/firing-state</property>
-                    <value>1</value>
-                </less-than>
+                    <value>0</value>
+                </equals>
             </condition>
             <volume>
                 <expression>
@@ -673,11 +720,14 @@
                         <property>/engines/engine[1]/rpm</property>
                         <entry>
                             <ind>0</ind><dep>0</dep>
-                            <ind>10</ind><dep>0</dep>
+                            <ind>10</ind><dep>1</dep>
                         </entry>
                     </table>
                 </expression>
             </volume>
+            <pitch>
+                <offset>1</offset>
+            </pitch>
         </engine>
     </fx>
 </PropertyList>

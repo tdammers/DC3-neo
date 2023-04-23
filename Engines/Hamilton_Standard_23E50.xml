@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <propeller version="1.01" name="prop">
-  <ixx>5</ixx>
+  <ixx>35</ixx>
   <diameter unit="IN"> 138 </diameter>
   <numblades>3</numblades>
   <gearratio>1.777777777777777777777777777777777778</gearratio>

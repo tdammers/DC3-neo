@@ -213,9 +213,9 @@
                     <yaw>0.25</yaw>
                 </roll>
                 <yaw>
-                    <aileron>0.1</aileron>
+                    <aileron>0.025</aileron>
                     <beta>0.3</beta>
-                    <damp>0.2</damp>
+                    <damp>0.3</damp>
                     <roll>0.1</roll>
                     <rudder>0.5</rudder>
                 </yaw>
