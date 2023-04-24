@@ -218,6 +218,7 @@
                     <damp>0.3</damp>
                     <roll>0.1</roll>
                     <rudder>0.5</rudder>
+                    <cowl-flaps>0.01</cowl-flaps>
                 </yaw>
                 <drag>
                     <parasitic>0.018</parasitic>
@@ -225,6 +226,7 @@
                     <gear>0.01</gear>
                     <elevator>0.01</elevator>
                     <flaps>0.045</flaps>
+                    <cowl-flaps>0.01</cowl-flaps>
                     <alpha>1</alpha>
                     <beta>1</beta>
                     <mach>1</mach>

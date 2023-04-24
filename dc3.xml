@@ -4,19 +4,19 @@
 <fdm_config name="dc3" version="2.0" release="ALPHA"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
-    
+
     <fileheader>
         <author>Tobias Dammers</author>
         <filecreationdate>12 Mar 2023</filecreationdate>
         <version>0.1</version>
         <description>Douglas DC-3</description>
     </fileheader>
-    
+
     <!--
       Sources:
         https://pcmuseum.tripod.com/dc3/index.html
     -->
-    
+
     <!--
       File:     dc3.xml
       Inputs:
@@ -25,7 +25,7 @@
         stall speed:   66.95kts
         max weight:    26204.48 lb
         length:        64.42 ft
-        wing: 
+        wing:
          span:         95.00 ft
          area:         987.05 sq-ft
          mean chord:   30.26 ft
@@ -59,7 +59,7 @@
         min. turn radius    219.12 ft
         max. turn rate:     0.57 deg/s
 -->
-    
+
     <!--
 
       Key Metrics:
@@ -99,7 +99,7 @@
             <z>  0.35</z>
         </location>
     </metrics>
-    
+
     <mass_balance>
         <ixx unit="SLUG*FT2">129620</ixx>
         <iyy unit="SLUG*FT2"> 73810</iyy>
@@ -192,11 +192,11 @@
             </location>
         </pointmass>
     </mass_balance>
-    
+
     <propulsion>
         <engine file="Electric1200hp">
             <feed> 0 </feed>
-            
+
             <thruster file="Hamilton_Standard_23E50">
                 <sense> 1 </sense>
                 <location unit="IN">
@@ -211,10 +211,10 @@
                 </orient>
             </thruster>
         </engine>
-        
+
         <engine file="Electric1200hp">
             <feed> 1 </feed>
-            
+
             <thruster file="Hamilton_Standard_23E50">
                 <sense> 1 </sense>
                 <location unit="IN">
@@ -229,7 +229,7 @@
                 </orient>
             </thruster>
         </engine>
-        
+
         <!--
             Manual lists tanks as 168 imp. gal. for the front tanks, 167 imp.
             gal. for the rear tanks; fuel density is given as 7.2 lbs/imp.gal.,
@@ -283,11 +283,11 @@
             <density>6.02</density>
             <type>AVGAS</type>
         </tank>
-        
+
     </propulsion>
-    
+
     <ground_reactions>
-        
+
         <contact type="BOGEY" name="LEFT_MAIN">
             <location unit="IN">
                 <x> 215.33 </x>
@@ -303,7 +303,7 @@
             <brake_group> LEFT </brake_group>
             <retractable> 1 </retractable>
         </contact>
-        
+
         <contact type="BOGEY" name="RIGHT_MAIN">
             <location unit="IN">
                 <x> 215.33</x>
@@ -319,7 +319,7 @@
             <brake_group> RIGHT </brake_group>
             <retractable> 1 </retractable>
         </contact>
-        
+
         <contact type="BOGEY" name="TAIL">
             <location unit="IN">
                 <x> 665.00</x>
@@ -336,7 +336,7 @@
             <brake_group> NONE </brake_group>
             <retractable> 0 </retractable>
         </contact>
-        
+
         <contact type="STRUCTURE" name="LEFT_WING">
             <location unit="IN">
                 <x>   180.00 </x>
@@ -348,7 +348,7 @@
             <spring_coeff unit="LBS/FT">      26204.48 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 26204.48 </damping_coeff>
         </contact>
-        
+
         <contact type="STRUCTURE" name="RIGHT_WING">
             <location unit="IN">
                 <x>   180.00 </x>
@@ -360,7 +360,7 @@
             <spring_coeff unit="LBS/FT">      26204.48 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 26204.48 </damping_coeff>
         </contact>
-        
+
         <contact type="STRUCTURE" name="STABILIZER_TOP">
             <location unit="IN">
                 <x>   722.00 </x>
@@ -372,7 +372,7 @@
             <spring_coeff unit="LBS/FT">      26204.48 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 26204.48 </damping_coeff>
         </contact>
-        
+
         <contact type="STRUCTURE" name="TAIL">
             <location unit="IN">
                 <x>   773.00 </x>
@@ -384,7 +384,7 @@
             <spring_coeff unit="LBS/FT">      26204.48 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 26204.48 </damping_coeff>
         </contact>
-        
+
         <contact type="STRUCTURE" name="NOSE">
             <location unit="IN">
                 <x>     0.00 </x>
@@ -396,7 +396,7 @@
             <spring_coeff unit="LBS/FT">      26204.48 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 26204.48 </damping_coeff>
         </contact>
-        
+
         <contact type="STRUCTURE" name="COCKPIT_ROOF">
             <location unit="IN">
                 <x>    38.00 </x>
@@ -408,7 +408,7 @@
             <spring_coeff unit="LBS/FT">      26204.48 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 26204.48 </damping_coeff>
         </contact>
-        
+
         <contact type="STRUCTURE" name="FRONT_FUSELAGE_ROOF">
             <location unit="IN">
                 <x>    63.00 </x>
@@ -420,24 +420,24 @@
             <spring_coeff unit="LBS/FT">      26204.48 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 26204.48 </damping_coeff>
         </contact>
-        
-        
+
+
     </ground_reactions>
-    
+
     <system file="Engines.xml"/>
     <system file="Propulsion.xml"/>
     <system file="Aircraft control.xml"/>
     <system file="Landing Gear.xml"/>
     <system file="Flaps.xml"/>
-    
+
     <flight_control name="FCS: dc3">
-        
+
     </flight_control>
-    
+
     <aerodynamics>
-        
+
         <axis name="LIFT">
-            
+
             <function name="aero/force/Lift_propwash">
                 <description>Delta lift due to propeller induced velocity</description>
                 <product>
@@ -456,7 +456,7 @@
                     </table>
                 </product>
             </function>
-            
+
             <!-- Lift above 0.85 and below -0.85 is generalised -->
             <function name="aero/force/Lift_alpha">
                 <description>Lift due to alpha</description>
@@ -499,7 +499,7 @@
                     </table>
                 </product>
             </function>
-            
+
             <function name="aero/force/Lift_pitch_rate">
                 <description>Lift due to pitch rate</description>
                 <product>
@@ -510,7 +510,7 @@
                     <property>params/lift/pitch-rate</property>
                 </product>
             </function>
-            
+
             <function name="aero/force/Lift_alpha_rate">
                 <description>Lift due to alpha rate</description>
                 <product>
@@ -521,7 +521,7 @@
                     <property>params/lift/alpha-rate</property>
                 </product>
             </function>
-            
+
             <function name="aero/force/Lift_elevator">
                 <description>Lift due to Elevator Deflection</description>
                 <product>
@@ -531,7 +531,7 @@
                     <property>params/lift/elevator</property>
                 </product>
             </function>
-            
+
             <function name="aero/force/Lift_flap">
                 <description>Delta Lift due to flaps</description>
                 <product>
@@ -550,12 +550,12 @@
                     <property>params/lift/flaps</property>
                 </product>
             </function>
-            
-            
+
+
         </axis>
-        
+
         <axis name="DRAG">
-            
+
             <!-- CD0 is based on fuselage, wing, horizontal- en vertical tail -->
             <!-- Antennas, struts and wires are not taken into account        -->
             <!-- CD for gear (fixed and retractable) is defined below         -->
@@ -567,7 +567,7 @@
                     <property>params/drag/parasitic</property>
                 </product>
             </function>
-            
+
             <function name="aero/force/Drag_alpha">
                 <description>Drag due to alpha</description>
                 <product>
@@ -593,7 +593,7 @@
                     </table>
                 </product>
             </function>
-            
+
             <function name="aero/force/Drag_induced">
                 <description>Induced drag</description>
                 <product>
@@ -603,7 +603,7 @@
                     <property>params/drag/induced</property>
                 </product>
             </function>
-            
+
             <function name="aero/force/Drag_mach">
                 <description>Drag due to mach</description>
                 <product>
@@ -621,7 +621,7 @@
                     </table>
                 </product>
             </function>
-            
+
             <function name="aero/force/Drag_beta">
                 <description>Drag due to sideslip</description>
                 <product>
@@ -640,7 +640,7 @@
                     </table>
                 </product>
             </function>
-            
+
             <function name="aero/force/Drag_elevator">
                 <description>Drag due to Elevator Deflection</description>
                 <product>
@@ -652,7 +652,7 @@
                     <property>params/drag/elevator</property>
                 </product>
             </function>
-            
+
             <function name="aero/force/Drag_gear">
                 <description>Drag due to gear</description>
                 <product>
@@ -662,7 +662,28 @@
                     <property>params/drag/gear</property>
                 </product>
             </function>
-            
+
+            <function name="aero/force/Drag_cowl_flap_left">
+                <description>Drag due to left cowl flaps</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>/controls/engines/engine[0]/cowl-flaps-pos</property>
+                    <property>params/drag/cowl-flaps</property>
+                </product>
+            </function>
+
+            <function name="aero/force/Drag_cowl_flap_right">
+                <description>Drag due to left cowl flaps</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>/controls/engines/engine[1]/cowl-flaps-pos</property>
+                    <property>params/drag/cowl-flaps</property>
+                </product>
+            </function>
+
+
             <function name="aero/force/Drag_flap">
                 <description>Drag due to flaps</description>
                 <product>
@@ -681,12 +702,12 @@
                     </table>
                 </product>
             </function>
-            
-            
+
+
         </axis>
-        
+
         <axis name="SIDE">
-            
+
             <function name="aero/force/Side_beta">
                 <description>Side force due to beta</description>
                 <product>
@@ -714,7 +735,7 @@
                     </table>
                 </product>
             </function>
-            
+
             <function name="aero/force/Side_yaw_rate">
                 <description>Side force due to yaw rate</description>
                 <product>
@@ -725,7 +746,7 @@
                     <value> 0.2335 </value>
                 </product>
             </function>
-            
+
             <function name="aero/force/Side_rudder">
                 <description>Side force due to rudder</description>
                 <product>
@@ -735,11 +756,11 @@
                     <value> 0.1206 </value>
                 </product>
             </function>
-            
+
         </axis>
-        
+
         <axis name="PITCH">
-            
+
             <function name="aero/moment/Pitch_propwash">
                 <description>Pitch moment due to propeller induced velocity</description>
                 <product>
@@ -761,7 +782,7 @@
                     <property>params/pitch/propwash</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Pitch_alpha">
                 <description>Pitch moment due to alpha</description>
                 <product>
@@ -773,7 +794,7 @@
                     <property>params/pitch/alpha</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Pitch_elevator">
                 <description>Pitch moment due to elevator</description>
                 <product>
@@ -794,7 +815,7 @@
                     <property>params/pitch/elevator</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Pitch_damp">
                 <description>Pitch moment due to pitch rate</description>
                 <product>
@@ -807,7 +828,7 @@
                     <property>params/pitch/rate</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Pitch_alphadot">
                 <description>Pitch moment due to alpha rate</description>
                 <product>
@@ -820,11 +841,11 @@
                     <property>params/pitch/alphadot</property>
                 </product>
             </function>
-            
+
         </axis>
-        
+
         <axis name="ROLL">
-            
+
             <function name="aero/moment/Roll_differential_propwash">
                 <description>Roll moment due to differential propwash</description>
                 <product>
@@ -836,7 +857,7 @@
                     <value> -4.4423 </value>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Roll_beta">
                 <description>Roll moment due to beta</description>
                 <product>
@@ -857,7 +878,7 @@
                     <property>params/roll/beta</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Roll_damp">
                 <description>Roll moment due to roll rate</description>
                 <product>
@@ -869,7 +890,7 @@
                     <property>params/roll/damp</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Roll_yaw">
                 <description>Roll moment due to yaw rate</description>
                 <product>
@@ -890,7 +911,7 @@
                     <property>params/roll/yaw</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Roll_aileron">
                 <description>Roll moment due to aileron</description>
                 <product>
@@ -911,7 +932,7 @@
                     <property>params/roll/aileron</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Roll_rudder">
                 <description>Roll moment due to rudder</description>
                 <product>
@@ -922,11 +943,11 @@
                     <property>params/roll/rudder</property>
                 </product>
             </function>
-            
+
         </axis>
-        
+
         <axis name="YAW">
-            
+
             <!-- Stall initiator -->
             <function name="aero/moment/Yaw_alpha">
                 <description>Yaw moment due to alpha</description>
@@ -947,7 +968,7 @@
                     </table>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Yaw_beta">
                 <description>Yaw moment due to beta</description>
                 <product>
@@ -958,7 +979,7 @@
                     <property>params/yaw/beta</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Yaw_roll_rate">
                 <description>Yaw moment due to roll rate</description>
                 <product>
@@ -979,7 +1000,7 @@
                     <property>params/yaw/roll</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Yaw_damp">
                 <description>Yaw moment due to yaw rate</description>
                 <product>
@@ -992,7 +1013,7 @@
                     <property>params/yaw/damp</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Yaw_rudder">
                 <description>Yaw moment due to rudder</description>
                 <product>
@@ -1017,7 +1038,7 @@
                     <property>params/yaw/rudder</property>
                 </product>
             </function>
-            
+
             <function name="aero/moment/Yaw_aileron">
                 <description>Adverse yaw</description>
                 <product>
@@ -1029,12 +1050,34 @@
                     <property>params/yaw/aileron</property>
                 </product>
             </function>
-            
+
+            <function name="aero/moment/Yaw_cowl_flap_left">
+                <description>Drag due to left cowl flaps</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>/controls/engines/engine[0]/cowl-flaps-pos</property>
+                    <property>params/yaw/cowl-flaps</property>
+                    <value>-1</value>
+                </product>
+            </function>
+
+            <function name="aero/moment/Yaw_cowl_flap_right">
+                <description>Drag due to left cowl flaps</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>/controls/engines/engine[1]/cowl-flaps-pos</property>
+                    <property>params/yaw/cowl-flaps</property>
+                </product>
+            </function>
+
+
         </axis>
-        
+
     </aerodynamics>
-    
+
     <external_reactions>
     </external_reactions>
-    
+
 </fdm_config>
