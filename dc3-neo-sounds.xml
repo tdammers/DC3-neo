@@ -255,20 +255,19 @@
                             <ind>50</ind><dep>0.5</dep>
                         </entry>
                         <entry>
-                            <ind>300</ind><dep>0.5</dep>
+                            <ind>250</ind><dep>0.5</dep>
                         </entry>
                         <entry>
-                            <ind>600</ind><dep>0</dep>
+                            <ind>300</ind><dep>0</dep>
                         </entry>
                     </table>
                 </expression>
             </volume>
             <pitch>
                 <property>/engines/engine[0]/rpm</property>
-                <factor>0.0015</factor>
-                <offset>0</offset>
-                <min>0.25</min>
-                <max>2.0</max>
+                <factor>0.003</factor>
+                <min>0.75</min>
+                <max>1.5</max>
             </pitch>
         </engine>
         <engine>
@@ -299,10 +298,10 @@
                             <ind>200</ind><dep>0</dep>
                         </entry>
                         <entry>
-                            <ind>300</ind><dep>0.2</dep>
+                            <ind>300</ind><dep>0.4</dep>
                         </entry>
                         <entry>
-                            <ind>600</ind><dep>0.2</dep>
+                            <ind>600</ind><dep>0.4</dep>
                         </entry>
                         <entry>
                             <ind>1000</ind><dep>0</dep>
@@ -353,7 +352,7 @@
             </volume>
             <pitch>
                 <property>/engines/engine[0]/rpm</property>
-                <factor>0.00074</factor>
+                <factor>0.0008</factor>
                 <offset>0</offset>
                 <min>0.1</min>
                 <max>2.0</max>
@@ -381,7 +380,7 @@
                     <table>
                         <property>/fdm/jsbsim/propulsion/engine[0]/power-hp</property>
                         <entry>
-                            <ind>700</ind><dep>0</dep>
+                            <ind>0</ind><dep>0</dep>
                         </entry>
                         <entry>
                             <ind>1200</ind><dep>1</dep>
@@ -391,7 +390,7 @@
             </volume>
             <pitch>
                 <property>/engines/engine[0]/rpm</property>
-                <factor>0.000375</factor>
+                <factor>0.000533333</factor>
                 <offset>0</offset>
                 <min>0.1</min>
                 <max>2.0</max>
@@ -470,6 +469,8 @@
                         <property>/engines/engine[0]/rpm</property>
                         <entry>
                             <ind>0</ind><dep>0</dep>
+                        </entry>
+                        <entry>
                             <ind>10</ind><dep>1</dep>
                         </entry>
                     </table>
@@ -720,6 +721,8 @@
                         <property>/engines/engine[1]/rpm</property>
                         <entry>
                             <ind>0</ind><dep>0</dep>
+                        </entry>
+                        <entry>
                             <ind>10</ind><dep>1</dep>
                         </entry>
                     </table>

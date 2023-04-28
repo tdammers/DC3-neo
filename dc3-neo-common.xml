@@ -189,9 +189,11 @@
     <sounds>
         <engine n="0">
             <backfiring type="bool">0</backfiring>
+            <shutdown type="bool">0</shutdown>
         </engine>
         <engine n="1">
             <backfiring type="bool">0</backfiring>
+            <shutdown type="bool">0</shutdown>
         </engine>
     </sounds>
     
@@ -226,7 +228,7 @@
                     <gear>0.01</gear>
                     <elevator>0.01</elevator>
                     <flaps>0.045</flaps>
-                    <cowl-flaps>0.01</cowl-flaps>
+                    <cowl-flaps>0.001</cowl-flaps>
                     <alpha>1</alpha>
                     <beta>1</beta>
                     <mach>1</mach>

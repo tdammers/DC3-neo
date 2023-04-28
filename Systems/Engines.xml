@@ -128,18 +128,6 @@
     </channel>
 
     <channel name="Left Engine">
-        <fcs_function name="propulsion/engine[0]/mp-inhg">
-            <function>
-                <product>
-                    <p>/controls/engines/engine[0]/throttle</p>
-                    <sum>
-                        <v>24.91</v>
-                        <p>atmosphere/P-inhg</p>
-                    </sum>
-                </product>
-            </function>
-        </fcs_function>
-
         <pure_gain name="/engines/engine[0]/cyl-temp">
             <input>propulsion/engine[0]/cht-degc</input>
             <gain>1</gain>
@@ -233,6 +221,80 @@
                             <p>propulsion/engine[0]/heat-loss</p>
                         </sum>
                     </product>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/suction-inhg">
+            <function>
+                <sum>
+                    <product>
+                        <v>30</v>
+                        <pow>
+                            <v>0.5</v>
+                            <product>
+                                <p>propulsion/engine[0]/engine-rpm</p>
+                                <v>0.02222222222222222222</v>
+                            </product>
+                        </pow>
+                    </product>
+                    <value>-30</value>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/blower-inhg">
+            <function>
+                <sum>
+                    <product>
+                        <v>-20</v>
+                        <pow>
+                            <v>0.5</v>
+                            <product>
+                                <p>propulsion/engine[0]/engine-rpm</p>
+                                <v>0.002222222222222222222</v>
+                            </product>
+                        </pow>
+                    </product>
+                    <product>
+                        <p>propulsion/engine[0]/engine-rpm</p>
+                        <v>0.013</v>
+                    </product>
+                    <value>20</value>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/mp-min-inhg">
+            <function>
+                <sum>
+                    <p>atmosphere/P-inhg</p>
+                    <p>propulsion/engine[0]/suction-inhg</p>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/mp-max-inhg">
+            <function>
+                <sum>
+                    <p>atmosphere/P-inhg</p>
+                    <p>propulsion/engine[0]/suction-inhg</p>
+                    <p>propulsion/engine[0]/blower-inhg</p>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/mp-inhg">
+            <function>
+                <sum>
+                    <product>
+                        <p>/controls/engines/engine[0]/throttle</p>
+                        <difference>
+                            <p>propulsion/engine[0]/mp-max-inhg</p>
+                            <p>propulsion/engine[0]/mp-min-inhg</p>
+                        </difference>
+                    </product>
+                    <p>propulsion/engine[0]/mp-min-inhg</p>
                 </sum>
             </function>
         </fcs_function>
@@ -497,18 +559,6 @@
     </channel>
 
     <channel name="Right Engine">
-        <fcs_function name="propulsion/engine[1]/mp-inhg">
-            <function>
-                <product>
-                    <p>/controls/engines/engine[1]/throttle</p>
-                    <sum>
-                        <v>24.91</v>
-                        <p>atmosphere/P-inhg</p>
-                    </sum>
-                </product>
-            </function>
-        </fcs_function>
-
         <pure_gain name="/engines/engine[1]/cyl-temp">
             <input>propulsion/engine[1]/cht-degc</input>
             <gain>1</gain>
@@ -602,6 +652,80 @@
                             <p>propulsion/engine[1]/heat-loss</p>
                         </sum>
                     </product>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/suction-inhg">
+            <function>
+                <sum>
+                    <product>
+                        <v>30</v>
+                        <pow>
+                            <v>0.5</v>
+                            <product>
+                                <p>propulsion/engine[1]/engine-rpm</p>
+                                <v>0.02222222222222222222</v>
+                            </product>
+                        </pow>
+                    </product>
+                    <value>-30</value>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/blower-inhg">
+            <function>
+                <sum>
+                    <product>
+                        <v>-20</v>
+                        <pow>
+                            <v>0.5</v>
+                            <product>
+                                <p>propulsion/engine[1]/engine-rpm</p>
+                                <v>0.002222222222222222222</v>
+                            </product>
+                        </pow>
+                    </product>
+                    <product>
+                        <p>propulsion/engine[1]/engine-rpm</p>
+                        <v>0.013</v>
+                    </product>
+                    <value>20</value>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/mp-min-inhg">
+            <function>
+                <sum>
+                    <p>atmosphere/P-inhg</p>
+                    <p>propulsion/engine[1]/suction-inhg</p>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/mp-max-inhg">
+            <function>
+                <sum>
+                    <p>atmosphere/P-inhg</p>
+                    <p>propulsion/engine[1]/suction-inhg</p>
+                    <p>propulsion/engine[1]/blower-inhg</p>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/mp-inhg">
+            <function>
+                <sum>
+                    <product>
+                        <p>/controls/engines/engine[1]/throttle</p>
+                        <difference>
+                            <p>propulsion/engine[1]/mp-max-inhg</p>
+                            <p>propulsion/engine[1]/mp-min-inhg</p>
+                        </difference>
+                    </product>
+                    <p>propulsion/engine[1]/mp-min-inhg</p>
                 </sum>
             </function>
         </fcs_function>
