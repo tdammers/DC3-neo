@@ -16,8 +16,58 @@
   <animation>
     <type>material</type>
     <object-name>wheels.unlock</object-name>
+    <!--
     <condition>
       <not><property>controls/gear/gear-down-lock</property></not>
+    </condition>
+    -->
+    <condition>
+        <or>
+            <and>
+                <!-- left MLG not extended but lever in "extend" pos -->
+                <not>
+                    <equals>
+                        <property>gear/gear[0]/position-norm</property>
+                        <value>1</value>
+                    </equals>
+                </not>
+                <property>controls/gear/gear-down</property>
+            </and>
+            <and>
+                <!-- right MLG not extended but lever in "extend" pos -->
+                <not>
+                    <equals>
+                        <property>gear/gear[1]/position-norm</property>
+                        <value>1</value>
+                    </equals>
+                </not>
+                <property>controls/gear/gear-down</property>
+            </and>
+            <and>
+                <!-- left MLG not retracted but lever in "retract" pos -->
+                <not>
+                    <equals>
+                        <property>gear/gear[0]/position-norm</property>
+                        <value>0</value>
+                    </equals>
+                </not>
+                <not>
+                    <property>controls/gear/gear-down</property>
+                </not>
+            </and>
+            <and>
+                <!-- right MLG not retracted but lever in "retract" pos -->
+                <not>
+                    <equals>
+                        <property>gear/gear[1]/position-norm</property>
+                        <value>0</value>
+                    </equals>
+                </not>
+                <not>
+                    <property>controls/gear/gear-down</property>
+                </not>
+            </and>
+        </or>
     </condition>
     <emission>
       <red>   1.0 </red>
@@ -29,11 +79,25 @@
   <animation>
     <type>material</type>
     <object-name>wheels.locked</object-name>
+    <!--
     <condition>
       <and>
         <property>controls/gear/gear-down-lock</property>
         <property>controls/gear/gear-down</property>
       </and>
+    </condition>
+    -->
+    <condition>
+        <and>
+            <equals>
+                <property>gear/gear[0]/position-norm</property>
+                <value>1</value>
+            </equals>
+            <equals>
+                <property>gear/gear[1]/position-norm</property>
+                <value>1</value>
+            </equals>
+        </and>
     </condition>
     <emission>
       <red>   0.0 </red>
