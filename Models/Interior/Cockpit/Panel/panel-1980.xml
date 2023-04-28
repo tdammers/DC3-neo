@@ -313,6 +313,7 @@
     </offsets>
   </model>
   
+  <!--
   <animation>
     <type>select</type>
     <object-name>gps155</object-name>
@@ -327,6 +328,7 @@
       </or>
     </condition>
   </animation>
+  -->
 
 
 </PropertyList>

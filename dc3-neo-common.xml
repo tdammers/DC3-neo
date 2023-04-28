@@ -65,6 +65,7 @@
                 <show-yokes type="bool">true</show-yokes>
                 <show-pilot type="bool">true</show-pilot>
                 <show-copilot type="bool">true</show-copilot>
+                <panel>gps155</panel>
             </config>
         </model>
         
@@ -99,6 +100,9 @@
         </multiplay>
         
         <systems>
+            <autopilot n="102">
+                <path>Aircraft/DC3-neo/PropertyRules/autopilot-century.xml</path>
+            </autopilot>
             <property-rule n="150">
                 <path>Aircraft/DC3-neo/PropertyRules/sounds.xml</path>
             </property-rule>
@@ -179,8 +183,20 @@
             <file>Aircraft/DC3-neo/Nasal/controls.nas</file>
         </controls>
         <dc3>
+            <file>Aircraft/Instruments-3d/ki266/ki266.nas</file>
             <file>Aircraft/DC3-neo/Nasal/tailwheel.nas</file>
+            <file>Aircraft/DC3-neo/Nasal/comm-radios.nas</file>
+            <file>Aircraft/DC3-neo/Nasal/autopilot-control.nas</file>
         </dc3>
+        <century>
+            <file>Aircraft/DC3-neo/Nasal/autopilot-century.nas</file>
+        </century>
+        <gps155>
+            <file>Aircraft/DC3-neo/Nasal/gps155.nas</file>
+        </gps155>
+        <chronograph>
+            <file>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/chronograph/chronograph.nas</file>
+        </chronograph>
     </nasal>
     
     <autopilot>
