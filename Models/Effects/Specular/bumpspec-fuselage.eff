@@ -4,10 +4,8 @@
   <name>Aircraft/DC3-neo/Models/Effects/reflection</name>
   <inherits-from>Aircraft/DC3-neo/Models/Effects/Specular/bumpspec</inherits-from>
   <parameters>
-    <reflection-fresnel type="float">1</reflection-fresnel>
-    <reflection-correction type="float">0</reflection-correction>
+    <reflection-fresnel-factor type="float">0.1</reflection-fresnel-factor>
     <reflection-enabled>1</reflection-enabled>
-    <reflection-noise>1</reflection-noise>
     <texture n="2">
       <image>Aircraft/DC3-neo/Models/normalmap.png</image>
       <filter>linear-mipmap-linear</filter>
