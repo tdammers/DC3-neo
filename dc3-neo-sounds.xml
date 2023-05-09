@@ -263,12 +263,6 @@
                     </table>
                 </expression>
             </volume>
-            <pitch>
-                <property>/engines/engine[0]/rpm</property>
-                <factor>0.003</factor>
-                <min>0.75</min>
-                <max>1.5</max>
-            </pitch>
         </engine>
         <engine>
             <name>Engine Left Idle</name>
@@ -514,13 +508,6 @@
                     </table>
                 </expression>
             </volume>
-            <pitch>
-                <property>/engines/engine[1]/rpm</property>
-                <factor>0.0015</factor>
-                <offset>0</offset>
-                <min>0.1</min>
-                <max>2.0</max>
-            </pitch>
         </engine>
         <engine>
             <name>Engine Right Idle</name>
