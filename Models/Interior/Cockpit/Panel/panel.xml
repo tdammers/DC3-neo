@@ -113,7 +113,6 @@
     <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/panel-1980.xml</path>
   </model>
 
-  <!--
   <animation>
     <type>select</type>
     <object-name>Panel1980</object-name>
@@ -130,7 +129,6 @@
       </or>
     </condition>
   </animation>
-  -->
 
   <!-- chronometre -->
   <model>

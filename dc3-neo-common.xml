@@ -25,6 +25,8 @@
             <tag>variable-pitch</tag>
         </tags>
 
+        <menubar include="gui/menu.xml"/>
+
         <sound>
             <path>dc3-neo-sounds.xml</path>
         </sound>
@@ -100,6 +102,9 @@
         </multiplay>
         
         <systems>
+            <autopilot n="101">
+                <path>Aircraft/DC3-neo/PropertyRules/autopilot-sperry.xml</path>
+            </autopilot>
             <autopilot n="102">
                 <path>Aircraft/DC3-neo/PropertyRules/autopilot-century.xml</path>
             </autopilot>
@@ -197,6 +202,9 @@
         <chronograph>
             <file>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/chronograph/chronograph.nas</file>
         </chronograph>
+        <dialogs>
+            <file>Aircraft/DC3-neo/Nasal/dialogs.nas</file>
+        </dialogs>
     </nasal>
     
     <autopilot>

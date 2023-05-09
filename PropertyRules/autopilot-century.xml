@@ -421,8 +421,8 @@
             <property>autopilot/century/heading-error</property>
         </input>
         <output>autopilot/settings/target-roll-deg</output>
-        <Kp>1.5</Kp>
-        <Ki>0.1</Ki>
+        <Kp>1.2</Kp>
+        <Ki>0.2</Ki>
         <min>-30</min>
         <max>30</max>
     </pi-simple-controller>
@@ -784,8 +784,8 @@
             <property>autopilot/settings/target-roll-rate-degps</property>
         </reference>
         <output>autopilot/internal/aileron</output>
-        <Kp>0.1</Kp>
-        <Ki>1.0</Ki>
+        <Kp>0.01</Kp>
+        <Ki>0.1</Ki>
     </pi-simple-controller>
     <pi-simple-controller>
         <name>Elevator control</name>
