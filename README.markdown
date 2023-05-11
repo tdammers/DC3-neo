@@ -68,32 +68,115 @@ Will probably not do:
 Starting out with Helijah's model and some instruments from fgdata; to be
 either refined or replaced eventually.
 
+Some mild improvements have been made to the exterior model:
+
+- A higher-resolution version of the bumpmap
+- Tweaked materials, effects & shaders to look better with ALS
+
+To do:
+
+- Improve interior, especially the flight deck.
+- Redo UV mapping
+- Add more details on exterior model (e.g. door hinges)
+- Reinstate liveries
+- Figure out HDR vs. ALS (automatic selection)
+- PBR liveries (with metalness & roughness textures etc.)
+
 ### FDM
 
-- Aerodynamics: crude starting point generated with Aeromatic++, and tweaked a
-  bit to be flyable. Needs work.
-- Landing gear: positions are correct; tail wheel lock implemented, but correct
-  locking mechanism needs to be implemented (in the "locked" lever position,
-  the TW will lock once it moves into or through a centered position, but will
-  remain free-castering until then). Wheel friction coefficients need tweaking.
-- Engines: flailing right now; entered known-correct and best-guess parameters,
-  but the resulting engine model does not match the spec *at all*. Plenty of
-  work needed.
+- Aerodynamics: generated a crude starting point with Aeromatic++, and tweaked
+  it to fly realistically and match performance specs. Effects currently
+  modeled:
+  - Adverse yaw
+  - Propwash
+  - Backfiring torque effects
+  - Cowl flap drag
+  - Flaps
+  - Landing gear drag
+  Not modeled yet (but planned at some point):
+  - Stall hysteresis
+  - Reduced rudder authority at high AoA due to fuselage wake
+  - Ground effect
+  - Pitch moment due to landing gear drag
+  - Wing icing
+- Landing gear:
+  - positions are correct
+  - tail wheel lock behaves realistically (in the "locked" lever position, the
+    TW will lock once it moves into or through a centered position, but will
+    remain free-castering until then)
+  - Overall ground interactions seem plausible, ground handling matches
+    descriptions (easy to taxi, differential thrust needed in crosswind
+    conditions), and unlike the YASim FDM, this one can be taxied safely and
+    comfortably up to about 30 knots straight, and 12-15 knots in sharp turns,
+    without ground-looping or nosing over.
+- Engines: partially done. We're making the entire engine model from scratch,
+  using the "electric" engine model from JSBSim as a neutral powerplant with
+  linear power response to throttle input. This way, we can model fuel flow,
+  firing behavior, backfiring, altitude effects, blower, mixture, etc.
+  ourselves. Currently simulated:
+  - Startup sequence (including meshing and priming)
+  - Magnetos
+  - CHT
+  - backfiring due to cold engine
+  - backfiring due to overpriming
+  - MP (including blower, density altitude, throttle)
+  - Prop governor / RPM levers
+  Not simulated yet:
+  - Mixture
+  - Automatic mixture control (including cutoff)
+  - Engine overheat / fire
+  - Oil pressure
+  - Carburetor temperature
+  - Engine icing
 - Mass & balance: should be accurate; payload locations eyeballed; fluids
   (oil, brake, etc.), emergency kits, etc., not considered, but included in
   OEW.
+  Fun stretch goal: model passengers and flight attendants moving around when
+  seat belt sign is off.
 
 ### Systems
 
 Currently, practically everything is stubbed out or missing. We will need the
 following:
 
-- Fuel (including tanks, carburetor, mixture control)
+- Fuel system:
+  - Engine fuel demand: partially done
+  - Carburetor
+  - Fuel tanks
+  - Mixture control
 - Electrical system
+- APU
 - Hydraulics (including hand pump; drives brakes, cowl flaps, wing flaps)
 - Oil (including oil temperature, reduction gear oil, oil dilution)
-- Heating & ventilation (cabin heat, windshield heat, 
+- Heating & ventilation (cabin heat, windshield heat, air pressure)
 - Vacuum system
-- Avionics (classic, modernized)
-- Autopilots (Sperry, Century)
-- APU
+- Lights (ALS / HDR; will probably not bother with low-spec or Rembrandt)
+- Autopilots (Sperry, Century; copied over and adjusted for JSBSim, both should
+  work, but need more testing and possibly tweaking).
+
+### Avionics
+
+- Overhead panels: 3D models copied over from helijah/PAF version. Most things
+  still need to be hooked up to actual systems.
+- Classic panel (1940s): 3D model copied over from helijah/PAF version. Some
+  instruments don't work yet. Sperry AP deserves a better 3D model and
+  textures.
+- Modern steam gauges panel (1980s):
+  - Reusing some instruments from classic panel (altimeter, engine gauges, VSI)
+  - ASI (in knots, rather than mph): done
+  - AI: Generic placeholder from FGDATA for now; working on a Collins ADI-84A
+    to replace it.
+  - HSI: Generic placeholder from FGDATA for now; will have to implement
+    something nicer eventually.
+  - ADF: Generic placeholder from FGDATA; may either eliminate entirely, or use
+    the one from the classic panel, or cook up a new one.
+  - GPS155tso: mostly working, GPS/NAV switch works, HSI driving needs more
+    testing.
+  - DME: ki266, working.
+  - Weather radar: nothing yet, but may make something at some point.
+  - EFB: will probably add FG-EFB at some point.
+  - Radio control panel: to do.
+- Both panels:
+  - Radio stack: mostly working, COMM radios don't have electrical power yet,
+    but, in theory, support 8.33 channels.
+  - Fuel gauges need better 3D model.
