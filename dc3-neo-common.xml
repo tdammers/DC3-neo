@@ -237,6 +237,7 @@
                     <damp>-1.0</damp>
                     <rudder>0.05</rudder>
                     <yaw>0.25</yaw>
+                    <backfiring>10000.0</backfiring>
                 </roll>
                 <yaw>
                     <aileron>0.025</aileron>
@@ -264,7 +265,11 @@
                     <elevator>0.5</elevator>
                     <propwash>1</propwash>
                     <flaps>0.3</flaps>
+                    <backfiring>50000.0</backfiring>
                 </lift>
+                <misc>
+                    <backfiring-frequency>0.98</backfiring-frequency>
+                </misc>
             </params>
             <propulsion>
                 <engine n="0">

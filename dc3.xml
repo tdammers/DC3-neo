@@ -551,6 +551,21 @@
                 </product>
             </function>
 
+            <function name="aero/force/Lift_backfiring_left">
+                <description>Lift due to left engine backfiring</description>
+                <product>
+                    <property>propulsion/engine[0]/backfiring-event</property>
+                    <property>-params/lift/backfiring</property>
+                </product>
+            </function>
+
+            <function name="aero/force/Lift_backfiring_right">
+                <description>Lift due to right engine backfiring</description>
+                <product>
+                    <property>propulsion/engine[1]/backfiring-event</property>
+                    <property>params/lift/backfiring</property>
+                </product>
+            </function>
 
         </axis>
 
@@ -855,6 +870,22 @@
                     <property>metrics/bw-ft</property>
                     <property>aero/alpha-rad</property>
                     <value> -4.4423 </value>
+                </product>
+            </function>
+
+            <function name="aero/moment/Roll_backfiring_left">
+                <description>Roll moment due to left engine backfiring</description>
+                <product>
+                    <property>propulsion/engine[0]/backfiring-event</property>
+                    <property>params/roll/backfiring</property>
+                </product>
+            </function>
+
+            <function name="aero/moment/Roll_backfiring_right">
+                <description>Roll moment due to right engine backfiring</description>
+                <product>
+                    <property>propulsion/engine[1]/backfiring-event</property>
+                    <property>params/roll/backfiring</property>
                 </product>
             </function>
 

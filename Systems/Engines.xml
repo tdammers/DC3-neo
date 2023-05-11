@@ -423,6 +423,24 @@
             </test>
         </switch>
 
+        <fcs_function name="propulsion/engine[0]/backfiring-event">
+            <function>
+                <product>
+                    <gt>
+                        <product>
+                            <sum>
+                                <urandom/>
+                                <v>1.0</v>
+                            </sum>
+                            <v>0.5</v>
+                        </product>
+                        <p>params/misc/backfiring-frequency</p>
+                    </gt>
+                    <p>propulsion/engine[0]/backfiring</p>
+                </product>
+            </function>
+        </fcs_function>
+
         <switch name="propulsion/engine[0]/firing-state">
             <default value="0" />
             <!-- backfiring -->
@@ -515,7 +533,7 @@
 
         <pure_gain name="propulsion/engine[0]/fuel-flow-primer">
             <input>/controls/engines/engine[0]/primer</input>
-            <gain>0.5</gain>
+            <gain>1.0</gain>
         </pure_gain>
 
         <fcs_function name="propulsion/engine[0]/fuel-flow">
@@ -853,6 +871,25 @@
                 </test>
             </test>
         </switch>
+
+        <fcs_function name="propulsion/engine[1]/backfiring-event">
+            <function>
+                <product>
+                    <gt>
+                        <product>
+                            <sum>
+                                <urandom/>
+                                <v>1.0</v>
+                            </sum>
+                            <v>0.5</v>
+                        </product>
+                        <p>params/misc/backfiring-frequency</p>
+                    </gt>
+                    <p>propulsion/engine[1]/backfiring</p>
+                </product>
+            </function>
+        </fcs_function>
+
 
         <switch name="propulsion/engine[1]/firing-state">
             <default value="0" />
