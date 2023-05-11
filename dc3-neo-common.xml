@@ -188,10 +188,11 @@
             <file>Aircraft/DC3-neo/Nasal/controls.nas</file>
         </controls>
         <dc3>
-            <file>Aircraft/Instruments-3d/ki266/ki266.nas</file>
+            <file>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/ki266/ki266.nas</file>
             <file>Aircraft/DC3-neo/Nasal/tailwheel.nas</file>
             <file>Aircraft/DC3-neo/Nasal/comm-radios.nas</file>
             <file>Aircraft/DC3-neo/Nasal/autopilot-control.nas</file>
+            <file>Aircraft/DC3-neo/Nasal/instrumentation.nas</file>
         </dc3>
         <century>
             <file>Aircraft/DC3-neo/Nasal/autopilot-century.nas</file>

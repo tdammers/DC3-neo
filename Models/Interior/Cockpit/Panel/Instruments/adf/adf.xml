@@ -17,6 +17,11 @@
   </emission>
  </animation>
 
+  <effect>
+    <inherits-from>Aircraft/DC3-neo/Models/Effects/Glass/glass</inherits-from>
+    <object-name>Front</object-name>
+  </effect>
+
  <animation>
   <type>rotate</type>
   <object-name>Face</object-name>
