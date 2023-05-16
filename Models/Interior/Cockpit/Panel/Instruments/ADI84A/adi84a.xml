@@ -49,7 +49,6 @@
         <type>material</type>
         <object-name>Case.Glass</object-name>
         <object-name>Slip.Tube</object-name>
-        <object-name>Horizon.Drum.AO</object-name>
         <transparency>
             <alpha>0.1</alpha>
         </transparency>
@@ -128,6 +127,7 @@
         <type>rotate</type>
         <object-name>Horizon.Drum</object-name>
         <object-name>Horizon.Fixed</object-name>
+        <object-name>Horizon.Drum.AO</object-name>
         <object-name>BankIndicator.Marker</object-name>
         <object-name>BankIndicator.Support</object-name>
         <center>
