@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <filter>
+        <type>noise-spike</type>
+        <input>controls/engines/engine[0]/magnetos</input>
+        <output>controls/engines/engine[0]/magnetos-pos</output>
+        <max-rate-of-change>5</max-rate-of-change>
+    </filter>
+    <filter>
+        <type>noise-spike</type>
+        <input>controls/engines/engine[1]/magnetos</input>
+        <output>controls/engines/engine[1]/magnetos-pos</output>
+        <max-rate-of-change>5</max-rate-of-change>
+    </filter>
+</PropertyList>

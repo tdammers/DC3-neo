@@ -68,6 +68,9 @@
                 <show-pilot type="bool">true</show-pilot>
                 <show-copilot type="bool">true</show-copilot>
                 <panel>gps155</panel>
+                <instrumentation>
+                    <ai>Sigmatek</ai>
+                </instrumentation>
             </config>
         </model>
         
@@ -110,6 +113,9 @@
             </autopilot>
             <property-rule n="150">
                 <path>Aircraft/DC3-neo/PropertyRules/sounds.xml</path>
+            </property-rule>
+            <property-rule n="151">
+                <path>Aircraft/DC3-neo/PropertyRules/switches.xml</path>
             </property-rule>
         </systems>
         
@@ -374,5 +380,15 @@
             </key>
         </keyboard>
     </input>
+
+    <systems>
+        <!-- placeholder until we have an actual electrical system -->
+        <electrical>
+            <outputs>
+                <comm n="0" type="double">28.5</comm>
+                <comm n="1" type="double">28.5</comm>
+            </outputs>
+        </electrical>
+    </systems>
     
 </PropertyList>
