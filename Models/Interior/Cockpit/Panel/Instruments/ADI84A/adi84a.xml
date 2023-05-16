@@ -62,8 +62,8 @@
         <emission>
             <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
             <red>   0.06 </red>
-            <green> 0.05 </green>
-            <blue>  0.04 </blue>
+            <green> 0.06 </green>
+            <blue>  0.05 </blue>
         </emission>
     </animation>
     <animation>
@@ -76,8 +76,8 @@
         <emission>
             <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
             <red>   0.05 </red>
-            <green> 0.0375 </green>
-            <blue>  0.025 </blue>
+            <green> 0.05 </green>
+            <blue>  0.0375 </blue>
         </emission>
     </animation>
     <animation>
@@ -95,11 +95,12 @@
         <object-name>LOC.Frame</object-name>
         <object-name>LOC.Shutter</object-name>
         <object-name>LOC.Tape</object-name>
+        <object-name>Slip.TubeBack</object-name>
         <emission>
             <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
             <red>   0.04 </red>
-            <green> 0.03 </green>
-            <blue>  0.02 </blue>
+            <green> 0.04 </green>
+            <blue>  0.03 </blue>
         </emission>
     </animation>
     <animation>
@@ -107,15 +108,18 @@
         <object-name>Slip.Backplate</object-name>
         <object-name>Slip.Case</object-name>
         <object-name>Slip.Marks</object-name>
-        <object-name>Slip.TubeBack</object-name>
         <object-name>SlipSkid.Ball</object-name>
         <object-name>SlipSkid.ScrewL</object-name>
         <object-name>SlipSkid.ScrewR</object-name>
+        <object-name>Case.CornerB</object-name>
+        <object-name>Case.CornerTL</object-name>
+        <object-name>Case.CornerTR</object-name>
+        <object-name>Case.FrontMask</object-name>
         <emission>
             <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
             <red>   0.02 </red>
-            <green> 0.015 </green>
-            <blue>  0.01 </blue>
+            <green> 0.02 </green>
+            <blue>  0.015 </blue>
         </emission>
     </animation>
     
