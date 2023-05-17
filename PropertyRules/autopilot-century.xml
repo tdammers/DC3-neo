@@ -423,8 +423,8 @@
         <output>autopilot/settings/target-roll-deg</output>
         <Kp>1.2</Kp>
         <Ki>0.2</Ki>
-        <min>-30</min>
-        <max>30</max>
+        <min>-25</min>
+        <max>25</max>
     </pi-simple-controller>
     <filter>
         <type>gain</type>
@@ -444,8 +444,8 @@
             <value>0.0</value>
         </input>
         <output>autopilot/settings/target-roll-deg</output>
-        <min>-30</min>
-        <max>30</max>
+        <min>-25</min>
+        <max>25</max>
     </filter>
     <pi-simple-controller>
         <name>Target roll rate</name>
@@ -464,7 +464,7 @@
                     <value>-5</value>
                     <product>
                         <dif>
-                            <value>-30</value>
+                            <value>-25</value>
                             <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
                         </dif>
                     </product>
@@ -477,7 +477,7 @@
                     <value>5</value>
                     <product>
                         <dif>
-                            <value>30</value>
+                            <value>25</value>
                             <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
                         </dif>
                     </product>
@@ -865,5 +865,45 @@
         <Kp>-0.025</Kp>
         <Ki>-0.25</Ki>
     </pi-simple-controller>
+
+    <!-- FD position -->
+    <filter>
+        <type>noise-spike</type>
+        <max-rate-of-change>60</max-rate-of-change>
+        <input>
+            <expression>
+                <difference>
+                    <property>autopilot/settings/target-roll-deg</property>
+                    <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+                </difference>
+            </expression>
+            <condition>
+                <property>autopilot/century/active</property>
+            </condition>
+        </input>
+        <input>
+            <value>0</value>
+        </input>
+        <output>autopilot/fd/roll-deg</output>
+    </filter>
+    <filter>
+        <type>noise-spike</type>
+        <max-rate-of-change>60</max-rate-of-change>
+        <input>
+            <expression>
+                <difference>
+                    <property>autopilot/settings/target-pitch-deg</property>
+                    <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
+                </difference>
+            </expression>
+            <condition>
+                <property>autopilot/century/active</property>
+            </condition>
+        </input>
+        <input>
+            <value>-45</value>
+        </input>
+        <output>autopilot/fd/pitch-deg</output>
+    </filter>
     
 </PropertyList>

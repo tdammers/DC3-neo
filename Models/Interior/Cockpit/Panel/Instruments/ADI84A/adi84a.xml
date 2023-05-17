@@ -165,28 +165,6 @@
         <object-name>FD</object-name>
         <object-name>FD.Bars</object-name>
         <center>
-            <x-m>0</x-m>
-            <y-m>0</y-m>
-            <z-m>0</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-        <expression>
-            <difference>
-                <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
-                <property>autopilot/settings/target-roll-deg</property>
-            </difference>
-        </expression>
-        <factor>1</factor>
-    </animation>
-    <animation>
-        <type>rotate</type>
-        <object-name>FD</object-name>
-        <object-name>FD.Bars</object-name>
-        <center>
             <x-m>-0.0498</x-m>
             <y-m>0</y-m>
             <z-m>0</z-m>
@@ -197,12 +175,28 @@
             <z>0</z>
         </axis>
         <expression>
-            <difference>
-                <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
-                <property>autopilot/settings/target-pitch-deg</property>
-            </difference>
+            <property>autopilot/fd/pitch-deg</property>
         </expression>
-        <factor>1.6667</factor>
+        <factor>-1.6667</factor>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>FD</object-name>
+        <object-name>FD.Bars</object-name>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <expression>
+            <property>autopilot/fd/roll-deg</property>
+        </expression>
+        <factor>-1</factor>
     </animation>
 
     <animation>
@@ -222,18 +216,6 @@
         <min-deg>-10</min-deg>
         <max-deg>10</max-deg>
         <factor>-10</factor>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>FD</object-name>
-        <object-name>FD.Bars</object-name>
-        <condition>
-            <greater-than>
-                <property>autopilot/century/active</property>
-                <value>0.5</value>
-            </greater-than>
-        </condition>
     </animation>
 
     <animation>

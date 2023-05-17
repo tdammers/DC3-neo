@@ -69,7 +69,7 @@
                 <show-copilot type="bool">true</show-copilot>
                 <panel>gps155</panel>
                 <instrumentation>
-                    <ai>Sigmatek</ai>
+                    <ai>ADI-84A</ai>
                 </instrumentation>
             </config>
         </model>
@@ -88,6 +88,7 @@
             <path>/sim/model/config/light-cone</path>
             <path>/sim/model/config/version</path>
             <path>/sim/model/config/panel</path>
+            <path>/sim/model/config/instrumentation</path>
             <path>/instrumentation/gps155/settings</path>
         </aircraft-data>
         
@@ -101,6 +102,8 @@
                 <!-- <int   n="11" alias="/sim/model/lights/passing/state"/> -->
                 <float n="14" alias="/controls/engines/engine[0]/cowl-flaps-norm"> 0 </float>
                 <float n="15" alias="/controls/engines/engine[1]/cowl-flaps-norm"> 0 </float>
+                <int n="17" alias="/controls/lighting/landing-lights[0]"> 0 </int>
+                <int n="18" alias="/controls/lighting/landing-lights[0]"> 0 </int>
             </generic>
         </multiplay>
         
@@ -249,8 +252,8 @@
                 <yaw>
                     <aileron>0.025</aileron>
                     <beta>0.3</beta>
-                    <damp>0.3</damp>
-                    <roll>0.1</roll>
+                    <damp>0.4</damp>
+                    <roll>0.01</roll>
                     <rudder>0.5</rudder>
                     <cowl-flaps>0.01</cowl-flaps>
                 </yaw>
@@ -314,6 +317,10 @@
                 <cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
             </engine>
         </engines>
+        <lighting>
+            <landing-lights n="0" type="bool">false</landing-lights>
+            <landing-lights n="1" type="bool">false</landing-lights>
+        </lighting>
     </controls>
     
     <input>
