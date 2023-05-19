@@ -542,6 +542,7 @@
         <min>-500</min>
         <max>500</max>
     </filter>
+
     <filter>
         <name>Pitch button to fpm (ATT mode)</name>
         <type>gain</type>
@@ -553,12 +554,6 @@
                         <property>autopilot/century/vertical-mode</property>
                         <value>0</value>
                     </equals>
-                    <not>
-                        <equals>
-                            <property>autopilot/century/pitch-button</property>
-                            <value>0</value>
-                        </equals>
-                    </not>
                 </and>
             </condition>
         </enable>
@@ -571,11 +566,11 @@
                     </equals>
                     <less-than>
                         <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
-                        <value>500</value>
+                        <value>1000</value>
                     </less-than>
                 </and>
             </condition>
-            <value>500</value>
+            <value>1000</value>
         </input>
         <input>
             <condition>
@@ -586,11 +581,11 @@
                     </equals>
                     <greater-than>
                         <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
-                        <value>-500</value>
+                        <value>-1000</value>
                     </greater-than>
                 </and>
             </condition>
-            <value>-500</value>
+            <value>-1000</value>
         </input>
         <input>instrumentation/vertical-speed-indicator/indicated-speed-fpm</input>
         <output>autopilot/settings/vertical-speed-fpm</output>
@@ -873,8 +868,8 @@
         <input>
             <expression>
                 <difference>
-                    <property>autopilot/settings/target-roll-deg</property>
                     <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+                    <property>autopilot/settings/target-roll-deg</property>
                 </difference>
             </expression>
             <condition>
@@ -892,8 +887,8 @@
         <input>
             <expression>
                 <difference>
-                    <property>autopilot/settings/target-pitch-deg</property>
                     <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
+                    <property>autopilot/settings/target-pitch-deg</property>
                 </difference>
             </expression>
             <condition>
