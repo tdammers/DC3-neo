@@ -2,7 +2,7 @@
 
 <!-- ************************************************************************
      Douglas DC-3
-     
+
      January 2012 modified by PAF team : http://http://equipe-flightgear.forumactif.com
      December 2012 updated  by Helijah : http://helijah.free.fr / http://embaranger.free.fr
      April    2016 updated  by Helijah : http://helijah.free.fr / http://embaranger.free.fr
@@ -10,152 +10,154 @@
 -->
 <PropertyList>
 
-  <name>config</name>
-  <modal>false</modal>
-  <layout>vbox</layout>
-  <padding>80</padding>
-
-  <group>
-    <layout>hbox</layout>
-    <empty>
-      <stretch>1</stretch>
-    </empty>		
-    <text>
-      <label>DC-3 Options</label>
-    </text>
-    <empty>
-      <stretch>1</stretch>
-    </empty>
-    <button>
-      <pref-width>16</pref-width>
-      <pref-height>16</pref-height>
-      <legend></legend>
-      <keynum>27</keynum>
-      <border>2</border>
-      <binding>
-        <command>dialog-close</command>
-      </binding>
-    </button>
-  </group>
-
-  <hrule/>
-
-  <group>
-    <halign>center</halign>
-    <layout>hbox</layout>
+    <name>config</name>
+    <modal>false</modal>
+    <layout>vbox</layout>
+    <padding>80</padding>
 
     <group>
-      <layout>vbox</layout>
-      
-      <group>
         <layout>hbox</layout>
+        <empty>
+            <stretch>1</stretch>
+        </empty>
+
         <text>
-          <label>Display</label>
-          <halign>left</halign>
+            <label>DC-3 Options</label>
         </text>
-        <hrule>
-          <stretch>true</stretch>
-        </hrule>
-      </group>
-
-      <checkbox>
-        <halign>left</halign>
-        <label>Show Yokes</label>
-        <property>sim/model/config/show-yokes</property>
-        <binding>
-          <command>property-toggle</command>
-          <property>sim/model/config/show-yokes</property>
-        </binding>
-      </checkbox>
-
-      <checkbox>
-        <halign>left</halign>
-        <label>Show Pilot</label>
-        <property>sim/model/config/show-pilot</property>
-        <binding>
-          <command>property-toggle</command>
-          <property>sim/model/config/show-pilot</property>
-        </binding>
-      </checkbox>
-
-      <checkbox>
-        <halign>left</halign>
-        <label>Show Copilot</label>
-        <property>sim/model/config/show-copilot</property>
-        <binding>
-          <command>property-toggle</command>
-          <property>sim/model/config/show-copilot</property>
-        </binding>
-      </checkbox>
-
-    <vrule/>
-
-    <group>
-      <layout>vbox</layout>
-
-      <group>
-        <layout>hbox</layout>
-        <text>
-          <label>Select version</label>
-          <halign>left</halign>
-        </text>
-      </group>
-
-      <group>
-        <layout>hbox</layout>
-        <combo>
-          <pref-width>110</pref-width>
-          <property>sim/model/config/version</property>
-          <value>civilian-gray</value>
-          <value>civilian-red</value>
-          <value>military</value>
-          <binding>
-            <command>dialog-apply</command>
-          </binding>
-        </combo>
-      </group>
-
-      <group>
-        <layout>hbox</layout>
-        <text>
-          <label>Panel layout</label>
-          <halign>left</halign>
-        </text>
-      </group>
-
-      <group>
-        <layout>hbox</layout>
-        <combo>
-          <pref-width>110</pref-width>
-          <property>sim/model/config/panel</property>
-          <value>traditional</value>
-          <value>standard</value>
-          <value>gps155</value>
-          <binding>
-            <command>dialog-apply</command>
-          </binding>
-        </combo>
-      </group>
-
+        <empty>
+            <stretch>1</stretch>
+        </empty>
+        <button>
+            <pref-width>16</pref-width>
+            <pref-height>16</pref-height>
+            <legend></legend>
+            <keynum>27</keynum>
+            <border>2</border>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
     </group>
 
-  </group>
+    <hrule/>
 
-  <hrule/>
+    <group>
+        <halign>center</halign>
+        <layout>hbox</layout>
 
-  <button>
-    <legend>Close</legend>
-    <default>true</default>
-    <key>Esc</key>
-    <binding>
-      <command>dialog-apply</command>
-    </binding>
-    <binding>
-      <command>dialog-close</command>
-    </binding>
-  </button>
+        <group>
+            <layout>vbox</layout>
 
-  <nasal>
-    <open></open>
-  </nasal>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>Display</label>
+                    <halign>left</halign>
+                </text>
+                <hrule>
+                    <stretch>true</stretch>
+                </hrule>
+            </group>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Show Yokes</label>
+                <property>sim/model/config/show-yokes</property>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>sim/model/config/show-yokes</property>
+                </binding>
+            </checkbox>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Show Pilot</label>
+                <property>sim/model/config/show-pilot</property>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>sim/model/config/show-pilot</property>
+                </binding>
+            </checkbox>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Show Copilot</label>
+                <property>sim/model/config/show-copilot</property>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>sim/model/config/show-copilot</property>
+                </binding>
+            </checkbox>
+
+            <vrule/>
+
+            <group>
+                <layout>vbox</layout>
+
+                <group>
+                    <layout>hbox</layout>
+                    <text>
+                        <label>Select version</label>
+                        <halign>left</halign>
+                    </text>
+                </group>
+
+                <group>
+                    <layout>hbox</layout>
+                    <combo>
+                        <pref-width>110</pref-width>
+                        <property>sim/model/config/version</property>
+                        <value>civilian-gray</value>
+                        <value>civilian-red</value>
+                        <value>military</value>
+                        <binding>
+                            <command>dialog-apply</command>
+                        </binding>
+                    </combo>
+                </group>
+
+                <group>
+                    <layout>hbox</layout>
+                    <text>
+                        <label>Panel layout</label>
+                        <halign>left</halign>
+                    </text>
+                </group>
+
+                <group>
+                    <layout>hbox</layout>
+                    <combo>
+                        <pref-width>110</pref-width>
+                        <property>sim/model/config/panel</property>
+                        <value>traditional</value>
+                        <value>standard</value>
+                        <value>gps155</value>
+                        <binding>
+                            <command>dialog-apply</command>
+                        </binding>
+                    </combo>
+                </group>
+
+            </group>
+
+        </group>
+    </group>
+
+    <hrule/>
+
+    <button>
+        <legend>Close</legend>
+        <default>true</default>
+        <key>Esc</key>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+        <binding>
+            <command>dialog-close</command>
+        </binding>
+    </button>
+
+    <nasal>
+        <open></open>
+    </nasal>
 </PropertyList>
