@@ -181,7 +181,7 @@
             <value>civilian-gray</value>
           </equals>
         </or>
-        <property>sim/model/config/details-high</property>
+        <!-- <property>sim/model/config/details-high</property> -->
       </and>
     </condition>
   </animation>

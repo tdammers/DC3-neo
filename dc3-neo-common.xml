@@ -120,6 +120,9 @@
             <property-rule n="151">
                 <path>Aircraft/DC3-neo/PropertyRules/switches.xml</path>
             </property-rule>
+            <autopilot n="152">
+                <path>Aircraft/DC3-neo/PropertyRules/animations.xml</path>
+            </autopilot>
         </systems>
         
     </sim>

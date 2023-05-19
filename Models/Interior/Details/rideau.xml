@@ -1,40 +1,124 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8" ?>
 
 <PropertyList>
+    <params>
+        <orientation>1</orientation>
+    </params>
 
-  <path>rideau.ac</path>
+    <path>rideau.ac</path>
 
-  <animation>
-    <!-- Objets opaques -->
-    <object-name>rideau</object-name>
+    <animation>
+        <!-- Objets opaques -->
+        <object-name>rideau</object-name>
 
-    <!-- Objets transparents -->
-  </animation>
+        <!-- Objets transparents -->
+    </animation>
 
-  <!-- Civilian red version -->
-  <animation>
-    <type>material</type>
-    <object-name>rideau</object-name>
-    <condition>
-      <equals>
-        <property>sim/model/config/version</property>
-        <value>civilian-red</value>
-      </equals>
-    </condition>
-    <texture>details.png</texture>
-  </animation>
+    <!-- Civilian red version -->
+    <animation>
+        <type>material</type>
+        <object-name>rideau</object-name>
+        <condition>
+            <equals>
+                <property>sim/model/config/version</property>
+                <value>civilian-red</value>
+            </equals>
+        </condition>
+        <texture>details.png</texture>
+    </animation>
 
-  <!-- Civilian gray version -->
-  <animation>
-    <type>material</type>
-    <object-name>rideau</object-name>
-    <condition>
-      <equals>
-        <property>sim/model/config/version</property>
-        <value>civilian-gray</value>
-      </equals>
-    </condition>
-    <texture>Liveries/colors_gray.png</texture>
-  </animation>
+    <!-- Civilian gray version -->
+    <animation>
+        <type>material</type>
+        <object-name>rideau</object-name>
+        <condition>
+            <equals>
+                <property>sim/model/config/version</property>
+                <value>civilian-gray</value>
+            </equals>
+        </condition>
+        <texture>Liveries/colors_gray.png</texture>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>rideau</object-name>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+        <offset-m>0.21</offset-m>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>rideau</object-name>
+        <axis>
+            <x alias="../../../params/orientation" />
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <property>sim/model/animations/curtains/post-rotate-deg</property>
+        <factor>-1</factor>
+    </animation>
+    <animation>
+        <type>scale</type>
+        <object-name>rideau</object-name>
+
+        <property>sim/model/animations/curtains/sy</property>
+
+        <x-factor>0</x-factor>
+        <y-factor>0</y-factor>
+        <z-factor>1</z-factor>
+
+        <x-min>1</x-min>
+        <y-min>1</y-min>
+        <z-min>0</z-min>
+    </animation>
+    <animation>
+        <type>scale</type>
+        <object-name>rideau</object-name>
+
+        <property>sim/model/animations/curtains/sx</property>
+
+        <x-factor>0</x-factor>
+        <y-factor>1</y-factor>
+        <z-factor>0</z-factor>
+
+        <x-min>1</x-min>
+        <y-min>0</y-min>
+        <z-min>1</z-min>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>rideau</object-name>
+        <axis>
+            <x alias="../../../params/orientation" />
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <offset-deg>45</offset-deg>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>rideau</object-name>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+        <offset-m>-0.21</offset-m>
+    </animation>
+
 
 </PropertyList>

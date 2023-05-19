@@ -281,6 +281,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> 90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -301,6 +306,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> 90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -321,6 +331,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> 90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -341,6 +356,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> 90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -361,6 +381,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> 90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -381,6 +406,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> 89 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -401,6 +431,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> 88 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -421,6 +456,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> 86 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <!-- Cote droit -->
@@ -442,6 +482,11 @@
       <z-m> 0.032 </z-m>
       <heading-deg> -90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>-1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -462,6 +507,11 @@
       <z-m> 0.032 </z-m>
       <heading-deg> -90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>-1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -482,6 +532,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> -90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>-1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -502,6 +557,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> -90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>-1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -522,6 +582,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> -90 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>-1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -542,6 +607,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> -89 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>-1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -562,6 +632,11 @@
       <z-m>  0.032 </z-m>
       <heading-deg> -88 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>-1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <model>
@@ -582,10 +657,15 @@
       <z-m>  0.032 </z-m>
       <heading-deg> -86 </heading-deg>
     </offsets>
+    <overlay>
+        <params>
+            <orientation>-1</orientation>
+        </params>
+    </overlay>
   </model>
 
   <!-- Toutes les lampes -->
-  <!-- Gauche -->       
+  <!-- Gauche -->
   <model>
     <path>Aircraft/DC3-neo/Models/Interior/Details/lampes.xml</path>
     <offsets>
@@ -685,7 +765,7 @@
     </offsets>
   </model>
 
-  <!-- Droite -->       
+  <!-- Droite -->
   <model>
     <path>Aircraft/DC3-neo/Models/Interior/Details/lampes.xml</path>
     <offsets>
