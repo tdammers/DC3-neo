@@ -45,10 +45,10 @@ var syncVertical = func (mode=-1) {
         setprop('autopilot/settings/target-altitude-ft',
             getprop('instrumentation/altimeter/pressure-alt-ft'));
     }
-    elsif (mode == ATT) {
-        setprop('autopilot/settings/target-pitch-deg',
-            getprop('instrumentation/attitude-indicator/indicated-pitch-deg'));
-    }
+    # elsif (mode == ATT) {
+    #     setprop('autopilot/settings/target-pitch-deg',
+    #         getprop('instrumentation/attitude-indicator/indicated-pitch-deg'));
+    # }
 };
 
 var wingsLevel = func {
