@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <filter>
+        <name>Autopilot suction</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <input>
+            <expression>
+                <max>
+                    <property>systems/vacuum[0]/suction-inhg</property>
+                    <property>systems/vacuum[1]/suction-inhg</property>
+                </max>
+            </expression>
+        </input>
+        <output>
+            <property>/autopilot/sperry/suction-inhg</property>
+        </output>
+    </filter>
+    <filter>
+        <name>Autopilot on/off</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <input>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>autopilot/sperry/suction-inhg</property>
+                        <value>2.0</value>
+                    </greater-than>
+                    <property>/autopilot/sperry/available</property>
+                </and>
+            </condition>
+            <property>controls/autoflight/autopilot[0]/engage</property>
+        </input>
+        <input>
+            <value>0</value>
+        </input>
+        <output>
+            <property>/autopilot/sperry/active</property>
+        </output>
+    </filter>
+    
+    <filter>
+        <name>Autopilot pitch sync</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <enable>
+            <condition>
+                <and>
+                    <not>
+                        <property>/autopilot/sperry/active</property>
+                    </not>
+                    <property>config/sperry/auto-sync</property>
+                </and>
+            </condition>
+        </enable>
+        <input>
+            <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
+        </input>
+        <output>autopilot/settings/target-pitch-deg</output>
+    </filter>
+    <filter>
+        <name>Autopilot roll sync</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <enable>
+            <condition>
+                <and>
+                    <not>
+                        <property>/autopilot/sperry/active</property>
+                    </not>
+                    <property>config/sperry/auto-sync</property>
+                </and>
+            </condition>
+        </enable>
+        <input>
+            <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+        </input>
+        <output>autopilot/settings/target-roll-deg</output>
+    </filter>
+    
+    <filter>
+        <name>Sperry pitch error</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <input>
+            <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
+        </input>
+        <reference>
+            <property>autopilot/settings/target-pitch-deg</property>
+        </reference>
+        <period>
+            <min>-180</min>
+            <max>180</max>
+        </period>
+        <output>autopilot/sperry/pitch-error</output>
+    </filter>
+    <filter>
+        <name>Sperry roll error</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <input>
+            <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+        </input>
+        <reference>
+            <property>autopilot/settings/target-roll-deg</property>
+        </reference>
+        <period>
+            <min>-180</min>
+            <max>180</max>
+        </period>
+        <output>autopilot/sperry/roll-error</output>
+    </filter>
+    <filter>
+        <name>Sperry heading error</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <input>
+            <property>instrumentation/heading-indicator/indicated-heading-deg</property>
+        </input>
+        <reference>
+            <property>autopilot/settings/heading-bug-deg</property>
+        </reference>
+        <period>
+            <min>-180</min>
+            <max>180</max>
+        </period>
+        <output>autopilot/sperry/heading-error</output>
+    </filter>
+
+    <!-- rudder control -->
+    <filter>
+        <name>Sperry rudder control</name>
+        <type>exponential</type>
+        <filter-time>1</filter-time>
+        <enable>
+            <condition>
+                <property>autopilot/sperry/active</property>
+            </condition>
+        </enable>
+        <input>
+            <property>autopilot/sperry/heading-error</property>
+            <scale>-0.1</scale>
+        </input>
+        <output>controls/flight/rudder</output>
+        <min>-1</min>
+        <max>1</max>
+    </filter>
+
+    <!-- aileron control -->
+    <pi-simple-controller>
+        <name>Sperry aileron control</name>
+        <filter-time>1</filter-time>
+        <enable>
+            <condition>
+                <property>autopilot/sperry/active</property>
+            </condition>
+        </enable>
+        <input>
+            <property>autopilot/sperry/roll-error</property>
+            <scale>-0.1</scale>
+        </input>
+        <output>controls/flight/aileron</output>
+        <min>-1</min>
+        <max>1</max>
+        <Kp>-1.0</Kp>
+        <Ki>-0.5</Ki>
+    </pi-simple-controller>
+
+    <!-- elevator control -->
+    <pi-simple-controller>
+        <name>Sperry elevator control</name>
+        <enable>
+            <condition>
+                <property>autopilot/sperry/active</property>
+            </condition>
+        </enable>
+        <input>
+            <property>autopilot/sperry/pitch-error</property>
+            <scale>0.1</scale>
+        </input>
+        <output>controls/flight/elevator-trim</output>
+        <min>-1</min>
+        <max>1</max>
+        <Kp>-1.0</Kp>
+        <Ki>-0.5</Ki>
+    </pi-simple-controller>
+    
+</PropertyList>
