@@ -604,11 +604,9 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/left-valve</property>
+        <property>controls/fuel/left-valve-sel</property>
         <step>1</step>
-        <min>0</min>
-        <max>5</max>
-        <wrap>true</wrap>
+        <wrap>false</wrap>
       </binding>
     </action>
   </animation>
@@ -622,11 +620,9 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-          <property>controls/fuel/left-valve</property>
+          <property>controls/fuel/left-valve-sel</property>
         <step>-1</step>
-        <min>0</min>
-        <max>5</max>
-        <wrap>true</wrap>
+        <wrap>false</wrap>
       </binding>
     </action>
   </animation>
@@ -659,11 +655,9 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-          <property>controls/fuel/right-valve</property>
+          <property>controls/fuel/right-valve-sel</property>
         <step>1</step>
-        <min>0</min>
-        <max>5</max>
-        <wrap>true</wrap>
+        <wrap>false</wrap>
       </binding>
     </action>
   </animation>
@@ -677,11 +671,9 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/right-valve</property>
+        <property>controls/fuel/right-valve-sel</property>
         <step>-1</step>
-        <min>0</min>
-        <max>5</max>
-        <wrap>true</wrap>
+        <wrap>false</wrap>
       </binding>
     </action>
   </animation>

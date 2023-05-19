@@ -103,7 +103,7 @@
                 <float n="14" alias="/controls/engines/engine[0]/cowl-flaps-norm"> 0 </float>
                 <float n="15" alias="/controls/engines/engine[1]/cowl-flaps-norm"> 0 </float>
                 <int n="17" alias="/controls/lighting/landing-lights[0]"> 0 </int>
-                <int n="18" alias="/controls/lighting/landing-lights[0]"> 0 </int>
+                <int n="18" alias="/controls/lighting/landing-lights[1]"> 0 </int>
             </generic>
         </multiplay>
         
@@ -117,12 +117,12 @@
             <property-rule n="150">
                 <path>Aircraft/DC3-neo/PropertyRules/sounds.xml</path>
             </property-rule>
-            <property-rule n="151">
+            <autopilot n="151">
                 <path>Aircraft/DC3-neo/PropertyRules/switches.xml</path>
-            </property-rule>
-            <autopilot n="152">
-                <path>Aircraft/DC3-neo/PropertyRules/animations.xml</path>
             </autopilot>
+            <property-rule n="152">
+                <path>Aircraft/DC3-neo/PropertyRules/animations.xml</path>
+            </property-rule>
         </systems>
         
     </sim>
