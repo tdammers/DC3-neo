@@ -177,7 +177,7 @@
         <expression>
             <property>autopilot/fd/pitch-deg</property>
         </expression>
-        <factor>-1.6667</factor>
+        <factor>1.6667</factor>
     </animation>
     <animation>
         <type>rotate</type>
@@ -196,7 +196,7 @@
         <expression>
             <property>autopilot/fd/roll-deg</property>
         </expression>
-        <factor>-1</factor>
+        <factor>1</factor>
     </animation>
 
     <animation>
