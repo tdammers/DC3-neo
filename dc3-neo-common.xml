@@ -221,6 +221,12 @@
     </nasal>
     
     <autopilot>
+        <century>
+            <vertical-mode type="int">0</vertical-mode>
+            <lateral-mode type="int">0</lateral-mode>
+            <nav-armed type="bool">false</nav-armed>
+            <gs-armed type="bool">false</gs-armed>
+        </century>
     </autopilot>
 
     <sounds>

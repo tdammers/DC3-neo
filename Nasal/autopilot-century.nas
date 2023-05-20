@@ -45,10 +45,10 @@ var syncVertical = func (mode=-1) {
         setprop('autopilot/settings/target-altitude-ft',
             getprop('instrumentation/altimeter/pressure-alt-ft'));
     }
-    # elsif (mode == ATT) {
-    #     setprop('autopilot/settings/target-pitch-deg',
-    #         getprop('instrumentation/attitude-indicator/indicated-pitch-deg'));
-    # }
+    elsif (mode == ATT) {
+        setprop('autopilot/settings/target-pitch-deg',
+            getprop('instrumentation/attitude-indicator/indicated-pitch-deg'));
+    }
 };
 
 var wingsLevel = func {
@@ -165,7 +165,12 @@ setlistener('/sim/signals/fdm-initialized', func {
         var state = node.getValue() or 0;
         setprop('autopilot/century/pitch-button', state);
         if (!state) {
-            syncVertical();
+            # In ALT mode, need to re-sync target altitude.
+            # In ATT mode, we just keep whatever we have selected.
+            var mode = p.verticalMode.getValue() or 0;
+            if (mode == ALT) {
+                syncVertical();
+            }
         }
     }, 1, 0);
 

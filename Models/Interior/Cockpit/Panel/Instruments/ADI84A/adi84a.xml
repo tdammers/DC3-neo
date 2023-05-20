@@ -266,7 +266,7 @@
         <object-name>Flag.Computer</object-name>
         <condition>
             <less-than>
-                <property>autopilot/century/available</property>
+                <property>autopilot/century/powered</property>
                 <value>0.5</value>
             </less-than>
         </condition>
