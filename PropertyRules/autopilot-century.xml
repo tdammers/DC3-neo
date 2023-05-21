@@ -334,7 +334,6 @@
     <!-- Target heading computer -->
 
     <!-- Enable following filter for debugging -->
-    <!--
     <filter>
         <type>gain</type>
         <gain>1</gain>
@@ -352,7 +351,6 @@
         <input>autopilot/century/nav-intercept-course</input>
         <output>instrumentation/heading-indicator/heading-bug-deg</output>
     </filter>
-    -->
 
     <filter>
         <type>gain</type>
@@ -424,8 +422,8 @@
             <scale>-5</scale>
         </reference>
         <output>autopilot/century/nav-intercept-course-offset</output>
-        <Kp>-30</Kp>
-        <Ki>-2.5</Ki>
+        <Kp>-60</Kp>
+        <Ki>-0.4</Ki>
         <min>-45</min>
         <max>45</max>
     </pi-simple-controller>
@@ -467,8 +465,8 @@
             <property>autopilot/century/heading-error</property>
         </input>
         <output>autopilot/settings/target-roll-deg</output>
-        <Kp>1.5</Kp>
-        <Ki>0.15</Ki>
+        <Kp>1.0</Kp>
+        <Ki>0</Ki>
         <min>-25</min>
         <max>25</max>
     </pi-simple-controller>
