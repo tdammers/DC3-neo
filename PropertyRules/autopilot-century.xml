@@ -334,6 +334,7 @@
     <!-- Target heading computer -->
 
     <!-- Enable following filter for debugging -->
+    <!--
     <filter>
         <type>gain</type>
         <gain>1</gain>
@@ -351,6 +352,7 @@
         <input>autopilot/century/nav-intercept-course</input>
         <output>instrumentation/heading-indicator/heading-bug-deg</output>
     </filter>
+    -->
 
     <filter>
         <type>gain</type>
@@ -398,6 +400,10 @@
         <input>instrumentation/heading-indicator/indicated-heading-deg</input>
         <reference>instrumentation/nav[0]/radials/selected-deg</reference>
         <output>autopilot/century/nav-course-error</output>
+        <period>
+            <min>-180</min>
+            <max>180</max>
+        </period>
     </filter>
     <filter>
         <type>derivative</type>
@@ -422,8 +428,8 @@
             <scale>-5</scale>
         </reference>
         <output>autopilot/century/nav-intercept-course-offset</output>
-        <Kp>-60</Kp>
-        <Ki>-0.4</Ki>
+        <Kp>-30</Kp>
+        <Ki>-0.3</Ki>
         <min>-45</min>
         <max>45</max>
     </pi-simple-controller>
