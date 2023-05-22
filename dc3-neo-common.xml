@@ -252,7 +252,7 @@
                 </pitch>
                 <roll>
                     <aileron>0.5</aileron>
-                    <beta>0.2</beta>
+                    <beta>0.4</beta>
                     <damp>-1.0</damp>
                     <rudder>0.05</rudder>
                     <yaw>0.25</yaw>
@@ -260,7 +260,7 @@
                 </roll>
                 <yaw>
                     <aileron>0.025</aileron>
-                    <beta>0.3</beta>
+                    <beta>0.4</beta>
                     <damp>0.4</damp>
                     <roll>0.01</roll>
                     <rudder>0.5</rudder>
@@ -274,7 +274,7 @@
                     <flaps>0.045</flaps>
                     <cowl-flaps>0.001</cowl-flaps>
                     <alpha>1</alpha>
-                    <beta>1</beta>
+                    <beta>0.5</beta>
                     <mach>1</mach>
                 </drag>
                 <lift>
