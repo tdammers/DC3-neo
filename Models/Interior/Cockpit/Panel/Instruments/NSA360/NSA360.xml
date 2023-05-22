@@ -12,6 +12,13 @@
         <object-name>loc.scale</object-name>
         <object-name>gs.scale</object-name>
     </effect>
+
+    <animation>
+        <type>scale</type>
+        <x-offset>1.125</x-offset>
+        <y-offset>1.125</y-offset>
+        <z-offset>1.125</z-offset>
+    </animation>
     
     <animation>
         <type>material</type>

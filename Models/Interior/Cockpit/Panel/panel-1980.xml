@@ -70,6 +70,7 @@
     <!-- HSI -->
     <model>
         <path>Aircraft/DC3-neo/Models/Interior/Cockpit/Panel/Instruments/NSA360/NSA360.xml</path>
+        <name>HSI1</name>
         <offsets>
             <x-m> -0.010 </x-m>
             <y-m> -0.400 </y-m>
@@ -83,7 +84,7 @@
         <offsets>
             <x-m>  -0.010 </x-m>
             <y-m>  -0.400 </y-m>
-            <z-m>   0.255 </z-m>
+            <z-m>   0.235 </z-m>
         </offsets>
     </model>
     

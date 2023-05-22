@@ -71,6 +71,7 @@
                 <instrumentation>
                     <ai>ADI-84A</ai>
                 </instrumentation>
+                <version>civilian-gray</version>
             </config>
         </model>
         
@@ -330,6 +331,12 @@
             <landing-lights n="0" type="bool">false</landing-lights>
             <landing-lights n="1" type="bool">false</landing-lights>
         </lighting>
+        <gear>
+            <brake-parking type="int">1</brake-parking>
+            <tailwheel-lock type="bool">true</tailwheel-lock>
+            <tailwheel-lock-armed type="int">0</tailwheel-lock-armed>
+            <tailwheel-lock-engaged type="int">1</tailwheel-lock-engaged>
+        </gear>
     </controls>
     
     <input>
