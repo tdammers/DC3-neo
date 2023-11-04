@@ -104,7 +104,7 @@
                 <less-than>
                     <property>controls/engine[0]/mixture</property>
                     <value>0.1</value>
-                </equals>
+                </less-than>
             </condition>
             <value>1</value>
         </input>
@@ -129,7 +129,7 @@
                 <less-than>
                     <property>controls/engine[1]/mixture</property>
                     <value>0.1</value>
-                </equals>
+                </less-than>
             </condition>
             <value>1</value>
         </input>

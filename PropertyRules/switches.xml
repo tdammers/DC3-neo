@@ -152,12 +152,154 @@
     </filter>
 
     <filter>
+        <type>noise-spike</type>
+        <input>controls/fuel/tank[0]/boost-pump</input>
+        <output>controls/fuel/tank[0]/boost-pump-pos</output>
+        <max-rate-of-change>10</max-rate-of-change>
+    </filter>
+
+    <filter>
+        <type>noise-spike</type>
+        <input>controls/fuel/tank[1]/boost-pump</input>
+        <output>controls/fuel/tank[1]/boost-pump-pos</output>
+        <max-rate-of-change>10</max-rate-of-change>
+    </filter>
+
+    <filter>
         <type>gain</type>
         <gain>1</gain>
         <input>
             <expression>
                 <mod>
-                    <property>controls/fuel/left-valve-sel</property>
+                    <sum>
+                        <mod>
+                            <property>controls/fuel/tank-gauge-sel</property>
+                            <value>4</value>
+                        </mod>
+                        <value>4</value>
+                    </sum>
+                    <value>4</value>
+                </mod>
+            </expression>
+        </input>
+        <output>controls/fuel/tank-gauge</output>
+    </filter>
+    <filter>
+        <type>noise-spike</type>
+        <input>controls/fuel/tank-gauge-sel</input>
+        <output>controls/fuel/tank-gauge-pos</output>
+        <max-rate-of-change>10</max-rate-of-change>
+    </filter>
+
+    <filter>
+        <type>gain</type>
+        <input>
+            <condition>
+                <equals>
+                    <property>controls/fuel/tank-gauge</property>
+                    <value>0</value>
+                </equals>
+            </condition>
+            <property>consumables/fuel/tank[1]/level-gal_us</property>
+        </input>
+        <input>
+            <condition>
+                <equals>
+                    <property>controls/fuel/tank-gauge</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+            <property>consumables/fuel/tank[3]/level-gal_us</property>
+        </input>
+        <input>
+            <condition>
+                <equals>
+                    <property>controls/fuel/tank-gauge</property>
+                    <value>2</value>
+                </equals>
+            </condition>
+            <property>consumables/fuel/tank[2]/level-gal_us</property>
+        </input>
+        <input>
+            <condition>
+                <equals>
+                    <property>controls/fuel/tank-gauge</property>
+                    <value>3</value>
+                </equals>
+            </condition>
+            <property>consumables/fuel/tank[0]/level-gal_us</property>
+        </input>
+        <input>
+            <value>100</value>
+        </input>
+        <output>consumables/fuel/level-gauge</output>
+    </filter>
+
+    <filter>
+        <type>noise-spike</type>
+        <input>
+            <expression>
+                <table>
+                    <property>consumables/fuel/level-gauge</property>
+                    <entry>
+                        <ind>0</ind><dep>-45</dep>
+                    </entry>
+                    <entry>
+                        <ind>40</ind><dep>-25</dep>
+                    </entry>
+                    <entry>
+                        <ind>50</ind><dep>-22</dep>
+                    </entry>
+                    <entry>
+                        <ind>70</ind><dep>-14</dep>
+                    </entry>
+                    <entry>
+                        <ind>100</ind><dep>-4</dep>
+                    </entry>
+                    <entry>
+                        <ind>110</ind><dep>0</dep>
+                    </entry>
+                    <entry>
+                        <ind>150</ind><dep>12</dep>
+                    </entry>
+                    <entry>
+                        <ind>160</ind><dep>17</dep>
+                    </entry>
+                    <entry>
+                        <ind>170</ind><dep>21</dep>
+                    </entry>
+                    <entry>
+                        <ind>180</ind><dep>26</dep>
+                    </entry>
+                    <entry>
+                        <ind>190</ind><dep>31</dep>
+                    </entry>
+                    <entry>
+                        <ind>200</ind><dep>38</dep>
+                    </entry>
+                    <entry>
+                        <ind>210</ind><dep>45</dep>
+                    </entry>
+                </table>
+            </expression>
+        </input>
+        <max-rate-of-change>30</max-rate-of-change>
+        <output>consumables/fuel/needle-gauge</output>
+    </filter>
+
+    <filter>
+        <type>gain</type>
+        <gain>1</gain>
+        <input>
+            <expression>
+                <mod>
+                    <sum>
+                        <mod>
+                            <property>controls/fuel/left-valve-sel</property>
+                            <value>5</value>
+                        </mod>
+                        <value>5</value>
+                    </sum>
                     <value>5</value>
                 </mod>
             </expression>

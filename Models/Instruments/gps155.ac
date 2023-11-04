@@ -7517,7 +7517,6 @@ name "LampMSG"
 data 9
 Plane.005
 crease 40.0
-texture "."
 numvert 6
 0.01189 0.01817 -0.05633
 0.01189 0.01523 -0.05633
@@ -7565,7 +7564,6 @@ name "LampNAV"
 data 9
 Plane.004
 crease 40.0
-texture "."
 numvert 6
 0.01189 -0.01326 -0.0201
 0.01189 -0.0162 -0.0201
@@ -7613,7 +7611,6 @@ name "LampNRST"
 data 5
 Plane
 crease 40.0
-texture "."
 numvert 6
 0.01189 -0.01326 0.0459
 0.01189 -0.0162 0.0459
@@ -7661,7 +7658,6 @@ name "LampRTE"
 data 9
 Plane.002
 crease 40.0
-texture "."
 numvert 6
 0.01189 -0.01326 0.01315
 0.01189 -0.0162 0.01315
@@ -7709,7 +7705,6 @@ name "LampSET"
 data 9
 Plane.001
 crease 40.0
-texture "."
 numvert 6
 0.01189 -0.01326 0.02965
 0.01189 -0.0162 0.02965
@@ -7757,7 +7752,6 @@ name "LampWPT"
 data 9
 Plane.003
 crease 40.0
-texture "."
 numvert 6
 0.01189 -0.01326 -0.00335
 0.01189 -0.0162 -0.00335

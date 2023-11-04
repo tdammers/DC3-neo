@@ -94,7 +94,7 @@
         </aircraft-data>
         
         <freeze>
-            <fuel type="bool">true</fuel>
+            <fuel type="bool">false</fuel>
         </freeze>
         
         <multiplay n="0">
@@ -319,7 +319,7 @@
     <controls>
         <engines>
             <engine n="0">
-                <feed_tank type="int">0</feed_tank>
+                <feed_tank type="int">-1</feed_tank>
                 <boost-coil type="bool">false</boost-coil>
                 <primer type="bool">false</primer>
                 <cowl-flaps-pos type="double">1</cowl-flaps-pos>
@@ -327,7 +327,7 @@
                 <mixture type="float">0</mixture>
             </engine>
             <engine n="1">
-                <feed_tank type="int">1</feed_tank>
+                <feed_tank type="int">-1</feed_tank>
                 <boost-coil type="bool">false</boost-coil>
                 <primer type="bool">false</primer>
                 <cowl-flaps-pos type="double">1</cowl-flaps-pos>

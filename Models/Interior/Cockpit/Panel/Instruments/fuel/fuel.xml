@@ -35,11 +35,9 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/tank-gauge</property>
+        <property>controls/fuel/tank-gauge-sel</property>
         <step>-1</step>
-        <min>0</min>
-        <max>4</max>
-        <wrap>1</wrap>
+        <wrap>0</wrap>
       </binding>
     </action>
   </animation>
@@ -53,11 +51,9 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/tank-gauge</property>
+        <property>controls/fuel/tank-gauge-sel</property>
         <step>1</step>
-        <min>0</min>
-        <max>4</max>
-        <wrap>1</wrap>
+        <wrap>0</wrap>
       </binding>
     </action>
   </animation>
@@ -83,11 +79,11 @@
     <type>rotate</type>
     <object-name>needle</object-name>
     <property>consumables/fuel/needle-gauge</property>
-    <factor>-0.69</factor>
+    <factor>-1</factor>
     <center>
       <x-m> 0.000 </x-m>
       <y-m> 0.000 </y-m>
-      <z-m> 0.014 </z-m>
+      <z-m> -0.006 </z-m>
     </center>
     <axis> 
       <x> 1 </x>

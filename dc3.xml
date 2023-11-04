@@ -195,7 +195,7 @@
 
     <propulsion>
         <engine file="Electric1200hp">
-            <feed> 0 </feed>
+            <feed>0</feed>
 
             <thruster file="Hamilton_Standard_23E50">
                 <sense> 1 </sense>
@@ -213,7 +213,7 @@
         </engine>
 
         <engine file="Electric1200hp">
-            <feed> 1 </feed>
+            <feed>1</feed>
 
             <thruster file="Hamilton_Standard_23E50">
                 <sense> 1 </sense>
@@ -246,6 +246,7 @@
             <contents unit="LBS">1000</contents>
             <density>6.02</density>
             <type>AVGAS</type>
+            <priority>0</priority>
         </tank>
         <tank type="FUEL" number="1">
             <!-- Right forward -->
@@ -258,6 +259,7 @@
             <contents unit="LBS">1000</contents>
             <density>6.02</density>
             <type>AVGAS</type>
+            <priority>0</priority>
         </tank>
         <tank type="FUEL" number="2">
             <!-- Left rear -->
@@ -270,6 +272,7 @@
             <contents unit="LBS">1000</contents>
             <density>6.02</density>
             <type>AVGAS</type>
+            <priority>0</priority>
         </tank>
         <tank type="FUEL" number="3">
             <!-- Right rear -->
@@ -282,6 +285,7 @@
             <contents unit="LBS">1000</contents>
             <density>6.02</density>
             <type>AVGAS</type>
+            <priority>0</priority>
         </tank>
 
     </propulsion>
@@ -425,6 +429,7 @@
     </ground_reactions>
 
     <system file="Engines.xml"/>
+    <system file="Fuel.xml"/>
     <system file="Propulsion.xml"/>
     <system file="Aircraft control.xml"/>
     <system file="Landing Gear.xml"/>
@@ -551,6 +556,7 @@
                 </product>
             </function>
 
+            <!--
             <function name="aero/force/Lift_backfiring_left">
                 <description>Lift due to left engine backfiring</description>
                 <product>
@@ -566,6 +572,7 @@
                     <property>params/lift/backfiring</property>
                 </product>
             </function>
+            -->
 
         </axis>
 
@@ -873,6 +880,7 @@
                 </product>
             </function>
 
+            <!--
             <function name="aero/moment/Roll_backfiring_left">
                 <description>Roll moment due to left engine backfiring</description>
                 <product>
@@ -888,6 +896,7 @@
                     <property>params/roll/backfiring</property>
                 </product>
             </function>
+            -->
 
             <function name="aero/moment/Roll_beta">
                 <description>Roll moment due to beta</description>

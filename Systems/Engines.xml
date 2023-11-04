@@ -18,9 +18,9 @@
     - MIXTURE: /controls/engines/engine[n]/mixture
       Controls the automatic mixture setting, ranging between:
       0.000 - cutoff
-      0.125 - auto lean
-      0.875 - auto rich
-      1.000 - full rich
+      0.200 - auto lean
+      0.500 - auto rich
+      1.000 - full rich / emergency
     - STARTER: /controls/engines/engine[n]/starter
     - MAGNETOS: /controls/engines/engine[n]/magnetos
     - PRIMER: /controls/engines/engine[n]/primer [add this]
@@ -46,6 +46,51 @@
       Influences effective engine power; exceeding max CHT will cause an engine
       fire.
 
+    FUEL FLOW
+    =========
+
+    Displacement: 29.978 l
+    Mixture flow into engine (litres per minute): 29.978 l * 0.5 * RPM
+
+    Fuel density (kg/m³): /consumables/fuel/tank[n]/density-kgpm3
+    Air density (kg/m³): /environment/density-slugft3 * 515.3788
+    Air density at sea level, standard atmo: ~0.002376892 slug ft³ = 1.225 kg/m³
+
+    Ideal fuel mixture (mass, air:fuel): 15:1
+
+    Ideal mixture density:
+
+        take 15 kg air + 1 kg fuel
+        m_air = 15 kg
+        m_fuel = 1 kg
+        V_air = m_air / air_density
+        V_fuel = m_fuel / fuel_density
+        V_total = V_air + V_fuel
+        m_total = m_air + m_fuel
+        density_total = m_total / V_total
+
+        for: air_density = 1.225; fuel_density = 721.355:
+        V_air = 12.2449 m³
+        V_fuel = 0.0013864 m³
+        V_total =
+        mixture_ratio = V_fuel / V_total = 0.0001132157
+
+        Add some headroom for "rich of peak" operation:
+        max_mixture_ratio = 0.00012
+
+    Now let's calculate fuel burn.
+
+        ΔV_total = 29.978 l * 0.5 * RPM
+        mixture_ratio = mixture_control * max_mixture_ratio
+        ΔV_fuel = ΔV_total * mixture_ratio
+        ΔV_air = ΔV_total * (1-mixture_ratio)
+        Δm_fuel = ΔV_fuel * fuel_density
+
+    Ex.: cruising at ~10,000 ft, 2050 RPM, ideal mixture
+
+    air_density = 0.3639
+
+
     -->
 
     <channel name="Atmosphere">
@@ -55,6 +100,14 @@
                     <p>atmosphere/P-psf</p>
                     <!-- convert to inHg -->
                     <v>0.014139032344453</v>
+                </product>
+            </function>
+        </fcs_function>
+        <fcs_function name="atmosphere/rho-kg_m3">
+            <function>
+                <product>
+                    <p>atmosphere/rho-slugs_ft3</p>
+                    <v>515.3788181</v>
                 </product>
             </function>
         </fcs_function>
@@ -299,7 +352,7 @@
             </function>
         </fcs_function>
 
-        <!-- max power attainable at sea level, mixture auto rich -->
+        <!-- max power attainable at sea level, ideal mixture -->
         <fcs_function name="propulsion/engine[0]/power-hp-sl">
             <function>
                 <table>
@@ -345,10 +398,151 @@
             </function>
         </fcs_function>
 
+        <fcs_function name="propulsion/engine[0]/ideal-mixture">
+            <function>
+                <product>
+                    <p>atmosphere/rho-kg_m3</p>
+                    <v>0.77</v>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/auto-rich-mixture">
+            <function>
+                <product>
+                    <p>atmosphere/rho-kg_m3</p>
+                    <v>0.79</v>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/auto-lean-mixture">
+            <function>
+                <product>
+                    <p>atmosphere/rho-kg_m3</p>
+                    <v>0.75</v>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/mixture-deviation">
+            <function>
+                <quotient>
+                    <p>propulsion/engine[0]/mixture</p>
+                    <p>propulsion/engine[0]/ideal-mixture</p>
+                </quotient>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/mixture">
+            <function>
+                <ifthen>
+                    <!-- below "auto lean": interpolate between auto-lean and cutoff. -->
+                    <lt>
+                        <p>fcs/mixture-cmd-norm[0]</p>
+                        <v>0.200</v>
+                    </lt>
+                    <product>
+                        <quotient>
+                            <p>fcs/mixture-cmd-norm[0]</p>
+                            <v>0.200</v>
+                        </quotient>
+                        <p>propulsion/engine[0]/auto-lean-mixture</p>
+                    </product>
+                    <ifthen>
+                        <!-- above "auto rich": interpolate between auto-rich and full rich -->
+                        <gt>
+                            <p>fcs/mixture-cmd-norm[0]</p>
+                            <v>0.500</v>
+                        </gt>
+                        <sum>
+                            <p>propulsion/engine[0]/auto-rich-mixture</p>
+                            <product>
+                                <quotient>
+                                    <difference>
+                                        <p>fcs/mixture-cmd-norm[0]</p>
+                                        <v>0.500</v>
+                                    </difference>
+                                    <!-- 1 - 0.500 -->
+                                    <v>0.500</v>
+                                </quotient>
+                                <difference>
+                                    <v>1</v>
+                                    <p>propulsion/engine[0]/auto-rich-mixture</p>
+                                </difference>
+                            </product>
+                        </sum>
+                        <!-- between "auto lean" and "auto rich": interpolate between auto-lean and auto-rich -->
+                        <sum>
+                            <p>propulsion/engine[0]/auto-lean-mixture</p>
+                            <product>
+                                <quotient>
+                                    <difference>
+                                        <p>fcs/mixture-cmd-norm[0]</p>
+                                        <v>0.2</v>
+                                    </difference>
+                                    <!-- 0.500 - 0.200 -->
+                                    <v>0.300</v>
+                                </quotient>
+                                <difference>
+                                    <p>propulsion/engine[0]/auto-rich-mixture</p>
+                                    <p>propulsion/engine[0]/auto-lean-mixture</p>
+                                </difference>
+                            </product>
+                        </sum>
+                    </ifthen>
+                </ifthen>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/mixture-power-factor">
+            <!-- power reduction due to mixture off peak -->
+            <function>
+                <table>
+                    <independentVar lookup="row">propulsion/engine[0]/mixture-deviation</independentVar>
+                    <tableData>
+                        0.200 0.000
+                        0.400 0.300
+                        0.600 0.500
+                        0.800 0.700
+                        0.950 0.800
+                        0.975 0.990 <!-- auto lean -->
+                        1.000 1.000
+                        1.025 1.000 <!-- auto rich -->
+                        2.000 0.995
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[0]/mixture-power-limit">
+            <!-- power limit due to leaning -->
+            <function>
+                <table>
+                    <independentVar lookup="row">propulsion/engine[0]/mixture-deviation</independentVar>
+                    <independentVar lookup="column">propulsion/engine[0]/mp-inhg</independentVar>
+                    <tableData>
+                                 10    30    35    40    45
+                        0.200 0.000 0.000 0.000 0.000 0.000
+                        0.400 0.300 0.300 0.300 0.200 0.100
+                        0.600 0.500 0.500 0.500 0.400 0.300
+                        0.800 0.700 0.700 0.600 0.500 0.400
+                        0.900 0.900 0.875 0.750 0.630 0.480
+                        0.975 1.000 0.990 0.800 0.700 0.500 <!-- auto lean -->
+                        1.000 1.000 1.000 1.000 1.000 1.000
+                        1.025 1.000 1.000 1.000 1.000 1.000 <!-- auto rich -->
+                        2.000 1.000 1.000 1.000 1.000 1.000
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+
         <fcs_function name="propulsion/engine[0]/power-hp-firing">
             <function>
                 <product>
                     <p>propulsion/engine[0]/power-hp-sl</p>
+                    <p>propulsion/engine[0]/mixture-power-factor</p>
+                    <p>propulsion/engine[0]/mixture-power-limit</p>
                     <table>
                         <independentVar lookup="row">atmosphere/pressure-altitude</independentVar>
                         <tableData>
@@ -496,15 +690,26 @@
 
         <fcs_function name="propulsion/engine[0]/fuel-demand-cranking">
             <function>
-                <table>
-                    <independentVar lookup="row">propulsion/engine[0]/engine-rpm</independentVar>
-                    <tableData>
-                         0   0.0
-                        30   0.1
-                      1000   1.0
-                      3000   3.0
-                    </tableData>
-                </table>
+                <product>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[0]/engine-rpm</independentVar>
+                        <tableData>
+                             0   0.0
+                            30   0.1
+                          1000   1.0
+                          3000   3.0
+                        </tableData>
+                    </table>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[0]/mixture-deviation</independentVar>
+                        <tableData>
+                            0.950 0.800
+                            0.975 0.888
+                            1.025 1.000
+                            1.050 1.111
+                        </tableData>
+                    </table>
+                </product>
             </function>
         </fcs_function>
 
@@ -538,21 +743,58 @@
 
         <fcs_function name="propulsion/engine[0]/fuel-flow">
             <function>
+                <sum>
+                    <!-- fuel supply from carburetor -->
+                    <min>
+                        <table>
+                            <independentVar lookup="row">propulsion/engine[0]/fuel-available</independentVar>
+                            <tableData>
+                               0.0  30
+                               0.5   0
+                            </tableData>
+                        </table>
+                        <p>propulsion/engine[0]/max-fuel-flow</p>
+                    </min>
+                    <p>propulsion/engine[0]/fuel-flow-primer</p>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <pure_gain name="propulsion/engine[0]/fuel-flow-pps">
+            <input>propulsion/engine[0]/fuel-flow</input>
+            <gain>0.0117311508</gain>
+        </pure_gain >
+
+        <switch name="propulsion/tank[0]/fuel-flow-engine[0]">
+            <default value="0"/>
+            <test value="propulsion/engine[0]/fuel-flow-pps">
+                /controls/engines/engine[0]/feed_tank eq 0
+            </test>
+        </switch>
+        <switch name="propulsion/tank[1]/fuel-flow-engine[0]">
+            <default value="0"/>
+            <test value="propulsion/engine[0]/fuel-flow-pps">
+                /controls/engines/engine[0]/feed_tank eq 1
+            </test>
+        </switch>
+        <switch name="propulsion/tank[2]/fuel-flow-engine[0]">
+            <default value="0"/>
+            <test value="propulsion/engine[0]/fuel-flow-pps">
+                /controls/engines/engine[0]/feed_tank eq 2
+            </test>
+        </switch>
+        <switch name="propulsion/tank[3]/fuel-flow-engine[0]">
+            <default value="0"/>
+            <test value="propulsion/engine[0]/fuel-flow-pps">
+                /controls/engines/engine[0]/feed_tank eq 3
+            </test>
+        </switch>
+
+        <fcs_function name="propulsion/engine[0]/fuel-flow-internal">
+            <function>
                 <difference>
-                    <sum>
-                        <!-- fuel supply from carburetor -->
-                        <min>
-                            <table>
-                                <independentVar lookup="row">propulsion/engine[0]/fuel-available</independentVar>
-                                <tableData>
-                                   0.0  30
-                                   0.5   0
-                                </tableData>
-                            </table>
-                            <p>propulsion/engine[0]/max-fuel-flow</p>
-                        </min>
-                        <p>propulsion/engine[0]/fuel-flow-primer</p>
-                    </sum>
+                    <!-- fuel in -->
+                    <p>propulsion/engine[0]/fuel-flow</p>
                     <!-- fuel out -->
                     <p>propulsion/engine[0]/fuel-demand</p>
                 </difference>
@@ -566,14 +808,13 @@
                         <p>propulsion/engine[0]/fuel-available</p>
                         <product>
                             <p>simulation/channel-dt</p>
-                            <p>propulsion/engine[0]/fuel-flow</p>
+                            <p>propulsion/engine[0]/fuel-flow-internal</p>
                         </product>
                     </sum>
                     <v>0.0</v>
                 </max>
             </function>
         </fcs_function>
-
     </channel>
 
     <channel name="Right Engine">
@@ -794,10 +1035,151 @@
             </function>
         </fcs_function>
 
+        <fcs_function name="propulsion/engine[1]/ideal-mixture">
+            <function>
+                <product>
+                    <p>atmosphere/rho-kg_m3</p>
+                    <v>0.77</v>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/auto-rich-mixture">
+            <function>
+                <product>
+                    <p>atmosphere/rho-kg_m3</p>
+                    <v>0.79</v>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/auto-lean-mixture">
+            <function>
+                <product>
+                    <p>atmosphere/rho-kg_m3</p>
+                    <v>0.75</v>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/mixture-deviation">
+            <function>
+                <quotient>
+                    <p>propulsion/engine[1]/mixture</p>
+                    <p>propulsion/engine[1]/ideal-mixture</p>
+                </quotient>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/mixture">
+            <function>
+                <ifthen>
+                    <!-- below "auto lean": interpolate between auto-lean and cutoff. -->
+                    <lt>
+                        <p>fcs/mixture-cmd-norm[1]</p>
+                        <v>0.200</v>
+                    </lt>
+                    <product>
+                        <quotient>
+                            <p>fcs/mixture-cmd-norm[1]</p>
+                            <v>0.200</v>
+                        </quotient>
+                        <p>propulsion/engine[1]/auto-lean-mixture</p>
+                    </product>
+                    <ifthen>
+                        <!-- above "auto rich": interpolate between auto-rich and full rich -->
+                        <gt>
+                            <p>fcs/mixture-cmd-norm[1]</p>
+                            <v>0.500</v>
+                        </gt>
+                        <sum>
+                            <p>propulsion/engine[1]/auto-rich-mixture</p>
+                            <product>
+                                <quotient>
+                                    <difference>
+                                        <p>fcs/mixture-cmd-norm[1]</p>
+                                        <v>0.500</v>
+                                    </difference>
+                                    <!-- 1 - 0.500 -->
+                                    <v>0.500</v>
+                                </quotient>
+                                <difference>
+                                    <v>1</v>
+                                    <p>propulsion/engine[1]/auto-rich-mixture</p>
+                                </difference>
+                            </product>
+                        </sum>
+                        <!-- between "auto lean" and "auto rich": interpolate between auto-lean and auto-rich -->
+                        <sum>
+                            <p>propulsion/engine[1]/auto-lean-mixture</p>
+                            <product>
+                                <quotient>
+                                    <difference>
+                                        <p>fcs/mixture-cmd-norm[1]</p>
+                                        <v>0.2</v>
+                                    </difference>
+                                    <!-- 0.500 - 0.200 -->
+                                    <v>0.300</v>
+                                </quotient>
+                                <difference>
+                                    <p>propulsion/engine[1]/auto-rich-mixture</p>
+                                    <p>propulsion/engine[1]/auto-lean-mixture</p>
+                                </difference>
+                            </product>
+                        </sum>
+                    </ifthen>
+                </ifthen>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/mixture-power-factor">
+            <!-- power reduction due to mixture off peak -->
+            <function>
+                <table>
+                    <independentVar lookup="row">propulsion/engine[1]/mixture-deviation</independentVar>
+                    <tableData>
+                        0.200 0.000
+                        0.400 0.300
+                        0.600 0.500
+                        0.800 0.700
+                        0.950 0.800
+                        0.975 0.990 <!-- auto lean -->
+                        1.000 1.000
+                        1.025 1.000 <!-- auto rich -->
+                        2.000 0.995
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="propulsion/engine[1]/mixture-power-limit">
+            <!-- power limit due to leaning -->
+            <function>
+                <table>
+                    <independentVar lookup="row">propulsion/engine[1]/mixture-deviation</independentVar>
+                    <independentVar lookup="column">propulsion/engine[1]/mp-inhg</independentVar>
+                    <tableData>
+                                 10    30    35    40    45
+                        0.200 0.000 0.000 0.000 0.000 0.000
+                        0.400 0.300 0.300 0.300 0.200 0.100
+                        0.600 0.500 0.500 0.500 0.400 0.300
+                        0.800 0.700 0.700 0.600 0.500 0.400
+                        0.900 0.900 0.875 0.750 0.630 0.480
+                        0.975 1.000 0.990 0.800 0.700 0.500 <!-- auto lean -->
+                        1.000 1.000 1.000 1.000 1.000 1.000
+                        1.025 1.000 1.000 1.000 1.000 1.000 <!-- auto rich -->
+                        2.000 1.000 1.000 1.000 1.000 1.000
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+
         <fcs_function name="propulsion/engine[1]/power-hp-firing">
             <function>
                 <product>
                     <p>propulsion/engine[1]/power-hp-sl</p>
+                    <p>propulsion/engine[1]/mixture-power-factor</p>
+                    <p>propulsion/engine[1]/mixture-power-limit</p>
                     <table>
                         <independentVar lookup="row">atmosphere/pressure-altitude</independentVar>
                         <tableData>
@@ -946,15 +1328,26 @@
 
         <fcs_function name="propulsion/engine[1]/fuel-demand-cranking">
             <function>
-                <table>
-                    <independentVar lookup="row">propulsion/engine[1]/engine-rpm</independentVar>
-                    <tableData>
-                         0   0.0
-                        30   0.1
-                      1000   1.0
-                      3000   3.0
-                    </tableData>
-                </table>
+                <product>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[1]/engine-rpm</independentVar>
+                        <tableData>
+                             0   0.0
+                            30   0.1
+                          1000   1.0
+                          3000   3.0
+                        </tableData>
+                    </table>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[1]/mixture-deviation</independentVar>
+                        <tableData>
+                            0.950 0.800
+                            0.975 0.888
+                            1.025 1.000
+                            1.050 1.111
+                        </tableData>
+                    </table>
+                </product>
             </function>
         </fcs_function>
 
@@ -983,26 +1376,63 @@
 
         <pure_gain name="propulsion/engine[1]/fuel-flow-primer">
             <input>/controls/engines/engine[1]/primer</input>
-            <gain>0.5</gain>
+            <gain>1.0</gain>
         </pure_gain>
 
         <fcs_function name="propulsion/engine[1]/fuel-flow">
             <function>
+                <sum>
+                    <!-- fuel supply from carburetor -->
+                    <min>
+                        <table>
+                            <independentVar lookup="row">propulsion/engine[1]/fuel-available</independentVar>
+                            <tableData>
+                               0.0  30
+                               0.5   0
+                            </tableData>
+                        </table>
+                        <p>propulsion/engine[1]/max-fuel-flow</p>
+                    </min>
+                    <p>propulsion/engine[1]/fuel-flow-primer</p>
+                </sum>
+            </function>
+        </fcs_function>
+
+        <pure_gain name="propulsion/engine[1]/fuel-flow-pps">
+            <input>propulsion/engine[1]/fuel-flow</input>
+            <gain>0.0117311508</gain>
+        </pure_gain >
+
+        <switch name="propulsion/tank[0]/fuel-flow-engine[1]">
+            <default value="0"/>
+            <test value="propulsion/engine[1]/fuel-flow-pps">
+                /controls/engines/engine[1]/feed_tank eq 0
+            </test>
+        </switch>
+        <switch name="propulsion/tank[1]/fuel-flow-engine[1]">
+            <default value="0"/>
+            <test value="propulsion/engine[1]/fuel-flow-pps">
+                /controls/engines/engine[1]/feed_tank eq 1
+            </test>
+        </switch>
+        <switch name="propulsion/tank[2]/fuel-flow-engine[1]">
+            <default value="0"/>
+            <test value="propulsion/engine[1]/fuel-flow-pps">
+                /controls/engines/engine[1]/feed_tank eq 2
+            </test>
+        </switch>
+        <switch name="propulsion/tank[3]/fuel-flow-engine[1]">
+            <default value="0"/>
+            <test value="propulsion/engine[1]/fuel-flow-pps">
+                /controls/engines/engine[1]/feed_tank eq 3
+            </test>
+        </switch>
+
+        <fcs_function name="propulsion/engine[1]/fuel-flow-internal">
+            <function>
                 <difference>
-                    <sum>
-                        <!-- fuel supply from carburetor -->
-                        <min>
-                            <table>
-                                <independentVar lookup="row">propulsion/engine[1]/fuel-available</independentVar>
-                                <tableData>
-                                   0.0  30
-                                   0.5   0
-                                </tableData>
-                            </table>
-                            <p>propulsion/engine[1]/max-fuel-flow</p>
-                        </min>
-                        <p>propulsion/engine[1]/fuel-flow-primer</p>
-                    </sum>
+                    <!-- fuel in -->
+                    <p>propulsion/engine[1]/fuel-flow</p>
                     <!-- fuel out -->
                     <p>propulsion/engine[1]/fuel-demand</p>
                 </difference>
@@ -1016,7 +1446,7 @@
                         <p>propulsion/engine[1]/fuel-available</p>
                         <product>
                             <p>simulation/channel-dt</p>
-                            <p>propulsion/engine[1]/fuel-flow</p>
+                            <p>propulsion/engine[1]/fuel-flow-internal</p>
                         </product>
                     </sum>
                     <v>0.0</v>
