@@ -43,11 +43,9 @@
     <object-name>needle1</object-name>
     <property>engines/engine/fuel-psi-norm</property>
     <interpolation>
-      <entry><ind>  0  </ind><dep> 0 </dep></entry>
-      <entry><ind>  2  </ind><dep> 0 </dep></entry>
-      <entry><ind>  10  </ind><dep> 118 </dep></entry>
-      <entry><ind>  14  </ind><dep> 179 </dep></entry>
-      <entry><ind>  16 </ind><dep> 193 </dep></entry>
+      <entry><ind>   0  </ind><dep> 0 </dep></entry>
+      <entry><ind>  15.7</ind><dep> 180 </dep></entry>
+      <entry><ind>  25.1</ind><dep> 300 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
@@ -61,11 +59,9 @@
     <object-name>needle2</object-name>
     <property>engines/engine[1]/fuel-psi-norm</property>
     <interpolation>
-      <entry><ind>  0  </ind><dep> 0 </dep></entry>
-      <entry><ind>  2  </ind><dep> 0 </dep></entry>
-      <entry><ind>  10  </ind><dep> 118 </dep></entry>
-      <entry><ind>  14  </ind><dep> 179 </dep></entry>
-      <entry><ind>  16 </ind><dep> 193 </dep></entry>
+      <entry><ind>   0  </ind><dep> 0 </dep></entry>
+      <entry><ind>  16.0</ind><dep> 180 </dep></entry>
+      <entry><ind>  25.2</ind><dep> 300 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>

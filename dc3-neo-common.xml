@@ -345,6 +345,16 @@
             <tailwheel-lock-armed type="int">0</tailwheel-lock-armed>
             <tailwheel-lock-engaged type="int">1</tailwheel-lock-engaged>
         </gear>
+        <fuel>
+            <tank n="0">
+                <boost-pump type="bool">false</boost-pump>
+                <boost-pump-pos type="float">0</boost-pump-pos>
+            </tank>
+            <tank n="1">
+                <boost-pump type="bool">false</boost-pump>
+                <boost-pump-pos type="float">0</boost-pump-pos>
+            </tank>
+        </fuel>
     </controls>
     
     <input>

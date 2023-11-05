@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<system name="Fuel">
+    <channel name="Fuel Flow">
+        <summer>
+            <input>-propulsion/tank[0]/fuel-flow-engine[0]</input>
+            <input>-propulsion/tank[0]/fuel-flow-engine[1]</input>
+            <output>propulsion/tank[0]/external-flow-rate-pps</output>
+        </summer>
+        <summer>
+            <input>-propulsion/tank[1]/fuel-flow-engine[0]</input>
+            <input>-propulsion/tank[1]/fuel-flow-engine[1]</input>
+            <output>propulsion/tank[1]/external-flow-rate-pps</output>
+        </summer>
+        <summer>
+            <input>-propulsion/tank[2]/fuel-flow-engine[0]</input>
+            <input>-propulsion/tank[2]/fuel-flow-engine[1]</input>
+            <output>propulsion/tank[2]/external-flow-rate-pps</output>
+        </summer>
+        <summer>
+            <input>-propulsion/tank[3]/fuel-flow-engine[0]</input>
+            <input>-propulsion/tank[3]/fuel-flow-engine[1]</input>
+            <output>propulsion/tank[3]/external-flow-rate-pps</output>
+        </summer>
+
+        <pure_gain>
+            <input>propulsion/tank[0]/external-flow-rate-pps</input>
+            <output>propulsion/tank[0]/external-flow-rate-gph</output>
+            <gain>598</gain>
+        </pure_gain>
+
+        <pure_gain>
+            <input>propulsion/tank[1]/external-flow-rate-pps</input>
+            <output>propulsion/tank[1]/external-flow-rate-gph</output>
+            <gain>598</gain>
+        </pure_gain>
+
+        <pure_gain>
+            <input>propulsion/tank[2]/external-flow-rate-pps</input>
+            <output>propulsion/tank[2]/external-flow-rate-gph</output>
+            <gain>598</gain>
+        </pure_gain>
+
+        <pure_gain>
+            <input>propulsion/tank[3]/external-flow-rate-pps</input>
+            <output>propulsion/tank[3]/external-flow-rate-gph</output>
+            <gain>598</gain>
+        </pure_gain>
+    </channel>
+</system>
+

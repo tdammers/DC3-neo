@@ -288,6 +288,20 @@
     </filter>
 
     <filter>
+        <type>noise-spike</type>
+        <input>fdm/jsbsim/propulsion/engine[0]/fuel-pressure-psi</input>
+        <output>engines/engine[0]/fuel-psi-norm</output>
+        <max-rate-of-change>20</max-rate-of-change>
+    </filter>
+    <filter>
+        <type>noise-spike</type>
+        <input>fdm/jsbsim/propulsion/engine[1]/fuel-pressure-psi</input>
+        <output>engines/engine[1]/fuel-psi-norm</output>
+        <max-rate-of-change>20</max-rate-of-change>
+    </filter>
+
+
+    <filter>
         <type>gain</type>
         <gain>1</gain>
         <input>
