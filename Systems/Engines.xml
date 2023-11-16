@@ -827,7 +827,7 @@
 
         <pure_gain name="propulsion/engine[0]/fuel-flow-pps">
             <input>propulsion/engine[0]/fuel-flow</input>
-            <gain>0.0117311508</gain>
+            <gain>0.0102</gain>
         </pure_gain >
 
         <switch name="propulsion/tank[0]/fuel-flow-engine[0]">
@@ -1531,7 +1531,7 @@
 
         <pure_gain name="propulsion/engine[1]/fuel-flow-pps">
             <input>propulsion/engine[1]/fuel-flow</input>
-            <gain>0.0117311508</gain>
+            <gain>0.0102</gain>
         </pure_gain >
 
         <switch name="propulsion/tank[0]/fuel-flow-engine[1]">
