@@ -50,9 +50,21 @@
     <alpha-factor>systems/electrical/volts</alpha-factor>
   </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>CompositorSpotlight</object-name>
+    <object-name>CompositorCone</object-name>
+    <condition>
+      <equals>
+        <property>sim/multiplay/generic/int[17]</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
+
   <light>
     <type>spot</type>
-    <name>Spotlight</name>
+    <name>CompositorCone</name>
     <position>
         <x-m>0</x-m>
         <y-m>0</y-m>
@@ -89,15 +101,77 @@
         <max>1</max>
     </dim-factor>
     <attenuation>
-        <c>1</c>
-        <l>0.05</l>
-        <q>0.0005</q>
+        <c>0.5</c>
+        <l>0.01</l>
+        <q>0.00005</q>
     </attenuation>
-    <spot-exponent>100</spot-exponent>
+    <color>
+        <r>1.0</r>
+        <g>1.0</g>
+        <b>0.8</b>
+    </color>
+    <intensity>200000</intensity>
+    <spot-exponent>180</spot-exponent>
     <spot-cutoff>15.0</spot-cutoff>
     <range-m>1000</range-m>
     <near-m>0.1</near-m>
     <far-m>500</far-m>
   </light>
-  
+
+  <light>
+    <type>spot</type>
+    <name>CompositorSpotlight</name>
+    <position>
+        <x-m>0</x-m>
+        <y-m>-0.1</y-m>
+        <z-m>0</z-m>
+    </position>
+    <direction>
+        <heading-deg>0</heading-deg>
+        <roll-deg>0</roll-deg>
+        <pitch-deg>-90</pitch-deg>
+    </direction>
+    <ambient>
+        <r>1.0</r>
+        <g>1.0</g>
+        <b>0.8</b>
+        <a>1.0</a>
+    </ambient>
+    <diffuse>
+        <r>1.0</r>
+        <g>1.0</g>
+        <b>0.8</b>
+        <a>0.7</a>
+    </diffuse>
+    <specular>
+        <r>1.0</r>
+        <g>1.0</g>
+        <b>0.8</b>
+        <a>0.7</a>
+    </specular>
+    <dim-factor>
+        <property>sim/multiplay/generic/int[17]</property>
+        <factor>1</factor>
+        <offset>0</offset>
+        <min>0</min>
+        <max>1</max>
+    </dim-factor>
+    <attenuation>
+        <c>0</c>
+        <l>0</l>
+        <q>0</q>
+    </attenuation>
+    <color>
+        <r>1.0</r>
+        <g>1.0</g>
+        <b>0.8</b>
+    </color>
+    <intensity>10000</intensity>
+    <spot-exponent>10</spot-exponent>
+    <spot-cutoff>89.0</spot-cutoff>
+    <range-m>0.2</range-m>
+    <near-m>0.001</near-m>
+    <far-m>100</far-m>
+  </light>
+
 </PropertyList>

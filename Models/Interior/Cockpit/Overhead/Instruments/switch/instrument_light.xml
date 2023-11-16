@@ -19,9 +19,9 @@
       <binding>
         <command>property-adjust</command>
         <property>controls/lighting/instruments-norm</property>
-        <step>0.02</step>
+        <step>0.2</step>
         <min>0</min>
-        <max>0.16</max>
+        <max>1</max>
         <wrap>0</wrap>
       </binding>
       <binding>
@@ -40,9 +40,9 @@
       <binding>
         <command>property-adjust</command>
         <property>controls/lighting/instruments-norm</property>
-        <step>-0.02</step>
+        <step>-0.2</step>
         <min>0</min>
-        <max>0.16</max>
+        <max>1</max>
         <wrap>0</wrap>
       </binding>
       <binding>
@@ -56,7 +56,7 @@
     <type>knob</type>
     <object-name>bouton</object-name>
     <property>controls/lighting/instruments-norm</property>
-    <factor> -1125 </factor>
+    <factor>-180</factor>
     <axis>
       <x>  1 </x>
       <y>  0 </y>
@@ -66,9 +66,9 @@
       <binding>
         <command>property-adjust</command>
         <property>controls/lighting/instruments-norm</property>
-        <factor>0.01</factor>
+        <factor>0.1</factor>
         <min>0</min>
-        <max>0.16</max>
+        <max>1</max>
         <wrap>0</wrap>
       </binding>
       <binding>

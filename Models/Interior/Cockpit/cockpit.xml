@@ -188,6 +188,15 @@
             <b>0.15</b>
             <a>1</a>
         </specular>
+        <color>
+            <r>0.2</r>
+            <g>0.18</g>
+            <b>0.15</b>
+        </color>
+        <intensity>2</intensity>
+        <dim-factor>
+            <property>/controls/lighting/instruments-norm</property>
+        </dim-factor>
     </light>
     <light>
         <name>panel-light-2</name>
@@ -228,6 +237,15 @@
             <b>0.15</b>
             <a>1</a>
         </specular>
+        <color>
+            <r>0.2</r>
+            <g>0.18</g>
+            <b>0.15</b>
+        </color>
+        <intensity>2</intensity>
+        <dim-factor>
+            <property>/controls/lighting/instruments-norm</property>
+        </dim-factor>
     </light>
     <light>
         <name>panel-light-3</name>
@@ -268,6 +286,15 @@
             <b>0.15</b>
             <a>1</a>
         </specular>
+        <color>
+            <r>0.2</r>
+            <g>0.18</g>
+            <b>0.15</b>
+        </color>
+        <intensity>2</intensity>
+        <dim-factor>
+            <property>/controls/lighting/instruments-norm</property>
+        </dim-factor>
     </light>
     <light>
         <name>panel-light-4</name>
@@ -308,6 +335,15 @@
             <b>0.15</b>
             <a>1</a>
         </specular>
+        <color>
+            <r>0.2</r>
+            <g>0.18</g>
+            <b>0.15</b>
+        </color>
+        <intensity>2</intensity>
+        <dim-factor>
+            <property>/controls/lighting/instruments-norm</property>
+        </dim-factor>
     </light>
     
 </PropertyList>
