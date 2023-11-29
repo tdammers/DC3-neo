@@ -205,6 +205,40 @@
     <path>Aircraft/DC3-neo/Models/Light/dc-3-lights.xml</path>
   </model>
 
+  <animation>
+    <type>material</type>
+    <object-name>landingLightL</object-name>
+    <condition>
+      <equals>
+        <property>sim/multiplay/generic/int[17]</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+    <emission>
+        <factor-prop>systems/electrical/outputs/landing-lights[0]</factor-prop>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>0.8</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>landingLightR</object-name>
+    <condition>
+      <equals>
+        <property>sim/multiplay/generic/int[18]</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+    <emission>
+        <factor-prop>systems/electrical/outputs/landing-lights[1]</factor-prop>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>0.8</blue>
+    </emission>
+  </animation>
+
   <!-- Gouvernes de direction -->
   <animation>
     <type>rotate</type>

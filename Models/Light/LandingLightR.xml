@@ -3,18 +3,19 @@
 <PropertyList>
   
   <path>light-cone.ac</path>
+  <model>
+      <path>WhiteLight.ac</path>
+      <offsets>
+        <x-m>-0.1</x-m>
+      </offsets>
+  </model>
   <nopreview/>
-  
-  <animation>
-    <object-name>Cone</object-name>
-    <object-name>Cone-texture</object-name>
-    <object-name>Light</object-name>
-  </animation>
   
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Cone</object-name>
     <object-name>Cone-texture</object-name>
+    <object-name>Light</object-name>
   </effect>
   
   <effect>
@@ -22,6 +23,13 @@
     <object-name>Cone</object-name>
     <object-name>Cone-texture</object-name>
   </effect>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
+    <object-name>Light</object-name>
+  </animation>
   
   <animation>
     <type>material</type>
@@ -29,17 +37,17 @@
     <object-name>Cone</object-name>
     <object-name>Cone-texture</object-name>
     <emission>
+      <factor-prop>systems/electrical/outputs/landing-lights[1]</factor-prop>
       <red>1</red>
       <green>1</green>
       <blue>1</blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>Cone</object-name>
     <object-name>Cone-texture</object-name>
-    <object-name>Light</object-name>
     <condition>
       <equals>
         <property>sim/multiplay/generic/int[18]</property>
@@ -47,13 +55,50 @@
       </equals>
       <property>sim/model/config/light-cone</property>
     </condition>
-    <alpha-factor>systems/electrical/volts</alpha-factor>
+    <alpha-factor>systems/electrical/outputs/landing-lights[1]</alpha-factor>
   </animation>
 
-  
   <animation>
     <type>select</type>
-    <object-name>CompositorSpotlight</object-name>
+    <object-name>Light</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/multiplay/generic/int[18]</property>
+          <value> 1 </value>
+        </equals>
+        <greater-than>
+          <property>systems/electrical/buses/bus[1]/volts</property>
+          <value>8</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>alpha-test</type>
+    <object-name>Light</object-name>
+    <alpha-factor>0.05</alpha-factor>
+  </animation>
+
+  <animation>
+    <type>billboard</type>
+    <object-name>Light</object-name>
+    <spherical type="bool">true</spherical>
+  </animation>
+  
+  <animation>
+    <type>dist-scale</type>
+    <object-name>Light</object-name>
+    <interpolation>
+      <entry><ind>    0 </ind><dep> 1.00 </dep></entry>
+      <entry><ind>   20 </ind><dep> 1.50 </dep></entry>
+      <entry><ind> 1500 </ind><dep> 5.00 </dep></entry>
+    </interpolation>
+  </animation>
+
+  <animation>
+    <type>select</type>
     <object-name>CompositorCone</object-name>
     <condition>
       <equals>
@@ -67,7 +112,7 @@
     <type>spot</type>
     <name>CompositorCone</name>
     <position>
-        <x-m>0</x-m>
+        <x-m>1</x-m>
         <y-m>0</y-m>
         <z-m>0</z-m>
     </position>
@@ -95,7 +140,7 @@
         <a>0.7</a>
     </specular>
     <dim-factor>
-        <property>sim/multiplay/generic/int[18]</property>
+        <property>systems/electrical/outputs/landing-lights[1]</property>
         <factor>1</factor>
         <offset>0</offset>
         <min>0</min>
@@ -117,62 +162,6 @@
     <range-m>1000</range-m>
     <near-m>0.1</near-m>
     <far-m>500</far-m>
-  </light>
-
-  <light>
-    <type>spot</type>
-    <name>CompositorSpotlight</name>
-    <position>
-        <x-m>0</x-m>
-        <y-m>0.1</y-m>
-        <z-m>0</z-m>
-    </position>
-    <direction>
-        <heading-deg>0</heading-deg>
-        <roll-deg>0</roll-deg>
-        <pitch-deg>-90</pitch-deg>
-    </direction>
-    <ambient>
-        <r>1.0</r>
-        <g>1.0</g>
-        <b>0.8</b>
-        <a>1.0</a>
-    </ambient>
-    <diffuse>
-        <r>1.0</r>
-        <g>1.0</g>
-        <b>0.8</b>
-        <a>0.7</a>
-    </diffuse>
-    <specular>
-        <r>1.0</r>
-        <g>1.0</g>
-        <b>0.8</b>
-        <a>0.7</a>
-    </specular>
-    <dim-factor>
-        <property>sim/multiplay/generic/int[18]</property>
-        <factor>1</factor>
-        <offset>0</offset>
-        <min>0</min>
-        <max>1</max>
-    </dim-factor>
-    <attenuation>
-        <c>0</c>
-        <l>0</l>
-        <q>0</q>
-    </attenuation>
-    <color>
-        <r>1.0</r>
-        <g>1.0</g>
-        <b>0.8</b>
-    </color>
-    <intensity>10000</intensity>
-    <spot-exponent>10</spot-exponent>
-    <spot-cutoff>89.0</spot-cutoff>
-    <range-m>0.2</range-m>
-    <near-m>0.001</near-m>
-    <far-m>100</far-m>
   </light>
 
 </PropertyList>

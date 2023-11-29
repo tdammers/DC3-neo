@@ -53,7 +53,7 @@
       <and>
         <property>sim/multiplay/generic/int[12]</property>
         <greater-than>
-          <property>systems/electrical/volts</property>
+          <property>systems/electrical/buses/bus[0]/volts</property>
           <value>8</value>
         </greater-than>
       </and>

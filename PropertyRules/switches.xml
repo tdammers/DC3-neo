@@ -2,6 +2,13 @@
 <PropertyList>
     <filter>
         <type>noise-spike</type>
+        <input>controls/electric/battery-switch</input>
+        <output>controls/electric/battery-switch-pos</output>
+        <max-rate-of-change>5</max-rate-of-change>
+    </filter>
+
+    <filter>
+        <type>noise-spike</type>
         <input>controls/engines/engine[0]/magnetos</input>
         <output>controls/engines/engine[0]/magnetos-pos</output>
         <max-rate-of-change>5</max-rate-of-change>

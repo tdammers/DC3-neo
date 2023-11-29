@@ -103,6 +103,8 @@
                 <!-- <int   n="11" alias="/sim/model/lights/passing/state"/> -->
                 <float n="14" alias="/controls/engines/engine[0]/cowl-flaps-norm"> 0 </float>
                 <float n="15" alias="/controls/engines/engine[1]/cowl-flaps-norm"> 0 </float>
+                <int n="10" alias="/controls/lighting/running-lights"> 0 </int>
+                <int n="12" alias="/controls/lighting/tail-lights"> 0 </int>
                 <int n="17" alias="/controls/lighting/landing-lights[0]"> 0 </int>
                 <int n="18" alias="/controls/lighting/landing-lights[1]"> 0 </int>
             </generic>
@@ -118,6 +120,9 @@
             <autopilot n="103">
                 <path>Aircraft/DC3-neo/PropertyRules/fuel.xml</path>
             </autopilot>
+            <autopilot n="104">
+                <path>Aircraft/DC3-neo/PropertyRules/electrical.xml</path>
+            </autopilot>
             <property-rule n="120">
                 <path>Aircraft/DC3-neo/PropertyRules/views.xml</path>
             </property-rule>
@@ -130,6 +135,11 @@
             <property-rule n="152">
                 <path>Aircraft/DC3-neo/PropertyRules/animations.xml</path>
             </property-rule>
+
+            <!--Disable XML electrical system-->
+            <electrical>
+                <path></path>
+            </electrical>
         </systems>
         
     </sim>
@@ -482,5 +492,5 @@
             </outputs>
         </electrical>
     </systems>
-    
+
 </PropertyList>

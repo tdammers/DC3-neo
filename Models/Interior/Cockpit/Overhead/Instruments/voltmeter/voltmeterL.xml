@@ -38,7 +38,7 @@
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>systems/electrical/volts</property>
+    <property>systems/electrical/buses/bus[0]/volts</property>
     <interpolation>
       <entry><ind> 30 </ind><dep>  44.45 </dep></entry>
       <entry><ind>  0 </ind><dep> -45.44 </dep></entry>
