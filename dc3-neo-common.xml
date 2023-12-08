@@ -222,6 +222,7 @@
             <file>Aircraft/DC3-neo/Nasal/comm-radios.nas</file>
             <file>Aircraft/DC3-neo/Nasal/autopilot-control.nas</file>
             <file>Aircraft/DC3-neo/Nasal/instrumentation.nas</file>
+            <file>Aircraft/DC3-neo/Nasal/liveries.nas</file>
         </dc3>
         <century>
             <file>Aircraft/DC3-neo/Nasal/autopilot-century.nas</file>
