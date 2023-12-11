@@ -30,37 +30,35 @@
         <sound>
             <path>dc3-neo-sounds.xml</path>
         </sound>
-        
-        <!--
-    <previews>
-        <preview>
-            <type>exterior</type>
-            <path>Splash/splash1.jpg</path>
-            <splash type="bool">true</splash>
-        </preview>
-        <preview>
-            <type>exterior</type>
-            <path>Splash/splash2.jpg</path>
-            <splash type="bool">true</splash>
-        </preview>
-        <preview>
-            <type>exterior</type>
-            <path>Splash/splash3.jpg</path>
-            <splash type="bool">true</splash>
-        </preview>
-        <preview>
-            <type>interior</type>
-            <path>Splash/splash4.jpg</path>
-            <splash type="bool">true</splash>
-        </preview>
-        <preview>
-            <type>exterior</type>
-            <path>Splash/splash5.jpg</path>
-            <splash type="bool">true</splash>
-        </preview>
-    </previews>
-    -->
-        
+
+        <previews>
+            <preview>
+                <type>exterior</type>
+                <path>Splash/splash1.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splash/splash2.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splash/splash3.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>interior</type>
+                <path>Splash/splash4.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splash/splash5.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+        </previews>
+
         <model>
             <start-idling type="bool">false</start-idling>
             <config>
