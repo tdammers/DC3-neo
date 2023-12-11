@@ -66,11 +66,13 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
+    <!--
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
+    -->
   </animation>
 
   <effect>
@@ -150,11 +152,13 @@
     <property-base>sim/model/livery-engine</property-base>
     <texture-prop>texture</texture-prop>
     <texture>Engines/Propeller/propeller.png</texture>
+    <!--
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
+    -->
   </animation>
 
   <!-- Ailettes -->
