@@ -60,9 +60,9 @@
         <object-name>Horizon.Fixed</object-name>
         <emission>
             <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-            <red>   0.06 </red>
-            <green> 0.06 </green>
-            <blue>  0.05 </blue>
+            <red>   0.40 </red>
+            <green> 0.40 </green>
+            <blue>  0.30 </blue>
         </emission>
     </animation>
     <animation>
@@ -74,9 +74,9 @@
         <object-name>FD.Bars</object-name>
         <emission>
             <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-            <red>   0.05 </red>
-            <green> 0.05 </green>
-            <blue>  0.0375 </blue>
+            <red>   0.40 </red>
+            <green> 0.40 </green>
+            <blue>  0.30 </blue>
         </emission>
     </animation>
     <animation>
@@ -97,9 +97,9 @@
         <object-name>Slip.TubeBack</object-name>
         <emission>
             <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-            <red>   0.04 </red>
-            <green> 0.04 </green>
-            <blue>  0.03 </blue>
+            <red>   0.40 </red>
+            <green> 0.40 </green>
+            <blue>  0.30 </blue>
         </emission>
     </animation>
     <animation>
@@ -116,9 +116,9 @@
         <object-name>Case.FrontMask</object-name>
         <emission>
             <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-            <red>   0.02 </red>
-            <green> 0.02 </green>
-            <blue>  0.015 </blue>
+            <red>   0.20 </red>
+            <green> 0.20 </green>
+            <blue>  0.15 </blue>
         </emission>
     </animation>
     

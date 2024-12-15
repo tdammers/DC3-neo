@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <PropertyList>
     <sim include="dc3-neo-views.xml">
-        
+
         <fuel-fraction>0.8</fuel-fraction>
-        
+
         <rating>
             <FDM type="int">     3 </FDM>
             <systems type="int"> 1 </systems>
@@ -72,13 +72,13 @@
                 <version>civilian-gray</version>
             </config>
         </model>
-        
+
         <current-view>
             <can-change-z-offset type="bool">false</can-change-z-offset>
             <z-offset-min-m type="float">12.5</z-offset-min-m>
             <z-offset-max-m type="float">3200.0</z-offset-max-m>
         </current-view>
-        
+
         <aircraft-data>
             <path>/sim/model/config/show-yokes</path>
             <path>/sim/model/config/show-pilot</path>
@@ -90,11 +90,11 @@
             <path>/sim/model/config/instrumentation</path>
             <path>/instrumentation/gps155/settings</path>
         </aircraft-data>
-        
+
         <freeze>
             <fuel type="bool">false</fuel>
         </freeze>
-        
+
         <multiplay n="0">
             <chat_display>1</chat_display>
             <generic n="0">
@@ -107,7 +107,7 @@
                 <int n="18" alias="/controls/lighting/landing-lights[1]"> 0 </int>
             </generic>
         </multiplay>
-        
+
         <systems>
             <autopilot n="101">
                 <path>Aircraft/DC3-neo/PropertyRules/autopilot-sperry.xml</path>
@@ -139,9 +139,9 @@
                 <path></path>
             </electrical>
         </systems>
-        
+
     </sim>
-    
+
     <consumables>
         <fuel>
             <tank n="0">
@@ -158,7 +158,7 @@
             </tank>
         </fuel>
     </consumables>
-    
+
     <payload>
         <weight n="0">
             <name>Flight Crew (A)</name>
@@ -209,7 +209,7 @@
             <min-lb>0</min-lb>
         </weight>
     </payload>
-    
+
     <nasal>
         <controls>
             <file>Aircraft/DC3-neo/Nasal/controls.nas</file>
@@ -235,13 +235,57 @@
             <file>Aircraft/DC3-neo/Nasal/dialogs.nas</file>
         </dialogs>
     </nasal>
-    
+
     <autopilot>
         <century>
             <vertical-mode type="int">0</vertical-mode>
             <lateral-mode type="int">0</lateral-mode>
             <nav-armed type="bool">false</nav-armed>
             <gs-armed type="bool">false</gs-armed>
+
+            <active type="bool">false</active>
+            <active-derivative type="float">0</active-derivative>
+            <alt-button type="bool">false</alt-button>
+            <apr-button type="bool">false</apr-button>
+            <att-button type="bool">false</att-button>
+            <available type="bool">false</available>
+            <ga-airspeed type="double">0</ga-airspeed>
+            <gs-armed type="bool">false</gs-armed>
+            <gs-base-descent-rate type="float">0</gs-base-descent-rate>
+            <gs-captured type="bool">0</gs-captured>
+            <hdg-button type="bool">0</hdg-button>
+            <heading-bug-deg type="float">0</heading-bug-deg>
+            <heading-error type="float">0</heading-error>
+            <lateral-mode type="int">0</lateral-mode>
+            <lights>
+                <alt type="bool">false</alt>
+                <ap type="bool">false</ap>
+                <ap-blinking type="bool">false</ap-blinking>
+                <apr type="bool">false</apr>
+                <att type="bool">false</att>
+                <blink-state type="bool">false</blink-state>
+                <ga type="bool">false</ga>
+                <gs type="bool">false</gs>
+                <hdg type="bool">false</hdg>
+                <nav type="bool">false</nav>
+            </lights>
+            <nav-armed type="bool">false</nav-armed>
+            <nav-button type="bool">false</nav-button>
+            <nav-captured type="bool">false</nav-captured>
+            <nav-capture-rate type="float">0</nav-capture-rate>
+            <nav-course-error type="float">0</nav-course-error>
+            <nav-intercept-course type="float">0</nav-intercept-course>
+            <nav-intercept-course-offset type="float">0</nav-intercept-course-offset>
+            <pitch-button type="int">0</pitch-button>
+            <powered type="bool">false</powered>
+            <target-altitude-ft type="float">0</target-altitude-ft>
+            <target-pitch-deg type="float">0</target-pitch-deg>
+            <target-pitch-rate-degps type="float">0</target-pitch-rate-degps>
+            <target-roll-deg type="float">0</target-roll-deg>
+            <target-roll-rate-degps type="float">0</target-roll-rate-degps>
+            <vertical-mode type="int">0</vertical-mode>
+            <vertical-speed-deviation type="float">0</vertical-speed-deviation>
+            <vertical-speed-fpm type="float">0</vertical-speed-fpm>
         </century>
     </autopilot>
 
@@ -255,7 +299,7 @@
             <shutdown type="bool">0</shutdown>
         </engine>
     </sounds>
-    
+
     <fdm>
         <jsbsim>
             <params>
@@ -324,7 +368,7 @@
             </propulsion>
         </jsbsim>
     </fdm>
-    
+
     <controls>
         <engines>
             <engine n="0">
@@ -365,7 +409,7 @@
             </tank>
         </fuel>
     </controls>
-    
+
     <input>
         <keyboard>
             <key n="75">
@@ -437,8 +481,12 @@
                             <condition>
                                 <and>
                                     <property>/sim/current-view/can-change-z-offset</property>
-                                    <not><property>/devices/status/mice/mouse[0]/button[2]</property></not>
-                                    <not><property>/sim/mouse/right-button-mode-cycle-enabled</property></not>
+                                    <not>
+                                        <property>/devices/status/mice/mouse[0]/button[2]</property>
+                                    </not>
+                                    <not>
+                                        <property>/sim/mouse/right-button-mode-cycle-enabled</property>
+                                    </not>
                                 </and>
                             </condition>
                             <command>nasal</command>
@@ -460,8 +508,12 @@
                             <condition>
                                 <and>
                                     <property>/sim/current-view/can-change-z-offset</property>
-                                    <not><property>/devices/status/mice/mouse[0]/button[2]</property></not>
-                                    <not><property>/sim/mouse/right-button-mode-cycle-enabled</property></not>
+                                    <not>
+                                        <property>/devices/status/mice/mouse[0]/button[2]</property>
+                                    </not>
+                                    <not>
+                                        <property>/sim/mouse/right-button-mode-cycle-enabled</property>
+                                    </not>
                                 </and>
                             </condition>
                             <command>nasal</command>

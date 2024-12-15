@@ -322,7 +322,7 @@
             <property>instrumentation/heading-indicator/indicated-heading-deg</property>
         </input>
         <reference>
-            <property>autopilot/settings/heading-bug-deg</property>
+            <property>autopilot/century/heading-bug-deg</property>
         </reference>
         <period>
             <min>-180</min>
@@ -389,7 +389,7 @@
             </condition>
             <property>instrumentation/heading-indicator/indicated-heading-deg</property>
         </input>
-        <output>autopilot/settings/heading-bug-deg</output>
+        <output>autopilot/century/heading-bug-deg</output>
     </filter>
     
     <!-- NAV intercept course -->
@@ -470,7 +470,7 @@
         <input>
             <property>autopilot/century/heading-error</property>
         </input>
-        <output>autopilot/settings/target-roll-deg</output>
+        <output>autopilot/century/target-roll-deg</output>
         <Kp>1.0</Kp>
         <Ki>0</Ki>
         <min>-25</min>
@@ -493,7 +493,7 @@
         <input>
             <value>0.0</value>
         </input>
-        <output>autopilot/settings/target-roll-deg</output>
+        <output>autopilot/century/target-roll-deg</output>
         <min>-25</min>
         <max>25</max>
     </filter>
@@ -503,9 +503,9 @@
             <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
         </input>
         <reference>
-            <property>autopilot/settings/target-roll-deg</property>
+            <property>autopilot/century/target-roll-deg</property>
         </reference>
-        <output>autopilot/settings/target-roll-rate-degps</output>
+        <output>autopilot/century/target-roll-rate-degps</output>
         <Kp>2.0</Kp>
         <Ki>0.2</Ki>
         <min>
@@ -559,9 +559,9 @@
             <property>instrumentation/altimeter/pressure-alt-ft</property>
         </input>
         <reference>
-            <property>autopilot/settings/target-altitude-ft</property>
+            <property>autopilot/century/target-altitude-ft</property>
         </reference>
-        <output>autopilot/settings/vertical-speed-fpm</output>
+        <output>autopilot/century/vertical-speed-fpm</output>
         <min>-1500</min>
         <max>1500</max>
     </filter>
@@ -588,7 +588,7 @@
         <input>
             <property>autopilot/century/pitch-button</property>
         </input>
-        <output>autopilot/settings/vertical-speed-fpm</output>
+        <output>autopilot/century/vertical-speed-fpm</output>
         <min>-500</min>
         <max>500</max>
     </filter>
@@ -635,8 +635,8 @@
             </condition>
             <value>5</value>
         </reference>
-        <input>autopilot/settings/target-pitch-deg</input>
-        <output>autopilot/settings/target-pitch-deg</output>
+        <input>autopilot/century/target-pitch-deg</input>
+        <output>autopilot/century/target-pitch-deg</output>
         <min>-10</min>
         <max>15</max>
     </filter>
@@ -699,7 +699,7 @@
         <min>-1500</min>
         <max>0</max>
         
-        <output>autopilot/settings/vertical-speed-fpm</output>
+        <output>autopilot/century/vertical-speed-fpm</output>
     </filter>
     
     <pi-simple-controller>
@@ -728,9 +728,9 @@
             <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
         </input>
         <reference>
-            <property>autopilot/settings/vertical-speed-fpm</property>
+            <property>autopilot/century/vertical-speed-fpm</property>
         </reference>
-        <output>autopilot/settings/target-pitch-deg</output>
+        <output>autopilot/century/target-pitch-deg</output>
         <Kp>0.005</Kp>
         <Ki>0.001</Ki>
         <min>-5</min>
@@ -764,7 +764,7 @@
         </enable>
         <input>instrumentation/airspeed-indicator/indicated-speed-kt</input>
         <reference>autopilot/century/ga-airspeed</reference>
-        <output>autopilot/settings/target-pitch-deg</output>
+        <output>autopilot/century/target-pitch-deg</output>
         <Kp>-1</Kp>
         <Ti>20</Ti>
         <Td>0</Td>
@@ -778,9 +778,9 @@
             <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
         </input>
         <reference>
-            <property>autopilot/settings/target-pitch-deg</property>
+            <property>autopilot/century/target-pitch-deg</property>
         </reference>
-        <output>autopilot/settings/target-pitch-rate-degps</output>
+        <output>autopilot/century/target-pitch-rate-degps</output>
         <Kp>0.4</Kp>
         <Ki>0.01</Ki>
         <min>-0.7</min>
@@ -820,7 +820,7 @@
             <property>autopilot/internal/roll-rate-degps</property>
         </input>
         <reference>
-            <property>autopilot/settings/target-roll-rate-degps</property>
+            <property>autopilot/century/target-roll-rate-degps</property>
         </reference>
         <output>autopilot/internal/aileron</output>
         <Kp>0.01</Kp>
@@ -842,7 +842,7 @@
             <property>autopilot/internal/pitch-rate-degps</property>
         </input>
         <reference>
-            <property>autopilot/settings/target-pitch-rate-degps</property>
+            <property>autopilot/century/target-pitch-rate-degps</property>
         </reference>
         <output>autopilot/internal/elevator</output>
         <Kp>-0.025</Kp>
@@ -913,7 +913,7 @@
             <expression>
                 <difference>
                     <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
-                    <property>autopilot/settings/target-roll-deg</property>
+                    <property>autopilot/century/target-roll-deg</property>
                 </difference>
             </expression>
             <condition>
@@ -932,7 +932,7 @@
             <expression>
                 <difference>
                     <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
-                    <property>autopilot/settings/target-pitch-deg</property>
+                    <property>autopilot/century/target-pitch-deg</property>
                 </difference>
             </expression>
             <condition>

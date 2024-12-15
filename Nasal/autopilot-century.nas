@@ -42,17 +42,17 @@ var syncVertical = func (mode=-1) {
     if (mode < 0)
         mode = p.verticalMode.getValue() or 0;
     if (mode == ALT) {
-        setprop('autopilot/settings/target-altitude-ft',
+        setprop('autopilot/century/target-altitude-ft',
             getprop('instrumentation/altimeter/pressure-alt-ft'));
     }
     elsif (mode == ATT) {
-        setprop('autopilot/settings/target-pitch-deg',
+        setprop('autopilot/century/target-pitch-deg',
             getprop('instrumentation/attitude-indicator/indicated-pitch-deg'));
     }
 };
 
 var wingsLevel = func {
-    setprop('autopilot/settings/target-roll-deg', 0.0);
+    setprop('autopilot/century/target-roll-deg', 0.0);
 }
 
 var initialized = 0;

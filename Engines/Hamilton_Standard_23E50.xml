@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<propeller version="1.01" name="prop">
+<propeller version="1.1" name="prop">
   <ixx>35</ixx>
   <diameter unit="IN"> 138 </diameter>
   <numblades>3</numblades>

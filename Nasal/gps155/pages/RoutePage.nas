@@ -57,7 +57,7 @@ var ActiveRoutePage = {
         var fp = flightplan();
         if (fp != nil) {
             var idx = ActiveRoutePage.scrollPos + 1;
-            if (idx < fp.getPlanSize()) {
+            if (idx < fp.getPlanSize() and fp.getPlanSize() > 0) {
                 me.editableWaypointID = fp.getWP(idx).id;
             }
         }
@@ -137,7 +137,7 @@ var ActiveRoutePage = {
         var extraMode = deviceProps.settings.fields.route.legExtraMode.getValue();
         lines[0] = sprintf('%-11s %3s  %3s', legInfo, distMode, extraMode);
 
-        if (fp != nil and fp.getPlanSize() > 1) {
+        if (fp != nil and fp.getPlanSize() > 0) {
             for (var y = 0; y < 2; y += 1) {
                 var index = ActiveRoutePage.scrollPos + y;
                 var wp = fp.getWP(index);
@@ -197,13 +197,18 @@ var ActiveRoutePage = {
                         extraStr = sprintf("%2i:%02i", eteHours, eteMinutes);
                     }
                     elsif (extraMode == 'eta') {
-                        var distIntoRoute = wpCurr.distance_along_route - deviceProps.wp[1].distance.getValue();
-                        var gs = math.max(100, deviceProps.groundspeed.getValue() or 0);
-                        var eteMinutesRaw = 60 * (wp.distance_along_route - distIntoRoute)  / gs;
-                        var etaMinutesRaw = math.round(getprop('/sim/time/utc/day-seconds') / 60 + eteMinutesRaw);
-                        var etaMinutes = math.mod(etaMinutesRaw, 60);
-                        var etaHours = math.mod(math.floor(etaMinutesRaw / 60), 24);
-                        extraStr = sprintf("%02i:%02i", etaHours, etaMinutes);
+                        if (wpCurr != nil) {
+                            var distIntoRoute = wpCurr.distance_along_route - deviceProps.wp[1].distance.getValue();
+                            var gs = math.max(100, deviceProps.groundspeed.getValue() or 0);
+                            var eteMinutesRaw = 60 * (wp.distance_along_route - distIntoRoute)  / gs;
+                            var etaMinutesRaw = math.round(getprop('/sim/time/utc/day-seconds') / 60 + eteMinutesRaw);
+                            var etaMinutes = math.mod(etaMinutesRaw, 60);
+                            var etaHours = math.mod(math.floor(etaMinutesRaw / 60), 24);
+                            extraStr = sprintf("%02i:%02i", etaHours, etaMinutes);
+                        }
+                        else {
+                            extraStr = "--:--";
+                        }
                     }
                     identStr = navid5(wp.id, 5);
                 }
@@ -250,7 +255,7 @@ var ActiveRoutePage = {
                 if (ActiveRoutePage.scrollPos > maxPos) ActiveRoutePage.scrollPos = maxPos;
             }
             var idx = ActiveRoutePage.scrollPos + 1;
-            if (fp != nil and idx < fp.getPlanSize()) {
+            if (fp != nil and idx < fp.getPlanSize() and fp.getPlanSize() > 0) {
                 me.editableWaypointID = fp.getWP(idx).id;
             }
             ActiveRoutePage.scrollResetTimer = 10;
@@ -313,8 +318,13 @@ var ActiveRoutePage = {
             var self = me;
             searchAndConfirmWaypoint(me.editableWaypointID, self, func (waypoint) {
                 var leg = createWP(waypoint.lat, waypoint.lon, waypoint.ident);
-                if (fp.getPlanSize() == 1 and (ghosttype(waypoint) == 'airport' or ghosttype(waypoint) == 'FGAirport')) {
+                printf("Plan size: %i", fp.getPlanSize());
+                if (fp.getPlanSize() == 0 and (ghosttype(waypoint) == 'airport' or ghosttype(waypoint) == 'FGAirport')) {
+                    fp.departure = airportinfo(waypoint.id);
+                }
+                elsif (fp.getPlanSize() == 1 and (ghosttype(waypoint) == 'airport' or ghosttype(waypoint) == 'FGAirport')) {
                     fp.destination = airportinfo(waypoint.id);
+                    fp.activate();
                 }
                 elsif (ActiveRoutePage.scrollPos >= fp.getPlanSize())
                     fp.appendWP(leg);

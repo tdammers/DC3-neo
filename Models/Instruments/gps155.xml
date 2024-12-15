@@ -6,7 +6,7 @@
     <effect>
         <inherits-from>../Effects/gps155</inherits-from>
         <parameters>
-            <lightmap-factor n="0" type="float"><use>controls/lighting/panel-norm</use></lightmap-factor>
+            <lightmap-factor n="0" type="float"><use>systems/electrical/outputs/instrument-lights</use></lightmap-factor>
         </parameters>
         
         <object-name>BrightnessKnob</object-name>
